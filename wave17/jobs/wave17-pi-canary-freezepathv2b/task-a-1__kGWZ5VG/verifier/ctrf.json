@@ -1,0 +1,260 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 0,
+            "failed": 20,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787301692.1736968,
+            "stop": 1787301692.296074
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_gw_account_suspended",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.017690446693450212,
+                "start": 1787301692.1947892,
+                "stop": 1787301692.2261245,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_account_suspended():\n>       assert _gw_user().get(\"suspended\") is True\nE       AssertionError: assert False is True\nE        +  where False = <built-in method get of dict object at 0x756b7bac8d40>('suspended')\nE        +    where <built-in method get of dict object at 0x756b7bac8d40> = {'agreedToTerms': True, 'aliases': [], 'archived': False, 'changePasswordAtNextLogin': False, ...}.get\nE        +      where {'agreedToTerms': True, 'aliases': [], 'archived': False, 'changePasswordAtNextLogin': False, ...} = _gw_user()\n\n/tests/test_outputs.py:52: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_credential_reset_forced",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0018532713875174522,
+                "start": 1787301692.2262802,
+                "stop": 1787301692.2300043,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_credential_reset_forced():\n>       assert _gw_user().get(\"changePasswordAtNextLogin\") is True\nE       AssertionError: assert False is True\nE        +  where False = <built-in method get of dict object at 0x756b7b932380>('changePasswordAtNextLogin')\nE        +    where <built-in method get of dict object at 0x756b7b932380> = {'agreedToTerms': True, 'aliases': [], 'archived': False, 'changePasswordAtNextLogin': False, ...}.get\nE        +      where {'agreedToTerms': True, 'aliases': [], 'archived': False, 'changePasswordAtNextLogin': False, ...} = _gw_user()\n\n/tests/test_outputs.py:55: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_moved_into_legal_hold_ou",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001904667355120182,
+                "start": 1787301692.230136,
+                "stop": 1787301692.2338207,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_moved_into_legal_hold_ou():\n>       assert _gw_user().get(\"orgUnitPath\") == HOLD_OU_PATH\nE       AssertionError: assert '/Finance' == '/Legal Hold'\nE         \nE         - /Legal Hold\nE         + /Finance\n\n/tests/test_outputs.py:58: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_zoom",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0018014544621109962,
+                "start": 1787301692.2339463,
+                "stop": 1787301692.237511,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_zoom():\n>       assert \"zoom.us\" not in _gw_token_client_ids()\nE       AssertionError: assert 'zoom.us' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:61: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_dropbox",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016031400300562382,
+                "start": 1787301692.2376559,
+                "stop": 1787301692.2410076,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_dropbox():\n>       assert \"dropbox.com\" not in _gw_token_client_ids()\nE       AssertionError: assert 'dropbox.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:64: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_asana",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00174818467348814,
+                "start": 1787301692.2411346,
+                "stop": 1787301692.2445898,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_asana():\n>       assert \"asana.com\" not in _gw_token_client_ids()\nE       AssertionError: assert 'asana.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:67: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_slack_connector",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0015021106228232384,
+                "start": 1787301692.2447207,
+                "stop": 1787301692.248441,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_slack_connector():\n>       assert \"slack.com\" not in _gw_token_client_ids()\nE       AssertionError: assert 'slack.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:70: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_calendly",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0017500580288469791,
+                "start": 1787301692.2485683,
+                "stop": 1787301692.2520783,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_calendly():\n>       assert \"calendly.com\" not in _gw_token_client_ids()\nE       AssertionError: assert 'calendly.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:73: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_docusign",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001521699596196413,
+                "start": 1787301692.252209,
+                "stop": 1787301692.2554648,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_docusign():\n>       assert \"docusign.net\" not in _gw_token_client_ids()\nE       AssertionError: assert 'docusign.net' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:76: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_grammarly",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016752565279603004,
+                "start": 1787301692.2556145,
+                "stop": 1787301692.2590487,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_grammarly():\n>       assert \"grammarly.com\" not in _gw_token_client_ids()\nE       AssertionError: assert 'grammarly.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:79: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_trello",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001512295100837946,
+                "start": 1787301692.2591767,
+                "stop": 1787301692.2624376,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_trello():\n>       assert \"trello.com\" not in _gw_token_client_ids()\nE       AssertionError: assert 'trello.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:82: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_zapier",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0017092903144657612,
+                "start": 1787301692.2625644,
+                "stop": 1787301692.2660592,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_zapier():\n>       assert \"zapier.com\" not in _gw_token_client_ids()\nE       AssertionError: assert 'zapier.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:85: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_loom",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0015276777558028698,
+                "start": 1787301692.2661881,
+                "stop": 1787301692.2694461,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_loom():\n>       assert \"loom.com\" not in _gw_token_client_ids()\nE       AssertionError: assert 'loom.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:88: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_notion",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0017216335982084274,
+                "start": 1787301692.2695725,
+                "stop": 1787301692.2730534,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gw_token_revoked_notion():\n>       assert \"notion.so\" not in _gw_token_client_ids()\nE       AssertionError: assert 'notion.so' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}\nE        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()\n\n/tests/test_outputs.py:91: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_slack_account_deactivated",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001722866203635931,
+                "start": 1787301692.2731807,
+                "stop": 1787301692.276681,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_slack_account_deactivated():\n>       assert _slack_user().get(\"deleted\") is True\nE       AssertionError: assert False is True\nE        +  where False = <built-in method get of dict object at 0x756b7b93b440>('deleted')\nE        +    where <built-in method get of dict object at 0x756b7b93b440> = {'channel_ids': [], 'deleted': False, 'id': 'U42543D3ED', 'is_admin': False, ...}.get\nE        +      where {'channel_ids': [], 'deleted': False, 'id': 'U42543D3ED', 'is_admin': False, ...} = _slack_user()\n\n/tests/test_outputs.py:94: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_routed_to_legal_hold_group",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0022590826265513897,
+                "start": 1787301692.276807,
+                "stop": 1787301692.280903,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_sn_incident_routed_to_legal_hold_group():\n>       assert _ref(_incident().get(\"assignment_group\")) == LEGAL_GROUP_SYS_ID\nE       AssertionError: assert 'da062321d79b...3e67903f5c324' == 'e6d6a3f8315b...d2b370e90a07a'\nE         \nE         - e6d6a3f8315bbe2b82ad2b370e90a07a\nE         + da062321d79bf4362533e67903f5c324\n\n/tests/test_outputs.py:97: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_escalation_reason_recorded",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002218842040747404,
+                "start": 1787301692.2810261,
+                "stop": 1787301692.2851455,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_sn_incident_escalation_reason_recorded():\n>       assert \"litigation\" in str(_incident().get(\"u_escalation_reason\", \"\")).lower()\nE       AssertionError: assert 'litigation' in ''\nE        +  where '' = <built-in method lower of str object at 0xb3c3f0>()\nE        +    where <built-in method lower of str object at 0xb3c3f0> = ''.lower\nE        +      where '' = str('')\nE        +        where '' = <built-in method get of dict object at 0x756b7b93a680>('u_escalation_reason', '')\nE        +          where <built-in method get of dict object at 0x756b7b93a680> = {'active': 'false', 'assigned_to': 'b2c808596d0d2d5811e1a0ae09efb2f2', 'assignment_group': 'da062321d79bf4362533e67903f5c324', 'caller_id': '675ff1fab54c430598ba41261287d734', ...}.get\nE        +            where {'active': 'false', 'assigned_to': 'b2c808596d0d2d5811e1a0ae09efb2f2', 'assignment_group': 'da062321d79bf4362533e67903f5c324', 'caller_id': '675ff1fab54c430598ba41261287d734', ...} = _incident()\n\n/tests/test_outputs.py:100: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_put_on_hold",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002115970943123102,
+                "start": 1787301692.2852733,
+                "stop": 1787301692.289233,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_sn_incident_put_on_hold():\n>       assert str(_incident().get(\"state\")) == \"3\"\nE       AssertionError: assert '7' == '3'\nE         \nE         - 3\nE         + 7\n\n/tests/test_outputs.py:103: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_okta_status_remains_suspended",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0013862429186701775,
+                "start": 1787301692.2893598,
+                "stop": 1787301692.2927728,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_okta_status_remains_suspended():\n>       assert str(_okta_user().get(\"status\")) == \"SUSPENDED\"\nE       AssertionError: assert 'ACTIVE' == 'SUSPENDED'\nE         \nE         - SUSPENDED\nE         + ACTIVE\n\n/tests/test_outputs.py:106: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_okta_mfa_factors_preserved",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0013349121436476707,
+                "start": 1787301692.2929006,
+                "stop": 1787301692.2959404,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_okta_mfa_factors_preserved():\n>       assert \"sms\" in _okta_factor_types()\nE       AssertionError: assert 'sms' in []\nE        +  where [] = _okta_factor_types()\n\n/tests/test_outputs.py:109: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

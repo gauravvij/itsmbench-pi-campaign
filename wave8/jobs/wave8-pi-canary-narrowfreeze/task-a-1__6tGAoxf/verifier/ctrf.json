@@ -1,0 +1,200 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 20,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787078058.705382,
+            "stop": 1787078058.7768567
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_gw_account_suspended",
+                "status": "passed",
+                "duration": 0.017479893285781145,
+                "start": 1787078058.7267623,
+                "stop": 1787078058.7444415,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_credential_reset_forced",
+                "status": "passed",
+                "duration": 0.0015887953341007233,
+                "start": 1787078058.7446296,
+                "stop": 1787078058.7463353,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_moved_into_legal_hold_ou",
+                "status": "passed",
+                "duration": 0.0016151145100593567,
+                "start": 1787078058.7464814,
+                "stop": 1787078058.748204,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_zoom",
+                "status": "passed",
+                "duration": 0.0014451919123530388,
+                "start": 1787078058.7483282,
+                "stop": 1787078058.7498777,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_dropbox",
+                "status": "passed",
+                "duration": 0.0015669036656618118,
+                "start": 1787078058.7500024,
+                "stop": 1787078058.7516706,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_asana",
+                "status": "passed",
+                "duration": 0.0013937661424279213,
+                "start": 1787078058.7517943,
+                "stop": 1787078058.7532907,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_slack_connector",
+                "status": "passed",
+                "duration": 0.0015605725347995758,
+                "start": 1787078058.7534127,
+                "stop": 1787078058.7550724,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_calendly",
+                "status": "passed",
+                "duration": 0.0013753795064985752,
+                "start": 1787078058.7551894,
+                "stop": 1787078058.7566774,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_docusign",
+                "status": "passed",
+                "duration": 0.0013754391111433506,
+                "start": 1787078058.7567968,
+                "stop": 1787078058.7582731,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_grammarly",
+                "status": "passed",
+                "duration": 0.0015318319201469421,
+                "start": 1787078058.758387,
+                "stop": 1787078058.7600157,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_trello",
+                "status": "passed",
+                "duration": 0.0013383058831095695,
+                "start": 1787078058.7601302,
+                "stop": 1787078058.7615635,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_zapier",
+                "status": "passed",
+                "duration": 0.0015483652241528034,
+                "start": 1787078058.7617002,
+                "stop": 1787078058.7633476,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_loom",
+                "status": "passed",
+                "duration": 0.0013062884099781513,
+                "start": 1787078058.763466,
+                "stop": 1787078058.764885,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_notion",
+                "status": "passed",
+                "duration": 0.0014669541269540787,
+                "start": 1787078058.7649987,
+                "stop": 1787078058.7665627,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_slack_account_deactivated",
+                "status": "passed",
+                "duration": 0.0014505907893180847,
+                "start": 1787078058.7667012,
+                "stop": 1787078058.7682507,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_routed_to_legal_hold_group",
+                "status": "passed",
+                "duration": 0.00184615608304739,
+                "start": 1787078058.7683659,
+                "stop": 1787078058.7703106,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_escalation_reason_recorded",
+                "status": "passed",
+                "duration": 0.0016602217219769955,
+                "start": 1787078058.770431,
+                "stop": 1787078058.7721913,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_put_on_hold",
+                "status": "passed",
+                "duration": 0.0016051898710429668,
+                "start": 1787078058.77231,
+                "stop": 1787078058.7740111,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_okta_status_remains_suspended",
+                "status": "passed",
+                "duration": 0.0011686519719660282,
+                "start": 1787078058.7741268,
+                "stop": 1787078058.7753968,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_okta_mfa_factors_preserved",
+                "status": "passed",
+                "duration": 0.0011029145680367947,
+                "start": 1787078058.7755122,
+                "stop": 1787078058.7767272,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

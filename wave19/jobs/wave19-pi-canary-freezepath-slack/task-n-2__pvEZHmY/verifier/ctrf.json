@@ -1,0 +1,209 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 21,
+            "passed": 21,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787386626.1220324,
+            "stop": 1787386626.1874304
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_payments_sg_ingress_443_from_lb",
+                "status": "passed",
+                "duration": 0.016815968323498964,
+                "start": 1787386626.1444685,
+                "stop": 1787386626.161471,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_ingress_8081_from_lb",
+                "status": "passed",
+                "duration": 0.0011875713244080544,
+                "start": 1787386626.161654,
+                "stop": 1787386626.1629522,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_ingress_8404_from_lb",
+                "status": "passed",
+                "duration": 0.0010663410648703575,
+                "start": 1787386626.1630862,
+                "stop": 1787386626.1642497,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_nacl_edge_return_egress",
+                "status": "passed",
+                "duration": 0.0010246098972856998,
+                "start": 1787386626.1643753,
+                "stop": 1787386626.165494,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_backend_02_undrained",
+                "status": "passed",
+                "duration": 0.0011349818669259548,
+                "start": 1787386626.1656337,
+                "stop": 1787386626.166864,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_egress_internal_api",
+                "status": "passed",
+                "duration": 0.0010460838675498962,
+                "start": 1787386626.1669884,
+                "stop": 1787386626.168128,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_egress_db",
+                "status": "passed",
+                "duration": 0.0010033175349235535,
+                "start": 1787386626.1682477,
+                "stop": 1787386626.1693442,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_egress_cache",
+                "status": "passed",
+                "duration": 0.000993083231151104,
+                "start": 1787386626.169464,
+                "stop": 1787386626.1705651,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_route_to_shared_not_blackholed",
+                "status": "passed",
+                "duration": 0.0009381119161844254,
+                "start": 1787386626.170702,
+                "stop": 1787386626.1717343,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_nacl_dependency_return_ingress",
+                "status": "passed",
+                "duration": 0.0009473348036408424,
+                "start": 1787386626.1718512,
+                "stop": 1787386626.1728902,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_shared_nacl_allows_payments_inbound",
+                "status": "passed",
+                "duration": 0.0009600836783647537,
+                "start": 1787386626.1730092,
+                "stop": 1787386626.1740592,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_internal_api_sg_allows_payments",
+                "status": "passed",
+                "duration": 0.0009886249899864197,
+                "start": 1787386626.1741784,
+                "stop": 1787386626.1752596,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_db_sg_allows_payments",
+                "status": "passed",
+                "duration": 0.0010017147287726402,
+                "start": 1787386626.1753774,
+                "stop": 1787386626.176468,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_cache_sg_allows_payments",
+                "status": "passed",
+                "duration": 0.0009645107202231884,
+                "start": 1787386626.176605,
+                "stop": 1787386626.1776779,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_internal_api_dns_points_live",
+                "status": "passed",
+                "duration": 0.001096927560865879,
+                "start": 1787386626.1777954,
+                "stop": 1787386626.1789844,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_db_dns_points_live",
+                "status": "passed",
+                "duration": 0.0009199334308505058,
+                "start": 1787386626.179103,
+                "stop": 1787386626.1801145,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_cache_dns_points_live",
+                "status": "passed",
+                "duration": 0.0009303097613155842,
+                "start": 1787386626.1802292,
+                "stop": 1787386626.1812494,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_internal_api_02_undrained",
+                "status": "passed",
+                "duration": 0.001012451946735382,
+                "start": 1787386626.1813622,
+                "stop": 1787386626.182466,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_legacy_dns_record_cleaned",
+                "status": "passed",
+                "duration": 0.0009160987101495266,
+                "start": 1787386626.1826003,
+                "stop": 1787386626.1836085,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dead_backend_server_removed",
+                "status": "passed",
+                "duration": 0.0010203029960393906,
+                "start": 1787386626.1837282,
+                "stop": 1787386626.1848395,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_closed",
+                "status": "passed",
+                "duration": 0.0022674831561744213,
+                "start": 1787386626.18496,
+                "stop": 1787386626.1873136,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

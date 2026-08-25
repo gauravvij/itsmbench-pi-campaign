@@ -1,0 +1,462 @@
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1688 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1174 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1524 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2142 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1814 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1508 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [671 B]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.9 kB]
+Fetched 32.2 MB in 1s (21.9 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcurl4t64
+The following packages will be upgraded:
+  curl libcurl4t64
+2 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Need to get 569 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.12 [227 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.12 [343 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 569 kB in 0s (10.7 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6310 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Preparing to unpack .../libcurl4t64_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.12) ...
+Setting up curl (8.5.0-2ubuntu10.12) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.8) ...
+downloading uv 0.9.7 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 6 packages in 15ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 47 items
+
+../tests/test_outputs.py FFFFFFFFFFFFFFFFFFFFFFFFFF..................... [100%]
+
+=================================== FAILURES ===================================
+________________________ test_s2_file_restored_trend_h1 ________________________
+
+    def test_s2_file_restored_trend_h1():
+>       _s2_restored(MARCUS_FILES[0])
+
+/tests/test_outputs.py:240: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'VP-220 complaint trend analysis 2024-H1.xlsx'
+
+    def _s2_restored(fname):
+        drive_id, kids = sp_children("quality", "Quality Records", "Complaint Trends")
+        hits = [k for k in kids if k.get("name") == fname]
+>       assert len(hits) == 1, f"{fname} not (uniquely) back in Complaint Trends"
+E       AssertionError: VP-220 complaint trend analysis 2024-H1.xlsx not (uniquely) back in Complaint Trends
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+/tests/test_outputs.py:235: AssertionError
+________________________ test_s2_file_restored_trend_h2 ________________________
+
+    def test_s2_file_restored_trend_h2():
+>       _s2_restored(MARCUS_FILES[1])
+
+/tests/test_outputs.py:243: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'VP-220 complaint trend analysis 2024-H2.xlsx'
+
+    def _s2_restored(fname):
+        drive_id, kids = sp_children("quality", "Quality Records", "Complaint Trends")
+        hits = [k for k in kids if k.get("name") == fname]
+>       assert len(hits) == 1, f"{fname} not (uniquely) back in Complaint Trends"
+E       AssertionError: VP-220 complaint trend analysis 2024-H2.xlsx not (uniquely) back in Complaint Trends
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+/tests/test_outputs.py:235: AssertionError
+________________________ test_s2_file_restored_mdr_log _________________________
+
+    def test_s2_file_restored_mdr_log():
+>       _s2_restored(MARCUS_FILES[2])
+
+/tests/test_outputs.py:246: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'VP-220 MDR log 2024.xlsx'
+
+    def _s2_restored(fname):
+        drive_id, kids = sp_children("quality", "Quality Records", "Complaint Trends")
+        hits = [k for k in kids if k.get("name") == fname]
+>       assert len(hits) == 1, f"{fname} not (uniquely) back in Complaint Trends"
+E       AssertionError: VP-220 MDR log 2024.xlsx not (uniquely) back in Complaint Trends
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+/tests/test_outputs.py:235: AssertionError
+_________________________ test_s2_row_status_trend_h1 __________________________
+
+    def test_s2_row_status_trend_h1():
+>       assert str(_s2_fields(MARCUS_FILES[0]).get("Status", "")).lower() == "active"
+E       AssertionError: assert 'archived' == 'active'
+E         
+E         - active
+E         + archived
+
+/tests/test_outputs.py:252: AssertionError
+_________________________ test_s2_row_status_trend_h2 __________________________
+
+    def test_s2_row_status_trend_h2():
+>       assert str(_s2_fields(MARCUS_FILES[1]).get("Status", "")).lower() == "active"
+E       AssertionError: assert 'archived' == 'active'
+E         
+E         - active
+E         + archived
+
+/tests/test_outputs.py:255: AssertionError
+__________________________ test_s2_row_status_mdr_log __________________________
+
+    def test_s2_row_status_mdr_log():
+>       assert str(_s2_fields(MARCUS_FILES[2]).get("Status", "")).lower() == "active"
+E       AssertionError: assert 'archived' == 'active'
+E         
+E         - active
+E         + archived
+
+/tests/test_outputs.py:258: AssertionError
+__________________________ test_s2_row_label_trend_h1 __________________________
+
+    def test_s2_row_label_trend_h1():
+>       assert str(_s2_fields(MARCUS_FILES[0]).get("RetentionLabel", "")).lower() == "vp220-qms"
+E       AssertionError: assert '' == 'vp220-qms'
+E         
+E         - vp220-qms
+
+/tests/test_outputs.py:261: AssertionError
+__________________________ test_s2_row_label_trend_h2 __________________________
+
+    def test_s2_row_label_trend_h2():
+>       assert str(_s2_fields(MARCUS_FILES[1]).get("RetentionLabel", "")).lower() == "vp220-qms"
+E       AssertionError: assert '' == 'vp220-qms'
+E         
+E         - vp220-qms
+
+/tests/test_outputs.py:264: AssertionError
+__________________________ test_s2_row_label_mdr_log ___________________________
+
+    def test_s2_row_label_mdr_log():
+>       assert str(_s2_fields(MARCUS_FILES[2]).get("RetentionLabel", "")).lower() == "vp220-qms"
+E       AssertionError: assert '' == 'vp220-qms'
+E         
+E         - vp220-qms
+
+/tests/test_outputs.py:267: AssertionError
+_________________________ test_s2_row_docpath_trend_h1 _________________________
+
+    def test_s2_row_docpath_trend_h1():
+>       _s2_docpath(MARCUS_FILES[0])
+
+/tests/test_outputs.py:275: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'VP-220 complaint trend analysis 2024-H1.xlsx'
+
+    def _s2_docpath(fname):
+        dp = norm_path(_s2_fields(fname).get("DocPath"))
+>       assert dp.endswith(f"complaint trends/{fname.lower()}"), f"DocPath wrong: {dp}"
+E       AssertionError: DocPath wrong: quality records/archive/vp-220 complaint trend analysis 2024-h1.xlsx
+E       assert False
+E        +  where False = <built-in method endswith of str object at 0x7942376e32f0>('complaint trends/vp-220 complaint trend analysis 2024-h1.xlsx')
+E        +    where <built-in method endswith of str object at 0x7942376e32f0> = 'quality records/archive/vp-220 complaint trend analysis 2024-h1.xlsx'.endswith
+
+/tests/test_outputs.py:271: AssertionError
+_________________________ test_s2_row_docpath_trend_h2 _________________________
+
+    def test_s2_row_docpath_trend_h2():
+>       _s2_docpath(MARCUS_FILES[1])
+
+/tests/test_outputs.py:278: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'VP-220 complaint trend analysis 2024-H2.xlsx'
+
+    def _s2_docpath(fname):
+        dp = norm_path(_s2_fields(fname).get("DocPath"))
+>       assert dp.endswith(f"complaint trends/{fname.lower()}"), f"DocPath wrong: {dp}"
+E       AssertionError: DocPath wrong: quality records/archive/vp-220 complaint trend analysis 2024-h2.xlsx
+E       assert False
+E        +  where False = <built-in method endswith of str object at 0x7942376e37c0>('complaint trends/vp-220 complaint trend analysis 2024-h2.xlsx')
+E        +    where <built-in method endswith of str object at 0x7942376e37c0> = 'quality records/archive/vp-220 complaint trend analysis 2024-h2.xlsx'.endswith
+
+/tests/test_outputs.py:271: AssertionError
+_________________________ test_s2_row_docpath_mdr_log __________________________
+
+    def test_s2_row_docpath_mdr_log():
+>       _s2_docpath(MARCUS_FILES[2])
+
+/tests/test_outputs.py:281: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'VP-220 MDR log 2024.xlsx'
+
+    def _s2_docpath(fname):
+        dp = norm_path(_s2_fields(fname).get("DocPath"))
+>       assert dp.endswith(f"complaint trends/{fname.lower()}"), f"DocPath wrong: {dp}"
+E       AssertionError: DocPath wrong: quality records/archive/vp-220 mdr log 2024.xlsx
+E       assert False
+E        +  where False = <built-in method endswith of str object at 0x7942376ce490>('complaint trends/vp-220 mdr log 2024.xlsx')
+E        +    where <built-in method endswith of str object at 0x7942376ce490> = 'quality records/archive/vp-220 mdr log 2024.xlsx'.endswith
+
+/tests/test_outputs.py:271: AssertionError
+____________________ test_s2_qa_archive_exact_remaining_set ____________________
+
+    def test_s2_qa_archive_exact_remaining_set():
+        _, kids = sp_children("quality", "Quality Records", "Archive")
+>       assert {k.get("name") for k in kids} == QA_ARCHIVE_EXPECTED
+E       AssertionError: assert {'Legacy supp...24.docx', ...} == {'Legacy supp...ds 2024.xlsx'}
+E         
+E         Extra items in the left set:
+E         'VP-220 MDR log 2024.xlsx'
+E         'VP-220 complaint trend analysis 2024-H2.xlsx'
+E         'VP-220 complaint trend analysis 2024-H1.xlsx'
+E         Use -v to get more diff
+
+/tests/test_outputs.py:285: AssertionError
+______________________ test_s3_marcus_folder_back_at_root ______________________
+
+    def test_s3_marcus_folder_back_at_root():
+        hits = od_by_name("marcus.chen", "VP220-complaint-raw")
+        assert len(hits) == 1
+>       assert od_eff_parent(hits[0]) == od_root_id("marcus.chen"), "folder still displaced"
+E       AssertionError: folder still displaced
+E       assert 'odi-a87fd77227' == 'odi-426df18e58'
+E         
+E         - odi-426df18e58
+E         + odi-a87fd77227
+
+/tests/test_outputs.py:290: AssertionError
+______________________ test_s3_litsupport_share_restored _______________________
+
+    def test_s3_litsupport_share_restored():
+        d = od_drive("marcus.chen")
+        hits = od_by_name("marcus.chen", "VP220-complaint-raw")
+        assert len(hits) == 1
+>       assert any(grants_litsupport(p) for p in perms_of(d["id"], hits[0]["id"])), \
+            "no litsupport read grant on the evidence folder"
+E       AssertionError: no litsupport read grant on the evidence folder
+E       assert False
+E        +  where False = any(<generator object test_s3_litsupport_share_restored.<locals>.<genexpr> at 0x794237894860>)
+
+/tests/test_outputs.py:296: AssertionError
+_______________________ test_s4_fluidics_page_reparented _______________________
+
+    def test_s4_fluidics_page_reparented():
+        reg = page_by_title(FMEA_REGISTER)
+>       assert str(page_by_title(PRIYA_PAGES[0]).get("parentId")) == str(reg["id"])
+E       AssertionError: assert 'cp-324' == 'cp-353'
+E         
+E         - cp-353
+E         + cp-324
+
+/tests/test_outputs.py:301: AssertionError
+______________________ test_s4_occlusion_page_reparented _______________________
+
+    def test_s4_occlusion_page_reparented():
+        reg = page_by_title(FMEA_REGISTER)
+>       assert str(page_by_title(PRIYA_PAGES[1]).get("parentId")) == str(reg["id"])
+E       AssertionError: assert 'cp-324' == 'cp-353'
+E         
+E         - cp-353
+E         + cp-324
+
+/tests/test_outputs.py:305: AssertionError
+___________________ test_s4_conf_archive_children_exact_set ____________________
+
+    def test_s4_conf_archive_children_exact_set():
+        arch = page_by_title("Archive")
+        kids = {p["title"] for p in eng_pages() if str(p.get("parentId")) == str(arch["id"])}
+>       assert kids == CONF_ARCHIVE_EXPECTED
+E       AssertionError: assert {'Cleanroom g...ventory', ...} == {'Cleanroom g... sunset plan'}
+E         
+E         Extra items in the left set:
+E         'FMEA — VP-220 Fluidics Module'
+E         'FMEA — VP-220 Occlusion Sensor'
+E         Use -v to get more diff
+
+/tests/test_outputs.py:310: AssertionError
+_______________________ test_s5_vp220_channel_unarchived _______________________
+
+    def test_s5_vp220_channel_unarchived():
+>       assert channel("vp220-eng").get("is_archived") is False
+E       AssertionError: assert True is False
+E        +  where True = <built-in method get of dict object at 0x7942378f32c0>('is_archived')
+E        +    where <built-in method get of dict object at 0x7942378f32c0> = {'created': 1704704400, 'creator': 'U975F5358', 'id': 'C4AB1C971', 'is_archived': True, ...}.get
+E        +      where {'created': 1704704400, 'creator': 'U975F5358', 'id': 'C4AB1C971', 'is_archived': True, ...} = channel('vp220-eng')
+
+/tests/test_outputs.py:313: AssertionError
+__________________________ test_s6_row_status_fatigue __________________________
+
+    def test_s6_row_status_fatigue():
+>       assert str((dhf_row(TOM_FILES[0]).get("fields") or {}).get("Status", "")).lower() == "active"
+E       AssertionError: assert 'archived' == 'active'
+E         
+E         - active
+E         + archived
+
+/tests/test_outputs.py:316: AssertionError
+_________________________ test_s6_row_status_occlusion _________________________
+
+    def test_s6_row_status_occlusion():
+>       assert str((dhf_row(TOM_FILES[1]).get("fields") or {}).get("Status", "")).lower() == "active"
+E       AssertionError: assert 'archived' == 'active'
+E         
+E         - active
+E         + archived
+
+/tests/test_outputs.py:319: AssertionError
+__________________________ test_s6_row_label_fatigue ___________________________
+
+    def test_s6_row_label_fatigue():
+>       assert str((dhf_row(TOM_FILES[0]).get("fields") or {}).get("RetentionLabel", "")).lower() == "vp220-dhf"
+E       AssertionError: assert '' == 'vp220-dhf'
+E         
+E         - vp220-dhf
+
+/tests/test_outputs.py:322: AssertionError
+_________________________ test_s6_row_label_occlusion __________________________
+
+    def test_s6_row_label_occlusion():
+>       assert str((dhf_row(TOM_FILES[1]).get("fields") or {}).get("RetentionLabel", "")).lower() == "vp220-dhf"
+E       AssertionError: assert '' == 'vp220-dhf'
+E         
+E         - vp220-dhf
+
+/tests/test_outputs.py:325: AssertionError
+_________________________ test_s6_row_docpath_fatigue __________________________
+
+    def test_s6_row_docpath_fatigue():
+>       _s6_docpath(TOM_FILES[0])
+
+/tests/test_outputs.py:333: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'VP-220 bench fatigue test raw 2024-08.csv'
+
+    def _s6_docpath(fname):
+        dp = norm_path((dhf_row(fname).get("fields") or {}).get("DocPath"))
+>       assert dp.endswith(f"bench tests/{fname.lower()}"), f"DocPath wrong: {dp}"
+E       AssertionError: DocPath wrong: vp-220 dhf/archive/vp-220 bench fatigue test raw 2024-08.csv
+E       assert False
+E        +  where False = <built-in method endswith of str object at 0x7942376bee20>('bench tests/vp-220 bench fatigue test raw 2024-08.csv')
+E        +    where <built-in method endswith of str object at 0x7942376bee20> = 'vp-220 dhf/archive/vp-220 bench fatigue test raw 2024-08.csv'.endswith
+
+/tests/test_outputs.py:329: AssertionError
+________________________ test_s6_row_docpath_occlusion _________________________
+
+    def test_s6_row_docpath_occlusion():
+>       _s6_docpath(TOM_FILES[1])
+
+/tests/test_outputs.py:336: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fname = 'VP-220 occlusion test raw 2024-09.csv'
+
+    def _s6_docpath(fname):
+        dp = norm_path((dhf_row(fname).get("fields") or {}).get("DocPath"))
+>       assert dp.endswith(f"bench tests/{fname.lower()}"), f"DocPath wrong: {dp}"
+E       AssertionError: DocPath wrong: vp-220 dhf/archive/vp-220 occlusion test raw 2024-09.csv
+E       assert False
+E        +  where False = <built-in method endswith of str object at 0x7942376bef00>('bench tests/vp-220 occlusion test raw 2024-09.csv')
+E        +    where <built-in method endswith of str object at 0x7942376bef00> = 'vp-220 dhf/archive/vp-220 occlusion test raw 2024-09.csv'.endswith
+
+/tests/test_outputs.py:329: AssertionError
+______________________ test_s7_priya_folder_back_at_root _______________________
+
+    def test_s7_priya_folder_back_at_root():
+        hits = od_by_name("priya.raman", "VP220-fw-traces")
+        assert len(hits) == 1
+>       assert od_eff_parent(hits[0]) == od_root_id("priya.raman"), "folder still displaced"
+E       AssertionError: folder still displaced
+E       assert 'odi-e3eaa70ba7' == 'odi-31279f1afc'
+E         
+E         - odi-31279f1afc
+E         + odi-e3eaa70ba7
+
+/tests/test_outputs.py:341: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_s8_trigger_ticket_closed
+PASSED ../tests/test_outputs.py::test_g_dana_report_name_kept
+PASSED ../tests/test_outputs.py::test_g_dana_report_stays_in_submission_folder
+PASSED ../tests/test_outputs.py::test_g_dana_report_content_untouched
+PASSED ../tests/test_outputs.py::test_g_elena_files_untouched
+PASSED ../tests/test_outputs.py::test_g_elena_rows_untouched
+PASSED ../tests/test_outputs.py::test_g_elena_folder_and_share_untouched
+PASSED ../tests/test_outputs.py::test_g_vp180_file_stays_archived
+PASSED ../tests/test_outputs.py::test_g_vp180_row_stays_archived
+PASSED ../tests/test_outputs.py::test_g_tom_files_never_moved
+PASSED ../tests/test_outputs.py::test_g_eng_archive_exact_set
+PASSED ../tests/test_outputs.py::test_g_thermal_summary_left_where_owner_put_it
+PASSED ../tests/test_outputs.py::test_g_jordan_archive_untouched
+PASSED ../tests/test_outputs.py::test_g_sam_archive_untouched
+PASSED ../tests/test_outputs.py::test_g_jordan_share_not_regranted
+PASSED ../tests/test_outputs.py::test_g_fmea_sibling_pages_unmoved
+PASSED ../tests/test_outputs.py::test_g_other_archived_channels_stay_archived
+PASSED ../tests/test_outputs.py::test_g_all_custodian_holds_still_applied
+PASSED ../tests/test_outputs.py::test_g_case_still_active
+PASSED ../tests/test_outputs.py::test_g_retention_label_definitions_untouched
+PASSED ../tests/test_outputs.py::test_g_register_row_counts_unchanged
+FAILED ../tests/test_outputs.py::test_s2_file_restored_trend_h1 - AssertionEr...
+FAILED ../tests/test_outputs.py::test_s2_file_restored_trend_h2 - AssertionEr...
+FAILED ../tests/test_outputs.py::test_s2_file_restored_mdr_log - AssertionErr...
+FAILED ../tests/test_outputs.py::test_s2_row_status_trend_h1 - AssertionError...
+FAILED ../tests/test_outputs.py::test_s2_row_status_trend_h2 - AssertionError...
+FAILED ../tests/test_outputs.py::test_s2_row_status_mdr_log - AssertionError:...
+FAILED ../tests/test_outputs.py::test_s2_row_label_trend_h1 - AssertionError:...
+FAILED ../tests/test_outputs.py::test_s2_row_label_trend_h2 - AssertionError:...
+FAILED ../tests/test_outputs.py::test_s2_row_label_mdr_log - AssertionError: ...
+FAILED ../tests/test_outputs.py::test_s2_row_docpath_trend_h1 - AssertionErro...
+FAILED ../tests/test_outputs.py::test_s2_row_docpath_trend_h2 - AssertionErro...
+FAILED ../tests/test_outputs.py::test_s2_row_docpath_mdr_log - AssertionError...
+FAILED ../tests/test_outputs.py::test_s2_qa_archive_exact_remaining_set - Ass...
+FAILED ../tests/test_outputs.py::test_s3_marcus_folder_back_at_root - Asserti...
+FAILED ../tests/test_outputs.py::test_s3_litsupport_share_restored - Assertio...
+FAILED ../tests/test_outputs.py::test_s4_fluidics_page_reparented - Assertion...
+FAILED ../tests/test_outputs.py::test_s4_occlusion_page_reparented - Assertio...
+FAILED ../tests/test_outputs.py::test_s4_conf_archive_children_exact_set - As...
+FAILED ../tests/test_outputs.py::test_s5_vp220_channel_unarchived - Assertion...
+FAILED ../tests/test_outputs.py::test_s6_row_status_fatigue - AssertionError:...
+FAILED ../tests/test_outputs.py::test_s6_row_status_occlusion - AssertionErro...
+FAILED ../tests/test_outputs.py::test_s6_row_label_fatigue - AssertionError: ...
+FAILED ../tests/test_outputs.py::test_s6_row_label_occlusion - AssertionError...
+FAILED ../tests/test_outputs.py::test_s6_row_docpath_fatigue - AssertionError...
+FAILED ../tests/test_outputs.py::test_s6_row_docpath_occlusion - AssertionErr...
+FAILED ../tests/test_outputs.py::test_s7_priya_folder_back_at_root - Assertio...
+======================== 26 failed, 21 passed in 0.38s =========================

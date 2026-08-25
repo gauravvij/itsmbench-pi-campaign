@@ -1,0 +1,203 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 19,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787229045.1996417,
+            "stop": 1787229045.294326
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_crowdstrike_containment_lifted",
+                "status": "passed",
+                "duration": 0.017543571069836617,
+                "start": 1787229045.2257433,
+                "stop": 1787229045.2435176,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_malware_hash_blocked",
+                "status": "passed",
+                "duration": 0.0014485381543636322,
+                "start": 1787229045.2437534,
+                "stop": 1787229045.24532,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_closed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001525623258203268,
+                "start": 1787229045.2454515,
+                "stop": 1787229045.2617142,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_crowdstrike_detection_closed():\n>       assert str(cs_malware_alert().get(\"status\", \"\")).lower() == \"closed\"\nE       AssertionError: assert 'new' == 'closed'\nE         \nE         - closed\nE         + new\n\n/tests/test_outputs.py:103: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_assigned_to_responder",
+                "status": "passed",
+                "duration": 0.0014578597620129585,
+                "start": 1787229045.2618604,
+                "stop": 1787229045.2634268,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_defender_scan_ran",
+                "status": "passed",
+                "duration": 0.0016047386452555656,
+                "start": 1787229045.2635596,
+                "stop": 1787229045.2652702,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_resynced",
+                "status": "passed",
+                "duration": 0.001219488214701414,
+                "start": 1787229045.2653937,
+                "stop": 1787229045.2667294,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_last_sync_advanced",
+                "status": "passed",
+                "duration": 0.001143935602158308,
+                "start": 1787229045.2668533,
+                "stop": 1787229045.268098,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_reclassified_security",
+                "status": "passed",
+                "duration": 0.0020175096578896046,
+                "start": 1787229045.268217,
+                "stop": 1787229045.270335,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_state_closed",
+                "status": "passed",
+                "duration": 0.0020038499496877193,
+                "start": 1787229045.2704532,
+                "stop": 1787229045.2725723,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_inactive",
+                "status": "passed",
+                "duration": 0.0019613574258983135,
+                "start": 1787229045.2727094,
+                "stop": 1787229045.27477,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_code_permanent",
+                "status": "passed",
+                "duration": 0.0018014898523688316,
+                "start": 1787229045.2748897,
+                "stop": 1787229045.2767913,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_notes_name_malware",
+                "status": "passed",
+                "duration": 0.0018011797219514847,
+                "start": 1787229045.2769096,
+                "stop": 1787229045.2788088,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_malware",
+                "status": "passed",
+                "duration": 0.001963809598237276,
+                "start": 1787229045.2789266,
+                "stop": 1787229045.280991,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_exact_hash",
+                "status": "passed",
+                "duration": 0.0019343560561537743,
+                "start": 1787229045.2811098,
+                "stop": 1787229045.2831454,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_product_area_endpoint_security",
+                "status": "passed",
+                "duration": 0.0017732195556163788,
+                "start": 1787229045.2832625,
+                "stop": 1787229045.2851367,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_short_description_names_malware",
+                "status": "passed",
+                "duration": 0.0017545404843986034,
+                "start": 1787229045.285258,
+                "stop": 1787229045.2871106,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_asset_audited",
+                "status": "passed",
+                "duration": 0.002668083645403385,
+                "start": 1787229045.2872286,
+                "stop": 1787229045.2900074,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_not_wiped_or_retired",
+                "status": "passed",
+                "duration": 0.0012112660333514214,
+                "start": 1787229045.2901435,
+                "stop": 1787229045.291464,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_still_compliant",
+                "status": "passed",
+                "duration": 0.0012111440300941467,
+                "start": 1787229045.2916038,
+                "stop": 1787229045.2929206,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_malware_ioc_escalated_in_place",
+                "status": "passed",
+                "duration": 0.0010498161427676678,
+                "start": 1787229045.293043,
+                "stop": 1787229045.29419,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

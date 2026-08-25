@@ -1,0 +1,123 @@
+{
+    "id": "6ca99289-405f-4197-b242-76ad72234fc0",
+    "task_name": "abhishek203/task-a-2",
+    "trial_name": "task-a-2__YhayP92",
+    "trial_uri": "file:///home/azureuser/agent_evals/wave9/jobs/wave9-pi-canary-endpointrca/task-a-2__YhayP92",
+    "task_id": {
+        "path": "tasks/task-a-2"
+    },
+    "source": "tasks",
+    "task_checksum": "802c7374ab4bec0f4da92286292abc71485a2b66e88c33b8ac4ee89bb7f5ec5a",
+    "config": {
+        "task": {
+            "path": "tasks/task-a-2",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "task-a-2__YhayP92",
+        "trials_dir": "/home/azureuser/agent_evals/wave9/jobs/wave9-pi-canary-endpointrca",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "pi",
+            "import_path": null,
+            "model_name": "openai/gpt-5.6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "thinking": "high"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "/home/azureuser/agent_evals/wave9/pi-agent-home",
+                    "target": "/root/.pi/agent"
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "443781fe-2529-44b1-aec5-f6a5b340a28b",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "pi",
+        "version": "0.84.2",
+        "model_info": {
+            "name": "gpt-5.6-sol",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 869417,
+        "n_cache_tokens": 869321,
+        "n_output_tokens": 7528,
+        "cost_usd": 0.9798179999999999,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-18T19:53:26.744861Z",
+    "finished_at": "2026-08-18T19:57:05.522758Z",
+    "environment_setup": {
+        "started_at": "2026-08-18T19:53:26.805566Z",
+        "finished_at": "2026-08-18T19:53:28.449651Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-18T19:53:28.449675Z",
+        "finished_at": "2026-08-18T19:53:49.281339Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-18T19:53:49.281449Z",
+        "finished_at": "2026-08-18T19:56:37.321673Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-18T19:56:37.636124Z",
+        "finished_at": "2026-08-18T19:56:42.662207Z"
+    },
+    "step_results": null
+}

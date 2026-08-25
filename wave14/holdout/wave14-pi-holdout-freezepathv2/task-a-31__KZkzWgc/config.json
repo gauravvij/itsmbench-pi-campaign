@@ -1,0 +1,27 @@
+{
+    "task": {
+        "path": "tasks/task-a-31",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-31__KZkzWgc",
+    "trials_dir": "/home/azureuser/agent_evals/wave14/holdout/wave14-pi-holdout-freezepathv2",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/deepseek/deepseek-v4-flash-0731",
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave14/holdout/skill-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "c88a3440-04d3-4fa0-8842-51ea4f19bb37"
+}

@@ -1,0 +1,260 @@
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1688 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1524 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1174 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1814 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1508 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2142 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [671 B]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.9 kB]
+Fetched 32.2 MB in 2s (14.6 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcurl4t64
+The following packages will be upgraded:
+  curl libcurl4t64
+2 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Need to get 569 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.12 [227 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.12 [343 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 569 kB in 0s (1698 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6310 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Preparing to unpack .../libcurl4t64_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.12) ...
+Setting up curl (8.5.0-2ubuntu10.12) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.8) ...
+downloading uv 0.9.7 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 6 packages in 15ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 20 items
+
+../tests/test_outputs.py FFFFFFFFFFFFFFFFFFF.                            [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_gw_account_suspended ___________________________
+
+    def test_gw_account_suspended():
+>       assert _gw_user().get("suspended") is True
+E       AssertionError: assert False is True
+E        +  where False = <built-in method get of dict object at 0x7c23dcbb8e40>('suspended')
+E        +    where <built-in method get of dict object at 0x7c23dcbb8e40> = {'agreedToTerms': True, 'aliases': [], 'archived': False, 'changePasswordAtNextLogin': False, ...}.get
+E        +      where {'agreedToTerms': True, 'aliases': [], 'archived': False, 'changePasswordAtNextLogin': False, ...} = _gw_user()
+
+/tests/test_outputs.py:52: AssertionError
+_______________________ test_gw_credential_reset_forced ________________________
+
+    def test_gw_credential_reset_forced():
+>       assert _gw_user().get("changePasswordAtNextLogin") is True
+E       AssertionError: assert False is True
+E        +  where False = <built-in method get of dict object at 0x7c23dcbb9400>('changePasswordAtNextLogin')
+E        +    where <built-in method get of dict object at 0x7c23dcbb9400> = {'agreedToTerms': True, 'aliases': [], 'archived': False, 'changePasswordAtNextLogin': False, ...}.get
+E        +      where {'agreedToTerms': True, 'aliases': [], 'archived': False, 'changePasswordAtNextLogin': False, ...} = _gw_user()
+
+/tests/test_outputs.py:55: AssertionError
+_______________________ test_gw_moved_into_legal_hold_ou _______________________
+
+    def test_gw_moved_into_legal_hold_ou():
+>       assert _gw_user().get("orgUnitPath") == HOLD_OU_PATH
+E       AssertionError: assert '/Finance' == '/Legal Hold'
+E         
+E         - /Legal Hold
+E         + /Finance
+
+/tests/test_outputs.py:58: AssertionError
+__________________________ test_gw_token_revoked_zoom __________________________
+
+    def test_gw_token_revoked_zoom():
+>       assert "zoom.us" not in _gw_token_client_ids()
+E       AssertionError: assert 'zoom.us' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:61: AssertionError
+________________________ test_gw_token_revoked_dropbox _________________________
+
+    def test_gw_token_revoked_dropbox():
+>       assert "dropbox.com" not in _gw_token_client_ids()
+E       AssertionError: assert 'dropbox.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:64: AssertionError
+_________________________ test_gw_token_revoked_asana __________________________
+
+    def test_gw_token_revoked_asana():
+>       assert "asana.com" not in _gw_token_client_ids()
+E       AssertionError: assert 'asana.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:67: AssertionError
+____________________ test_gw_token_revoked_slack_connector _____________________
+
+    def test_gw_token_revoked_slack_connector():
+>       assert "slack.com" not in _gw_token_client_ids()
+E       AssertionError: assert 'slack.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:70: AssertionError
+________________________ test_gw_token_revoked_calendly ________________________
+
+    def test_gw_token_revoked_calendly():
+>       assert "calendly.com" not in _gw_token_client_ids()
+E       AssertionError: assert 'calendly.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:73: AssertionError
+________________________ test_gw_token_revoked_docusign ________________________
+
+    def test_gw_token_revoked_docusign():
+>       assert "docusign.net" not in _gw_token_client_ids()
+E       AssertionError: assert 'docusign.net' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:76: AssertionError
+_______________________ test_gw_token_revoked_grammarly ________________________
+
+    def test_gw_token_revoked_grammarly():
+>       assert "grammarly.com" not in _gw_token_client_ids()
+E       AssertionError: assert 'grammarly.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:79: AssertionError
+_________________________ test_gw_token_revoked_trello _________________________
+
+    def test_gw_token_revoked_trello():
+>       assert "trello.com" not in _gw_token_client_ids()
+E       AssertionError: assert 'trello.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:82: AssertionError
+_________________________ test_gw_token_revoked_zapier _________________________
+
+    def test_gw_token_revoked_zapier():
+>       assert "zapier.com" not in _gw_token_client_ids()
+E       AssertionError: assert 'zapier.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:85: AssertionError
+__________________________ test_gw_token_revoked_loom __________________________
+
+    def test_gw_token_revoked_loom():
+>       assert "loom.com" not in _gw_token_client_ids()
+E       AssertionError: assert 'loom.com' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:88: AssertionError
+_________________________ test_gw_token_revoked_notion _________________________
+
+    def test_gw_token_revoked_notion():
+>       assert "notion.so" not in _gw_token_client_ids()
+E       AssertionError: assert 'notion.so' not in {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...}
+E        +  where {'asana.com', 'calendly.com', 'docusign.net', 'dropbox.com', 'expensify.com', 'grammarly.com', ...} = _gw_token_client_ids()
+
+/tests/test_outputs.py:91: AssertionError
+________________________ test_slack_account_deactivated ________________________
+
+    def test_slack_account_deactivated():
+>       assert _slack_user().get("deleted") is True
+E       AssertionError: assert False is True
+E        +  where False = <built-in method get of dict object at 0x7c23dca42d00>('deleted')
+E        +    where <built-in method get of dict object at 0x7c23dca42d00> = {'channel_ids': [], 'deleted': False, 'id': 'U42543D3ED', 'is_admin': False, ...}.get
+E        +      where {'channel_ids': [], 'deleted': False, 'id': 'U42543D3ED', 'is_admin': False, ...} = _slack_user()
+
+/tests/test_outputs.py:94: AssertionError
+_________________ test_sn_incident_routed_to_legal_hold_group __________________
+
+    def test_sn_incident_routed_to_legal_hold_group():
+>       assert _ref(_incident().get("assignment_group")) == LEGAL_GROUP_SYS_ID
+E       AssertionError: assert 'da062321d79b...3e67903f5c324' == 'e6d6a3f8315b...d2b370e90a07a'
+E         
+E         - e6d6a3f8315bbe2b82ad2b370e90a07a
+E         + da062321d79bf4362533e67903f5c324
+
+/tests/test_outputs.py:97: AssertionError
+_________________ test_sn_incident_escalation_reason_recorded __________________
+
+    def test_sn_incident_escalation_reason_recorded():
+>       assert "litigation" in str(_incident().get("u_escalation_reason", "")).lower()
+E       AssertionError: assert 'litigation' in ''
+E        +  where '' = <built-in method lower of str object at 0xb3c3f0>()
+E        +    where <built-in method lower of str object at 0xb3c3f0> = ''.lower
+E        +      where '' = str('')
+E        +        where '' = <built-in method get of dict object at 0x7c23dca46380>('u_escalation_reason', '')
+E        +          where <built-in method get of dict object at 0x7c23dca46380> = {'active': 'false', 'assigned_to': 'b2c808596d0d2d5811e1a0ae09efb2f2', 'assignment_group': 'da062321d79bf4362533e67903f5c324', 'caller_id': '675ff1fab54c430598ba41261287d734', ...}.get
+E        +            where {'active': 'false', 'assigned_to': 'b2c808596d0d2d5811e1a0ae09efb2f2', 'assignment_group': 'da062321d79bf4362533e67903f5c324', 'caller_id': '675ff1fab54c430598ba41261287d734', ...} = _incident()
+
+/tests/test_outputs.py:100: AssertionError
+_________________________ test_sn_incident_put_on_hold _________________________
+
+    def test_sn_incident_put_on_hold():
+>       assert str(_incident().get("state")) == "3"
+E       AssertionError: assert '6' == '3'
+E         
+E         - 3
+E         + 6
+
+/tests/test_outputs.py:103: AssertionError
+______________________ test_okta_status_remains_suspended ______________________
+
+    def test_okta_status_remains_suspended():
+>       assert str(_okta_user().get("status")) == "SUSPENDED"
+E       AssertionError: assert 'ACTIVE' == 'SUSPENDED'
+E         
+E         - SUSPENDED
+E         + ACTIVE
+
+/tests/test_outputs.py:106: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_okta_mfa_factors_preserved
+FAILED ../tests/test_outputs.py::test_gw_account_suspended - AssertionError: ...
+FAILED ../tests/test_outputs.py::test_gw_credential_reset_forced - AssertionE...
+FAILED ../tests/test_outputs.py::test_gw_moved_into_legal_hold_ou - Assertion...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_zoom - AssertionError:...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_dropbox - AssertionErr...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_asana - AssertionError...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_slack_connector - Asse...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_calendly - AssertionEr...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_docusign - AssertionEr...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_grammarly - AssertionE...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_trello - AssertionErro...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_zapier - AssertionErro...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_loom - AssertionError:...
+FAILED ../tests/test_outputs.py::test_gw_token_revoked_notion - AssertionErro...
+FAILED ../tests/test_outputs.py::test_slack_account_deactivated - AssertionEr...
+FAILED ../tests/test_outputs.py::test_sn_incident_routed_to_legal_hold_group
+FAILED ../tests/test_outputs.py::test_sn_incident_escalation_reason_recorded
+FAILED ../tests/test_outputs.py::test_sn_incident_put_on_hold - AssertionErro...
+FAILED ../tests/test_outputs.py::test_okta_status_remains_suspended - Asserti...
+========================= 19 failed, 1 passed in 0.12s =========================

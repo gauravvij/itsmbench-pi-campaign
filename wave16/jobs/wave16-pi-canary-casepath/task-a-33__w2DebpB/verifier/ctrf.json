@@ -1,0 +1,341 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 34,
+            "passed": 29,
+            "failed": 5,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787236818.344836,
+            "stop": 1787236818.485654
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_priya_member_disabled",
+                "status": "passed",
+                "duration": 0.016990769188851118,
+                "start": 1787236818.3712566,
+                "stop": 1787236818.3884373,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_removed_from_helios_group",
+                "status": "passed",
+                "duration": 0.001325444784015417,
+                "start": 1787236818.3886213,
+                "stop": 1787236818.3900669,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_removed_from_records_group",
+                "status": "passed",
+                "duration": 0.001180980820208788,
+                "start": 1787236818.390196,
+                "stop": 1787236818.3914845,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_sharepoint_finance_removed",
+                "status": "passed",
+                "duration": 0.0013583246618509293,
+                "start": 1787236818.391625,
+                "stop": 1787236818.3930893,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_sharepoint_exec_removed",
+                "status": "passed",
+                "duration": 0.0012919707223773003,
+                "start": 1787236818.3932168,
+                "stop": 1787236818.3946183,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_sharepoint_portfolio_removed",
+                "status": "passed",
+                "duration": 0.0013086399994790554,
+                "start": 1787236818.394758,
+                "stop": 1787236818.396177,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_onedrive_departed_share_grants_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.008860303554683924,
+                "start": 1787236818.3963056,
+                "stop": 1787236818.4201872,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_onedrive_departed_share_grants_removed():\n        priya_gone = not any(_grant_targets_user(p, PRIYA) for p in _item_perms(\"drive-dana\", \"item-budget\"))\n        theo_gone = not any(_grant_targets_user(p, THEO) for p in _item_perms(\"drive-dana\", \"item-forecast\"))\n>       assert priya_gone and theo_gone\nE       assert (False)\n\n/tests/test_outputs.py:112: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_priya_guest_disabled",
+                "status": "passed",
+                "duration": 0.001290028914809227,
+                "start": 1787236818.4203284,
+                "stop": 1787236818.4217453,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_guest_removed_from_external_group",
+                "status": "passed",
+                "duration": 0.0010065124370157719,
+                "start": 1787236818.4218786,
+                "stop": 1787236818.422992,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_guest_sharepoint_comms_removed",
+                "status": "passed",
+                "duration": 0.0011773365549743176,
+                "start": 1787236818.4231172,
+                "stop": 1787236818.4243984,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_disabled",
+                "status": "passed",
+                "duration": 0.0009702485986053944,
+                "start": 1787236818.4245207,
+                "stop": 1787236818.4255965,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_removed_from_helios_group",
+                "status": "passed",
+                "duration": 0.00097659882158041,
+                "start": 1787236818.4257214,
+                "stop": 1787236818.4267988,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_sharepoint_research_removed",
+                "status": "passed",
+                "duration": 0.0014178119599819183,
+                "start": 1787236818.4269192,
+                "stop": 1787236818.4284418,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_sharepoint_helios_removed",
+                "status": "passed",
+                "duration": 0.0012251059524714947,
+                "start": 1787236818.4285877,
+                "stop": 1787236818.4299161,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_helios_site_retains_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001298530027270317,
+                "start": 1787236818.430058,
+                "stop": 1787236818.4355202,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_helios_site_retains_active_owner():\n        owners = [p for p in _site_perms(\"site-helios\") if \"owner\" in (p.get(\"roles\") or [])]\n        non_departed_owner = any(\n            str((p.get(\"grantedToV2\") or {}).get(\"user\", {}).get(\"id\")) not in DEPARTED\n            and (p.get(\"grantedToV2\") or {}).get(\"user\", {}).get(\"id\")\n            for p in owners\n        )\n>       assert non_departed_owner\nE       assert False\n\n/tests/test_outputs.py:142: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_diego_github_deploy_key_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.007831539027392864,
+                "start": 1787236818.4356825,
+                "stop": 1787236818.447099,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_diego_github_deploy_key_removed():\n>       assert not any(str(k.get(\"id\")) == \"501\" for k in _repo_deploy_keys(\"contoso\", \"helios-infra\"))\nE       assert not True\nE        +  where True = any(<generator object test_diego_github_deploy_key_removed.<locals>.<genexpr> at 0x7e3c238220a0>)\n\n/tests/test_outputs.py:145: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_sana_guest_disabled",
+                "status": "passed",
+                "duration": 0.0015120026655495167,
+                "start": 1787236818.4472618,
+                "stop": 1787236818.4488857,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sana_guest_removed_from_external_group",
+                "status": "passed",
+                "duration": 0.001065459568053484,
+                "start": 1787236818.4490194,
+                "stop": 1787236818.4501877,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sana_guest_sharepoint_legal_removed",
+                "status": "passed",
+                "duration": 0.0012583667412400246,
+                "start": 1787236818.4503088,
+                "stop": 1787236818.4516819,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_disabled",
+                "status": "passed",
+                "duration": 0.0009897071868181229,
+                "start": 1787236818.4518027,
+                "stop": 1787236818.4528928,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_removed_from_design_group",
+                "status": "passed",
+                "duration": 0.0009927819482982159,
+                "start": 1787236818.4530082,
+                "stop": 1787236818.454098,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_sharepoint_design_removed",
+                "status": "passed",
+                "duration": 0.001127980649471283,
+                "start": 1787236818.4542165,
+                "stop": 1787236818.4554448,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_sharepoint_ops_removed",
+                "status": "passed",
+                "duration": 0.0011304356157779694,
+                "start": 1787236818.4555616,
+                "stop": 1787236818.4567914,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_github_deploy_key_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.006181817967444658,
+                "start": 1787236818.456908,
+                "stop": 1787236818.466457,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_theo_github_deploy_key_removed():\n>       assert not any(str(k.get(\"id\")) == \"504\" for k in _repo_deploy_keys(\"contoso\", \"data-platform\"))\nE       assert not True\nE        +  where True = any(<generator object test_theo_github_deploy_key_removed.<locals>.<genexpr> at 0x7e3c237dd0e0>)\n\n/tests/test_outputs.py:169: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_elena_disabled",
+                "status": "passed",
+                "duration": 0.0010848990641534328,
+                "start": 1787236818.4666035,
+                "stop": 1787236818.4677947,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_removed_from_integrations_group",
+                "status": "passed",
+                "duration": 0.0009824181906878948,
+                "start": 1787236818.467918,
+                "stop": 1787236818.4690053,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_sharepoint_portfolio_removed",
+                "status": "passed",
+                "duration": 0.0011391285806894302,
+                "start": 1787236818.4691277,
+                "stop": 1787236818.4703674,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_app_registration_neutralized",
+                "status": "passed",
+                "duration": 0.0024536093696951866,
+                "start": 1787236818.4704885,
+                "stop": 1787236818.4730482,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_disabled",
+                "status": "passed",
+                "duration": 0.0009525730274617672,
+                "start": 1787236818.4731684,
+                "stop": 1787236818.4742198,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_removed_from_integrations_group",
+                "status": "passed",
+                "duration": 0.0009699184447526932,
+                "start": 1787236818.4743402,
+                "stop": 1787236818.4754047,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_sharepoint_eng_removed",
+                "status": "passed",
+                "duration": 0.001135215163230896,
+                "start": 1787236818.4755197,
+                "stop": 1787236818.4767587,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_eng_site_retains_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011806907132267952,
+                "start": 1787236818.4768784,
+                "stop": 1787236818.4813542,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_eng_site_retains_active_owner():\n        owners = [p for p in _site_perms(\"site-eng\") if \"owner\" in (p.get(\"roles\") or [])]\n        non_departed_owner = any(\n            str((p.get(\"grantedToV2\") or {}).get(\"user\", {}).get(\"id\")) not in DEPARTED\n            and (p.get(\"grantedToV2\") or {}).get(\"user\", {}).get(\"id\")\n            for p in owners\n        )\n>       assert non_departed_owner\nE       assert False\n\n/tests/test_outputs.py:200: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_service_principal_neutralized",
+                "status": "passed",
+                "duration": 0.002395983785390854,
+                "start": 1787236818.4814818,
+                "stop": 1787236818.4839883,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_ticket_closed",
+                "status": "passed",
+                "duration": 0.0012741396203637123,
+                "start": 1787236818.4841154,
+                "stop": 1787236818.4854898,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

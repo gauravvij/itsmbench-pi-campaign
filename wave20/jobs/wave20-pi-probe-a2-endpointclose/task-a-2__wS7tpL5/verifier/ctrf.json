@@ -1,0 +1,200 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 20,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787480071.4619737,
+            "stop": 1787480071.5454996
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_crowdstrike_containment_lifted",
+                "status": "passed",
+                "duration": 0.0173252634704113,
+                "start": 1787480071.487995,
+                "stop": 1787480071.5055058,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_malware_hash_blocked",
+                "status": "passed",
+                "duration": 0.0012475899420678616,
+                "start": 1787480071.5056956,
+                "stop": 1787480071.5070643,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_closed",
+                "status": "passed",
+                "duration": 0.001177565660327673,
+                "start": 1787480071.5071971,
+                "stop": 1787480071.5084803,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_assigned_to_responder",
+                "status": "passed",
+                "duration": 0.0010454296134412289,
+                "start": 1787480071.5086179,
+                "stop": 1787480071.509765,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_defender_scan_ran",
+                "status": "passed",
+                "duration": 0.0019409679807722569,
+                "start": 1787480071.50989,
+                "stop": 1787480071.5119355,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_resynced",
+                "status": "passed",
+                "duration": 0.0012469291687011719,
+                "start": 1787480071.512058,
+                "stop": 1787480071.513407,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_last_sync_advanced",
+                "status": "passed",
+                "duration": 0.0011777770705521107,
+                "start": 1787480071.5135283,
+                "stop": 1787480071.514803,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_reclassified_security",
+                "status": "passed",
+                "duration": 0.0025921352207660675,
+                "start": 1787480071.5149217,
+                "stop": 1787480071.5176156,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_state_closed",
+                "status": "passed",
+                "duration": 0.0022902265191078186,
+                "start": 1787480071.5177376,
+                "stop": 1787480071.5201268,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_inactive",
+                "status": "passed",
+                "duration": 0.0024335989728569984,
+                "start": 1787480071.5202463,
+                "stop": 1787480071.522778,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_code_permanent",
+                "status": "passed",
+                "duration": 0.0022726603783667088,
+                "start": 1787480071.522897,
+                "stop": 1787480071.525269,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_notes_name_malware",
+                "status": "passed",
+                "duration": 0.0023781871423125267,
+                "start": 1787480071.525388,
+                "stop": 1787480071.5278673,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_malware",
+                "status": "passed",
+                "duration": 0.0024242852814495564,
+                "start": 1787480071.5279834,
+                "stop": 1787480071.5305104,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_exact_hash",
+                "status": "passed",
+                "duration": 0.0023858477361500263,
+                "start": 1787480071.5306494,
+                "stop": 1787480071.5331342,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_product_area_endpoint_security",
+                "status": "passed",
+                "duration": 0.002290034666657448,
+                "start": 1787480071.533252,
+                "stop": 1787480071.5356388,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_short_description_names_malware",
+                "status": "passed",
+                "duration": 0.0023269918747246265,
+                "start": 1787480071.535758,
+                "stop": 1787480071.538183,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_asset_audited",
+                "status": "passed",
+                "duration": 0.0029665702022612095,
+                "start": 1787480071.5382977,
+                "stop": 1787480071.5413663,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_not_wiped_or_retired",
+                "status": "passed",
+                "duration": 0.0011761938221752644,
+                "start": 1787480071.5414848,
+                "stop": 1787480071.5427606,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_still_compliant",
+                "status": "passed",
+                "duration": 0.0011715278960764408,
+                "start": 1787480071.5428803,
+                "stop": 1787480071.544151,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_malware_ioc_escalated_in_place",
+                "status": "passed",
+                "duration": 0.0010087359696626663,
+                "start": 1787480071.5442672,
+                "stop": 1787480071.5453706,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

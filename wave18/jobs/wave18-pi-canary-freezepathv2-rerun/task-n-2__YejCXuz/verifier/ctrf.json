@@ -1,0 +1,218 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 21,
+            "passed": 18,
+            "failed": 3,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787312466.31463,
+            "stop": 1787312466.4017127
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_payments_sg_ingress_443_from_lb",
+                "status": "passed",
+                "duration": 0.016791987232863903,
+                "start": 1787312466.3372152,
+                "stop": 1787312466.3541894,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_ingress_8081_from_lb",
+                "status": "passed",
+                "duration": 0.0011885007843375206,
+                "start": 1787312466.3543465,
+                "stop": 1787312466.355651,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_ingress_8404_from_lb",
+                "status": "passed",
+                "duration": 0.0010853391140699387,
+                "start": 1787312466.3557816,
+                "stop": 1787312466.3569646,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_nacl_edge_return_egress",
+                "status": "passed",
+                "duration": 0.0010010534897446632,
+                "start": 1787312466.3570886,
+                "stop": 1787312466.358183,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_backend_02_undrained",
+                "status": "passed",
+                "duration": 0.0011323178187012672,
+                "start": 1787312466.358306,
+                "stop": 1787312466.3595357,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_egress_internal_api",
+                "status": "passed",
+                "duration": 0.0010668816976249218,
+                "start": 1787312466.3596754,
+                "stop": 1787312466.3608363,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_egress_db",
+                "status": "passed",
+                "duration": 0.0010322900488972664,
+                "start": 1787312466.360956,
+                "stop": 1787312466.3620825,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_egress_cache",
+                "status": "passed",
+                "duration": 0.0010649487376213074,
+                "start": 1787312466.3622034,
+                "stop": 1787312466.3633626,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_route_to_shared_not_blackholed",
+                "status": "passed",
+                "duration": 0.0009673042222857475,
+                "start": 1787312466.3634827,
+                "stop": 1787312466.3645468,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_nacl_dependency_return_ingress",
+                "status": "passed",
+                "duration": 0.0009801536798477173,
+                "start": 1787312466.3646836,
+                "stop": 1787312466.365759,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_shared_nacl_allows_payments_inbound",
+                "status": "passed",
+                "duration": 0.0010011540725827217,
+                "start": 1787312466.365877,
+                "stop": 1787312466.36697,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_internal_api_sg_allows_payments",
+                "status": "passed",
+                "duration": 0.0010456601157784462,
+                "start": 1787312466.3670888,
+                "stop": 1787312466.3682268,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_db_sg_allows_payments",
+                "status": "passed",
+                "duration": 0.0010605617426335812,
+                "start": 1787312466.3683453,
+                "stop": 1787312466.3694978,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_cache_sg_allows_payments",
+                "status": "passed",
+                "duration": 0.0010669315233826637,
+                "start": 1787312466.3696337,
+                "stop": 1787312466.3707945,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_internal_api_dns_points_live",
+                "status": "passed",
+                "duration": 0.0011210320517420769,
+                "start": 1787312466.3709116,
+                "stop": 1787312466.3721259,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_db_dns_points_live",
+                "status": "passed",
+                "duration": 0.0009819352999329567,
+                "start": 1787312466.3722448,
+                "stop": 1787312466.3733175,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_cache_dns_points_live",
+                "status": "passed",
+                "duration": 0.0009261555969715118,
+                "start": 1787312466.373434,
+                "stop": 1787312466.374451,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_internal_api_02_undrained",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011994289234280586,
+                "start": 1787312466.3745666,
+                "stop": 1787312466.390558,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_internal_api_02_undrained():\n>       assert _runtime_admin(\"internal-api-be\", \"internal-api-02\") not in (\"maint\", \"drain\", \"None\", None)\nE       AssertionError: assert 'maint' not in ('maint', 'drain', 'None', None)\nE        +  where 'maint' = _runtime_admin('internal-api-be', 'internal-api-02')\n\n/tests/test_outputs.py:195: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_legacy_dns_record_cleaned",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00121000362560153,
+                "start": 1787312466.390711,
+                "stop": 1787312466.395029,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_legacy_dns_record_cleaned():\n>       assert all(str(r.get(\"ipv4addr\")) != LEGACY_DEAD_IP for r in _dns_records(\"internal-api-legacy.\" + DOMAIN))\nE       assert False\nE        +  where False = all(<generator object test_legacy_dns_record_cleaned.<locals>.<genexpr> at 0x7af7af452420>)\n\n/tests/test_outputs.py:198: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_dead_backend_server_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001253688707947731,
+                "start": 1787312466.3951597,
+                "stop": 1787312466.3995054,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_dead_backend_server_removed():\n>       assert all(str(s.get(\"address\")) != DEAD_BACKEND_IP for s in _pay_servers())\nE       assert False\nE        +  where False = all(<generator object test_dead_backend_server_removed.<locals>.<genexpr> at 0x7af7af2f4660>)\n\n/tests/test_outputs.py:201: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_incident_closed",
+                "status": "passed",
+                "duration": 0.0018156259320676327,
+                "start": 1787312466.3996544,
+                "stop": 1787312466.40157,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,251 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 21,
+            "passed": 7,
+            "failed": 14,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787052125.7163959,
+            "stop": 1787052125.839857
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_payments_sg_ingress_443_from_lb",
+                "status": "passed",
+                "duration": 0.016911258455365896,
+                "start": 1787052125.7389016,
+                "stop": 1787052125.756003,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_ingress_8081_from_lb",
+                "status": "passed",
+                "duration": 0.0012104157358407974,
+                "start": 1787052125.7561712,
+                "stop": 1787052125.7574914,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_ingress_8404_from_lb",
+                "status": "passed",
+                "duration": 0.001119961030781269,
+                "start": 1787052125.7576451,
+                "stop": 1787052125.7588642,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_nacl_edge_return_egress",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0013437741436064243,
+                "start": 1787052125.7589922,
+                "stop": 1787052125.7750514,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_payments_nacl_edge_return_egress():\n>       assert _nacl_allows(NACL_PAY, egress=True, cidr_options={LB_CIDR, \"0.0.0.0/0\"}, cover_ephemeral=True)\nE       AssertionError: assert False\nE        +  where False = _nacl_allows('acl-0payments0001', egress=True, cidr_options={'0.0.0.0/0', '10.60.0.0/24'}, cover_ephemeral=True)\n\n/tests/test_outputs.py:149: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_payments_backend_02_undrained",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016366872005164623,
+                "start": 1787052125.7751899,
+                "stop": 1787052125.7799122,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_payments_backend_02_undrained():\n>       assert _runtime_admin(\"payments-be\", \"payments-api-02\") not in (\"maint\", \"drain\", \"None\", None)\nE       AssertionError: assert 'maint' not in ('maint', 'drain', 'None', None)\nE        +  where 'maint' = _runtime_admin('payments-be', 'payments-api-02')\n\n/tests/test_outputs.py:152: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_egress_internal_api",
+                "status": "passed",
+                "duration": 0.0012678001075983047,
+                "start": 1787052125.7800426,
+                "stop": 1787052125.781409,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_egress_db",
+                "status": "passed",
+                "duration": 0.0012122280895709991,
+                "start": 1787052125.7815318,
+                "stop": 1787052125.782842,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_sg_egress_cache",
+                "status": "passed",
+                "duration": 0.0011614924296736717,
+                "start": 1787052125.7829628,
+                "stop": 1787052125.7842195,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_payments_route_to_shared_not_blackholed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011679618619382381,
+                "start": 1787052125.7843406,
+                "stop": 1787052125.7886105,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_payments_route_to_shared_not_blackholed():\n        t = _rt(RT_PAY)\n        assert t is not None\n        for r in t.get(\"RouteSet\", []):\n            if str(r.get(\"DestinationCidrBlock\")) == SHARED_CIDR and str(r.get(\"State\")) == \"blackhole\":\n>               assert False, \"blackhole route to shared-services still present\"\nE               AssertionError: blackhole route to shared-services still present\nE               assert False\n\n/tests/test_outputs.py:168: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_payments_nacl_dependency_return_ingress",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011826744303107262,
+                "start": 1787052125.7887454,
+                "stop": 1787052125.7929618,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_payments_nacl_dependency_return_ingress():\n>       assert _nacl_allows(NACL_PAY, egress=False, cidr_options={SHARED_CIDR, \"0.0.0.0/0\"}, cover_ephemeral=True)\nE       AssertionError: assert False\nE        +  where False = _nacl_allows('acl-0payments0001', egress=False, cidr_options={'0.0.0.0/0', '10.50.0.0/24'}, cover_ephemeral=True)\n\n/tests/test_outputs.py:171: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_shared_nacl_allows_payments_inbound",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011920081451535225,
+                "start": 1787052125.7930884,
+                "stop": 1787052125.7973187,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_shared_nacl_allows_payments_inbound():\n>       assert _nacl_allows(NACL_SHARED, egress=False, cidr_options={PAY_CIDR, \"0.0.0.0/0\"}, cover_ephemeral=False)\nE       AssertionError: assert False\nE        +  where False = _nacl_allows('acl-0shared00001', egress=False, cidr_options={'0.0.0.0/0', '10.30.0.0/24'}, cover_ephemeral=False)\n\n/tests/test_outputs.py:174: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_internal_api_sg_allows_payments",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011719390749931335,
+                "start": 1787052125.7974517,
+                "stop": 1787052125.8016782,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_internal_api_sg_allows_payments():\n>       assert _ingress_allows(SG_IAPI, DEP_PORT[\"internal-api\"], PAY_CIDR)\nE       AssertionError: assert False\nE        +  where False = _ingress_allows('sg-0internalapi0001', 8443, '10.30.0.0/24')\n\n/tests/test_outputs.py:177: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_db_sg_allows_payments",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011941115371882915,
+                "start": 1787052125.8018146,
+                "stop": 1787052125.806726,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_db_sg_allows_payments():\n>       assert _ingress_allows(SG_DB, DEP_PORT[\"payments-db\"], PAY_CIDR)\nE       AssertionError: assert False\nE        +  where False = _ingress_allows('sg-0db0000000000001', 5432, '10.30.0.0/24')\n\n/tests/test_outputs.py:180: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_cache_sg_allows_payments",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012099738232791424,
+                "start": 1787052125.806857,
+                "stop": 1787052125.811102,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_cache_sg_allows_payments():\n>       assert _ingress_allows(SG_CACHE, DEP_PORT[\"cache\"], PAY_CIDR)\nE       AssertionError: assert False\nE        +  where False = _ingress_allows('sg-0cache00000001', 6379, '10.30.0.0/24')\n\n/tests/test_outputs.py:183: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_internal_api_dns_points_live",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011541121639311314,
+                "start": 1787052125.811227,
+                "stop": 1787052125.8153572,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_internal_api_dns_points_live():\n>       assert _resolves_live(\"internal-api\", \"internal-api\")\nE       AssertionError: assert False\nE        +  where False = _resolves_live('internal-api', 'internal-api')\n\n/tests/test_outputs.py:186: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_db_dns_points_live",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011574872769415379,
+                "start": 1787052125.8154829,
+                "stop": 1787052125.8196893,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_db_dns_points_live():\n>       assert _resolves_live(\"payments-db\", \"payments-db\")\nE       AssertionError: assert False\nE        +  where False = _resolves_live('payments-db', 'payments-db')\n\n/tests/test_outputs.py:189: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_cache_dns_points_live",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0011313571594655514,
+                "start": 1787052125.8198206,
+                "stop": 1787052125.8239691,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_cache_dns_points_live():\n>       assert _resolves_live(\"cache\", \"cache\")\nE       AssertionError: assert False\nE        +  where False = _resolves_live('cache', 'cache')\n\n/tests/test_outputs.py:192: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_internal_api_02_undrained",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012933555990457535,
+                "start": 1787052125.824099,
+                "stop": 1787052125.828432,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_internal_api_02_undrained():\n>       assert _runtime_admin(\"internal-api-be\", \"internal-api-02\") not in (\"maint\", \"drain\", \"None\", None)\nE       AssertionError: assert 'maint' not in ('maint', 'drain', 'None', None)\nE        +  where 'maint' = _runtime_admin('internal-api-be', 'internal-api-02')\n\n/tests/test_outputs.py:195: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_legacy_dns_record_cleaned",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00108689209446311,
+                "start": 1787052125.8285625,
+                "stop": 1787052125.8326914,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_legacy_dns_record_cleaned():\n>       assert all(str(r.get(\"ipv4addr\")) != LEGACY_DEAD_IP for r in _dns_records(\"internal-api-legacy.\" + DOMAIN))\nE       assert False\nE        +  where False = all(<generator object test_legacy_dns_record_cleaned.<locals>.<genexpr> at 0x74954f4143c0>)\n\n/tests/test_outputs.py:198: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_dead_backend_server_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012486125342547894,
+                "start": 1787052125.83282,
+                "stop": 1787052125.8371482,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_dead_backend_server_removed():\n>       assert all(str(s.get(\"address\")) != DEAD_BACKEND_IP for s in _pay_servers())\nE       assert False\nE        +  where False = all(<generator object test_dead_backend_server_removed.<locals>.<genexpr> at 0x74954f417680>)\n\n/tests/test_outputs.py:201: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_incident_closed",
+                "status": "passed",
+                "duration": 0.0023409314453601837,
+                "start": 1787052125.837278,
+                "stop": 1787052125.8397267,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

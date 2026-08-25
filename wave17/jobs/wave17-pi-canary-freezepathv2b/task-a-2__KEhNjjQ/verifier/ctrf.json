@@ -1,0 +1,206 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 18,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787302213.342745,
+            "stop": 1787302213.4433992
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_crowdstrike_containment_lifted",
+                "status": "passed",
+                "duration": 0.018019565846771002,
+                "start": 1787302213.3686733,
+                "stop": 1787302213.3868828,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_malware_hash_blocked",
+                "status": "passed",
+                "duration": 0.0013225721195340157,
+                "start": 1787302213.3870544,
+                "stop": 1787302213.388496,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_closed",
+                "status": "passed",
+                "duration": 0.0011061900295317173,
+                "start": 1787302213.388648,
+                "stop": 1787302213.3898602,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_assigned_to_responder",
+                "status": "passed",
+                "duration": 0.0010332530364394188,
+                "start": 1787302213.3899846,
+                "stop": 1787302213.3911183,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_defender_scan_ran",
+                "status": "passed",
+                "duration": 0.0019139382056891918,
+                "start": 1787302213.3912418,
+                "stop": 1787302213.3932621,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_resynced",
+                "status": "passed",
+                "duration": 0.0012299041263759136,
+                "start": 1787302213.3933876,
+                "stop": 1787302213.3947322,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_last_sync_advanced",
+                "status": "passed",
+                "duration": 0.0011166268959641457,
+                "start": 1787302213.3948543,
+                "stop": 1787302213.3960705,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_reclassified_security",
+                "status": "passed",
+                "duration": 0.002417205832898617,
+                "start": 1787302213.3961887,
+                "stop": 1787302213.398718,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_state_closed",
+                "status": "passed",
+                "duration": 0.0022286460734903812,
+                "start": 1787302213.398839,
+                "stop": 1787302213.4011676,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_inactive",
+                "status": "passed",
+                "duration": 0.0022547845728695393,
+                "start": 1787302213.4012866,
+                "stop": 1787302213.4036365,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_code_permanent",
+                "status": "passed",
+                "duration": 0.0021742749959230423,
+                "start": 1787302213.4037564,
+                "stop": 1787302213.406031,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_notes_name_malware",
+                "status": "passed",
+                "duration": 0.0021657622419297695,
+                "start": 1787302213.4061522,
+                "stop": 1787302213.4084206,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_malware",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002435833215713501,
+                "start": 1787302213.4085402,
+                "stop": 1787302213.4256744,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_problem_root_cause_names_malware():\n>       assert \"malware\" in str(sn_target_problem().get(\"root_cause\", \"\")).lower()\nE       AssertionError: assert 'malware' in 'confirmed malicious process svch0st.exe (sha256 9d3f...) executed under marcus reilly session on nl-lt-4471, running a cryptominer and credential stealer; host auto-contained by crowdstrike producing user-perceived slowness/freezes.'\nE        +  where 'confirmed malicious process svch0st.exe (sha256 9d3f...) executed under marcus reilly session on nl-lt-4471, running a cryptominer and credential stealer; host auto-contained by crowdstrike producing user-perceived slowness/freezes.' = <built-in method lower of str object at 0x7caa1e74ef70>()\nE        +    where <built-in method lower of str object at 0x7caa1e74ef70> = 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus Reilly session on NL-LT-4471, running a cryptominer and credential stealer; host auto-contained by CrowdStrike producing user-perceived slowness/freezes.'.lower\nE        +      where 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus Reilly session on NL-LT-4471, running a cryptominer and credential stealer; host auto-contained by CrowdStrike producing user-perceived slowness/freezes.' = str('Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus Reilly session on NL-LT-4471, running a cryptominer and credential stealer; host auto-contained by CrowdStrike producing user-perceived slowness/freezes.')\nE        +        where 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus Reilly session on NL-LT-4471, running a cryptominer and credential stealer; host auto-contained by CrowdStrike producing user-perceived slowness/freezes.' = <built-in method get of dict object at 0x7caa1e575d00>('root_cause', '')\nE        +          where <built-in method get of dict object at 0x7caa1e575d00> = {'number': 'PRB0001001', 'root_cause': 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus...dpoint compromised by cryptomining/credential-stealing malware (LummaStealer/XMRig)', 'sys_class_name': 'problem', ...}.get\nE        +            where {'number': 'PRB0001001', 'root_cause': 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus...dpoint compromised by cryptomining/credential-stealing malware (LummaStealer/XMRig)', 'sys_class_name': 'problem', ...} = sn_target_problem()\n\n/tests/test_outputs.py:133: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_exact_hash",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0024937880225479603,
+                "start": 1787302213.4258153,
+                "stop": 1787302213.4312148,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_problem_root_cause_names_exact_hash():\n>       assert SHA256 in str(sn_target_problem().get(\"root_cause\", \"\"))\nE       AssertionError: assert '9d3f1c7a2b8e4f60d15a93c47e0b26f8a1c4d97e5302f8b6ae19c4d70f3b82a5' in 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus Reilly session on NL-LT-4471, running a cryptominer and credential stealer; host auto-contained by CrowdStrike producing user-perceived slowness/freezes.'\nE        +  where 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus Reilly session on NL-LT-4471, running a cryptominer and credential stealer; host auto-contained by CrowdStrike producing user-perceived slowness/freezes.' = str('Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus Reilly session on NL-LT-4471, running a cryptominer and credential stealer; host auto-contained by CrowdStrike producing user-perceived slowness/freezes.')\nE        +    where 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus Reilly session on NL-LT-4471, running a cryptominer and credential stealer; host auto-contained by CrowdStrike producing user-perceived slowness/freezes.' = <built-in method get of dict object at 0x7caa1e770140>('root_cause', '')\nE        +      where <built-in method get of dict object at 0x7caa1e770140> = {'number': 'PRB0001001', 'root_cause': 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus...dpoint compromised by cryptomining/credential-stealing malware (LummaStealer/XMRig)', 'sys_class_name': 'problem', ...}.get\nE        +        where {'number': 'PRB0001001', 'root_cause': 'Confirmed malicious process svch0st.exe (SHA256 9d3f...) executed under Marcus...dpoint compromised by cryptomining/credential-stealing malware (LummaStealer/XMRig)', 'sys_class_name': 'problem', ...} = sn_target_problem()\n\n/tests/test_outputs.py:136: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_problem_product_area_endpoint_security",
+                "status": "passed",
+                "duration": 0.0022346945479512215,
+                "start": 1787302213.4313457,
+                "stop": 1787302213.433699,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_short_description_names_malware",
+                "status": "passed",
+                "duration": 0.0023432550951838493,
+                "start": 1787302213.4338243,
+                "stop": 1787302213.4362712,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_asset_audited",
+                "status": "passed",
+                "duration": 0.0028108693659305573,
+                "start": 1787302213.4363916,
+                "stop": 1787302213.4393075,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_not_wiped_or_retired",
+                "status": "passed",
+                "duration": 0.0011639469303190708,
+                "start": 1787302213.4394355,
+                "stop": 1787302213.440711,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_still_compliant",
+                "status": "passed",
+                "duration": 0.0010942844673991203,
+                "start": 1787302213.4408329,
+                "stop": 1787302213.4420285,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_malware_ioc_escalated_in_place",
+                "status": "passed",
+                "duration": 0.0010326015762984753,
+                "start": 1787302213.4421458,
+                "stop": 1787302213.4432743,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

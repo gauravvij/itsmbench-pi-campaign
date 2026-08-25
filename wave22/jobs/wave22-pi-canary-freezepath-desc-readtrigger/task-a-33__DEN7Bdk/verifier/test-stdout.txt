@@ -1,0 +1,394 @@
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1196 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1725 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1526 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2146 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1842 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1525 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.9 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [671 B]
+Fetched 32.4 MB in 2s (20.2 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcurl4t64
+The following packages will be upgraded:
+  curl libcurl4t64
+2 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Need to get 569 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.12 [227 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.12 [343 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 569 kB in 0s (10.8 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6310 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Preparing to unpack .../libcurl4t64_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.12) ...
+Setting up curl (8.5.0-2ubuntu10.12) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.8) ...
+downloading uv 0.9.7 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 6 packages in 15ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 34 items
+
+../tests/test_outputs.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF              [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_priya_member_disabled __________________________
+
+    def test_priya_member_disabled():
+>       assert _disabled(PRIYA)
+E       AssertionError: assert False
+E        +  where False = _disabled('u-priya-anand')
+
+/tests/test_outputs.py:92: AssertionError
+_____________________ test_priya_removed_from_helios_group _____________________
+
+    def test_priya_removed_from_helios_group():
+>       assert PRIYA not in _group_member_ids("g-helios")
+E       AssertionError: assert 'u-priya-anand' not in {'u-diego-marchetti', 'u-lena-fischer', 'u-omar-said', 'u-priya-anand', 'u-raj-patel', 'u-sofia-romano'}
+E        +  where {'u-diego-marchetti', 'u-lena-fischer', 'u-omar-said', 'u-priya-anand', 'u-raj-patel', 'u-sofia-romano'} = _group_member_ids('g-helios')
+
+/tests/test_outputs.py:95: AssertionError
+____________________ test_priya_removed_from_records_group _____________________
+
+    def test_priya_removed_from_records_group():
+>       assert PRIYA not in _group_member_ids("g-records")
+E       AssertionError: assert 'u-priya-anand' not in {'u-grace-hoffman', 'u-priya-anand', 'u-tomas-vega'}
+E        +  where {'u-grace-hoffman', 'u-priya-anand', 'u-tomas-vega'} = _group_member_ids('g-records')
+
+/tests/test_outputs.py:98: AssertionError
+____________________ test_priya_sharepoint_finance_removed _____________________
+
+    def test_priya_sharepoint_finance_removed():
+>       assert not any(_grant_targets_user(p, PRIYA) for p in _site_perms("site-finance"))
+E       assert not True
+E        +  where True = any(<generator object test_priya_sharepoint_finance_removed.<locals>.<genexpr> at 0x79483e0ad2a0>)
+
+/tests/test_outputs.py:101: AssertionError
+______________________ test_priya_sharepoint_exec_removed ______________________
+
+    def test_priya_sharepoint_exec_removed():
+>       assert not any(_grant_targets_user(p, PRIYA) for p in _site_perms("site-exec"))
+E       assert not True
+E        +  where True = any(<generator object test_priya_sharepoint_exec_removed.<locals>.<genexpr> at 0x79483e0adc40>)
+
+/tests/test_outputs.py:104: AssertionError
+___________________ test_priya_sharepoint_portfolio_removed ____________________
+
+    def test_priya_sharepoint_portfolio_removed():
+>       assert not any(_grant_targets_user(p, PRIYA) for p in _site_perms("site-portfolio"))
+E       assert not True
+E        +  where True = any(<generator object test_priya_sharepoint_portfolio_removed.<locals>.<genexpr> at 0x79483e0ae500>)
+
+/tests/test_outputs.py:107: AssertionError
+_________________ test_onedrive_departed_share_grants_removed __________________
+
+    def test_onedrive_departed_share_grants_removed():
+        priya_gone = not any(_grant_targets_user(p, PRIYA) for p in _item_perms("drive-dana", "item-budget"))
+        theo_gone = not any(_grant_targets_user(p, THEO) for p in _item_perms("drive-dana", "item-forecast"))
+>       assert priya_gone and theo_gone
+E       assert (False)
+
+/tests/test_outputs.py:112: AssertionError
+__________________________ test_priya_guest_disabled ___________________________
+
+    def test_priya_guest_disabled():
+>       assert _disabled(PRIYA_GUEST)
+E       AssertionError: assert False
+E        +  where False = _disabled('u-priya-anand-guest')
+
+/tests/test_outputs.py:115: AssertionError
+_________________ test_priya_guest_removed_from_external_group _________________
+
+    def test_priya_guest_removed_from_external_group():
+>       assert PRIYA_GUEST not in _group_member_ids("g-external")
+E       AssertionError: assert 'u-priya-anand-guest' not in {'u-otto-lindqvist-guest', 'u-priya-anand-guest', 'u-sana-rahman-guest'}
+E        +  where {'u-otto-lindqvist-guest', 'u-priya-anand-guest', 'u-sana-rahman-guest'} = _group_member_ids('g-external')
+
+/tests/test_outputs.py:118: AssertionError
+__________________ test_priya_guest_sharepoint_comms_removed ___________________
+
+    def test_priya_guest_sharepoint_comms_removed():
+>       assert not any(_grant_targets_user(p, PRIYA_GUEST) for p in _site_perms("site-comms"))
+E       assert not True
+E        +  where True = any(<generator object test_priya_guest_sharepoint_comms_removed.<locals>.<genexpr> at 0x79483e058d60>)
+
+/tests/test_outputs.py:121: AssertionError
+_____________________________ test_diego_disabled ______________________________
+
+    def test_diego_disabled():
+>       assert _disabled(DIEGO)
+E       AssertionError: assert False
+E        +  where False = _disabled('u-diego-marchetti')
+
+/tests/test_outputs.py:124: AssertionError
+_____________________ test_diego_removed_from_helios_group _____________________
+
+    def test_diego_removed_from_helios_group():
+>       assert DIEGO not in _group_member_ids("g-helios")
+E       AssertionError: assert 'u-diego-marchetti' not in {'u-diego-marchetti', 'u-lena-fischer', 'u-omar-said', 'u-priya-anand', 'u-raj-patel', 'u-sofia-romano'}
+E        +  where {'u-diego-marchetti', 'u-lena-fischer', 'u-omar-said', 'u-priya-anand', 'u-raj-patel', 'u-sofia-romano'} = _group_member_ids('g-helios')
+
+/tests/test_outputs.py:127: AssertionError
+____________________ test_diego_sharepoint_research_removed ____________________
+
+    def test_diego_sharepoint_research_removed():
+>       assert not any(_grant_targets_user(p, DIEGO) for p in _site_perms("site-research"))
+E       assert not True
+E        +  where True = any(<generator object test_diego_sharepoint_research_removed.<locals>.<genexpr> at 0x79483e05a500>)
+
+/tests/test_outputs.py:130: AssertionError
+_____________________ test_diego_sharepoint_helios_removed _____________________
+
+    def test_diego_sharepoint_helios_removed():
+>       assert not any(_grant_targets_user(p, DIEGO) for p in _site_perms("site-helios"))
+E       assert not True
+E        +  where True = any(<generator object test_diego_sharepoint_helios_removed.<locals>.<genexpr> at 0x79483e05adc0>)
+
+/tests/test_outputs.py:133: AssertionError
+____________________ test_helios_site_retains_active_owner _____________________
+
+    def test_helios_site_retains_active_owner():
+        owners = [p for p in _site_perms("site-helios") if "owner" in (p.get("roles") or [])]
+        non_departed_owner = any(
+            str((p.get("grantedToV2") or {}).get("user", {}).get("id")) not in DEPARTED
+            and (p.get("grantedToV2") or {}).get("user", {}).get("id")
+            for p in owners
+        )
+>       assert non_departed_owner
+E       assert False
+
+/tests/test_outputs.py:142: AssertionError
+_____________________ test_diego_github_deploy_key_removed _____________________
+
+    def test_diego_github_deploy_key_removed():
+>       assert not any(str(k.get("id")) == "501" for k in _repo_deploy_keys("contoso", "helios-infra"))
+E       assert not True
+E        +  where True = any(<generator object test_diego_github_deploy_key_removed.<locals>.<genexpr> at 0x79483e0af220>)
+
+/tests/test_outputs.py:145: AssertionError
+___________________________ test_sana_guest_disabled ___________________________
+
+    def test_sana_guest_disabled():
+>       assert _disabled(SANA_GUEST)
+E       AssertionError: assert False
+E        +  where False = _disabled('u-sana-rahman-guest')
+
+/tests/test_outputs.py:148: AssertionError
+_________________ test_sana_guest_removed_from_external_group __________________
+
+    def test_sana_guest_removed_from_external_group():
+>       assert SANA_GUEST not in _group_member_ids("g-external")
+E       AssertionError: assert 'u-sana-rahman-guest' not in {'u-otto-lindqvist-guest', 'u-priya-anand-guest', 'u-sana-rahman-guest'}
+E        +  where {'u-otto-lindqvist-guest', 'u-priya-anand-guest', 'u-sana-rahman-guest'} = _group_member_ids('g-external')
+
+/tests/test_outputs.py:151: AssertionError
+___________________ test_sana_guest_sharepoint_legal_removed ___________________
+
+    def test_sana_guest_sharepoint_legal_removed():
+>       assert not any(_grant_targets_user(p, SANA_GUEST) for p in _site_perms("site-legal"))
+E       assert not True
+E        +  where True = any(<generator object test_sana_guest_sharepoint_legal_removed.<locals>.<genexpr> at 0x79483e0acf20>)
+
+/tests/test_outputs.py:154: AssertionError
+______________________________ test_theo_disabled ______________________________
+
+    def test_theo_disabled():
+>       assert _disabled(THEO)
+E       AssertionError: assert False
+E        +  where False = _disabled('u-theo-vance')
+
+/tests/test_outputs.py:157: AssertionError
+_____________________ test_theo_removed_from_design_group ______________________
+
+    def test_theo_removed_from_design_group():
+>       assert THEO not in _group_member_ids("g-design")
+E       AssertionError: assert 'u-theo-vance' not in {'u-lena-fischer', 'u-theo-vance'}
+E        +  where {'u-lena-fischer', 'u-theo-vance'} = _group_member_ids('g-design')
+
+/tests/test_outputs.py:160: AssertionError
+_____________________ test_theo_sharepoint_design_removed ______________________
+
+    def test_theo_sharepoint_design_removed():
+>       assert not any(_grant_targets_user(p, THEO) for p in _site_perms("site-design"))
+E       assert not True
+E        +  where True = any(<generator object test_theo_sharepoint_design_removed.<locals>.<genexpr> at 0x79483e05a340>)
+
+/tests/test_outputs.py:163: AssertionError
+_______________________ test_theo_sharepoint_ops_removed _______________________
+
+    def test_theo_sharepoint_ops_removed():
+>       assert not any(_grant_targets_user(p, THEO) for p in _site_perms("site-ops"))
+E       assert not True
+E        +  where True = any(<generator object test_theo_sharepoint_ops_removed.<locals>.<genexpr> at 0x79483e059a80>)
+
+/tests/test_outputs.py:166: AssertionError
+_____________________ test_theo_github_deploy_key_removed ______________________
+
+    def test_theo_github_deploy_key_removed():
+>       assert not any(str(k.get("id")) == "504" for k in _repo_deploy_keys("contoso", "data-platform"))
+E       assert not True
+E        +  where True = any(<generator object test_theo_github_deploy_key_removed.<locals>.<genexpr> at 0x79483e0589e0>)
+
+/tests/test_outputs.py:169: AssertionError
+_____________________________ test_elena_disabled ______________________________
+
+    def test_elena_disabled():
+>       assert _disabled(ELENA)
+E       AssertionError: assert False
+E        +  where False = _disabled('u-elena-novak')
+
+/tests/test_outputs.py:172: AssertionError
+__________________ test_elena_removed_from_integrations_group __________________
+
+    def test_elena_removed_from_integrations_group():
+>       assert ELENA not in _group_member_ids("g-integrations")
+E       AssertionError: assert 'u-elena-novak' not in {'u-elena-novak', 'u-marco-bianchi', 'u-raj-patel', 'u-viktor-sorensen'}
+E        +  where {'u-elena-novak', 'u-marco-bianchi', 'u-raj-patel', 'u-viktor-sorensen'} = _group_member_ids('g-integrations')
+
+/tests/test_outputs.py:175: AssertionError
+___________________ test_elena_sharepoint_portfolio_removed ____________________
+
+    def test_elena_sharepoint_portfolio_removed():
+>       assert not any(_grant_targets_user(p, ELENA) for p in _site_perms("site-portfolio"))
+E       assert not True
+E        +  where True = any(<generator object test_elena_sharepoint_portfolio_removed.<locals>.<genexpr> at 0x79483e0ad0e0>)
+
+/tests/test_outputs.py:178: AssertionError
+___________________ test_elena_app_registration_neutralized ____________________
+
+    def test_elena_app_registration_neutralized():
+        target = _by_id(_as_list(_get(M365 + "/applications")), "app-partner-sync")
+>       assert _apps_owned_by(ELENA) == [] and _artifact_neutralized(target)
+E       AssertionError: assert ([{'@odata.typ...nector', ...}] == []
+E         
+E         Left contains one more item: {'@odata.type': '#microsoft.graph.application', 'appId': '8f21c0a4-partner-sync', 'createdDateTime': '2026-03-01T09:00:00.000Z', 'displayName': 'Partner Data Sync Connector', ...}
+E         Use -v to get more diff)
+
+/tests/test_outputs.py:182: AssertionError
+_____________________________ test_viktor_disabled _____________________________
+
+    def test_viktor_disabled():
+>       assert _disabled(VIKTOR)
+E       AssertionError: assert False
+E        +  where False = _disabled('u-viktor-sorensen')
+
+/tests/test_outputs.py:185: AssertionError
+_________________ test_viktor_removed_from_integrations_group __________________
+
+    def test_viktor_removed_from_integrations_group():
+>       assert VIKTOR not in _group_member_ids("g-integrations")
+E       AssertionError: assert 'u-viktor-sorensen' not in {'u-elena-novak', 'u-marco-bianchi', 'u-raj-patel', 'u-viktor-sorensen'}
+E        +  where {'u-elena-novak', 'u-marco-bianchi', 'u-raj-patel', 'u-viktor-sorensen'} = _group_member_ids('g-integrations')
+
+/tests/test_outputs.py:188: AssertionError
+______________________ test_viktor_sharepoint_eng_removed ______________________
+
+    def test_viktor_sharepoint_eng_removed():
+>       assert not any(_grant_targets_user(p, VIKTOR) for p in _site_perms("site-eng"))
+E       assert not True
+E        +  where True = any(<generator object test_viktor_sharepoint_eng_removed.<locals>.<genexpr> at 0x79483e0aea40>)
+
+/tests/test_outputs.py:191: AssertionError
+______________________ test_eng_site_retains_active_owner ______________________
+
+    def test_eng_site_retains_active_owner():
+        owners = [p for p in _site_perms("site-eng") if "owner" in (p.get("roles") or [])]
+        non_departed_owner = any(
+            str((p.get("grantedToV2") or {}).get("user", {}).get("id")) not in DEPARTED
+            and (p.get("grantedToV2") or {}).get("user", {}).get("id")
+            for p in owners
+        )
+>       assert non_departed_owner
+E       assert False
+
+/tests/test_outputs.py:200: AssertionError
+__________________ test_viktor_service_principal_neutralized ___________________
+
+    def test_viktor_service_principal_neutralized():
+        target = _by_id(_as_list(_get(M365 + "/servicePrincipals")), "sp-export-bot")
+>       assert _sps_owned_by(VIKTOR) == [] and _artifact_neutralized(target)
+E       AssertionError: assert ([{'@odata.typ...To': [], ...}] == []
+E         
+E         Left contains one more item: {'@odata.type': '#microsoft.graph.servicePrincipal', 'accountEnabled': True, 'appId': 'c7e9-nightly-export', 'appRoleAssignedTo': [], ...}
+E         Use -v to get more diff)
+
+/tests/test_outputs.py:204: AssertionError
+______________________________ test_ticket_closed ______________________________
+
+    def test_ticket_closed():
+        r = _get(JSM + "/request/" + REQUEST)
+>       assert str((r or {}).get("currentStatus", {}).get("statusCategory")) == "COMPLETE"
+E       AssertionError: assert 'NEW' == 'COMPLETE'
+E         
+E         - COMPLETE
+E         + NEW
+
+/tests/test_outputs.py:208: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_priya_member_disabled - AssertionError:...
+FAILED ../tests/test_outputs.py::test_priya_removed_from_helios_group - Asser...
+FAILED ../tests/test_outputs.py::test_priya_removed_from_records_group - Asse...
+FAILED ../tests/test_outputs.py::test_priya_sharepoint_finance_removed - asse...
+FAILED ../tests/test_outputs.py::test_priya_sharepoint_exec_removed - assert ...
+FAILED ../tests/test_outputs.py::test_priya_sharepoint_portfolio_removed - as...
+FAILED ../tests/test_outputs.py::test_onedrive_departed_share_grants_removed
+FAILED ../tests/test_outputs.py::test_priya_guest_disabled - AssertionError: ...
+FAILED ../tests/test_outputs.py::test_priya_guest_removed_from_external_group
+FAILED ../tests/test_outputs.py::test_priya_guest_sharepoint_comms_removed - ...
+FAILED ../tests/test_outputs.py::test_diego_disabled - AssertionError: assert...
+FAILED ../tests/test_outputs.py::test_diego_removed_from_helios_group - Asser...
+FAILED ../tests/test_outputs.py::test_diego_sharepoint_research_removed - ass...
+FAILED ../tests/test_outputs.py::test_diego_sharepoint_helios_removed - asser...
+FAILED ../tests/test_outputs.py::test_helios_site_retains_active_owner - asse...
+FAILED ../tests/test_outputs.py::test_diego_github_deploy_key_removed - asser...
+FAILED ../tests/test_outputs.py::test_sana_guest_disabled - AssertionError: a...
+FAILED ../tests/test_outputs.py::test_sana_guest_removed_from_external_group
+FAILED ../tests/test_outputs.py::test_sana_guest_sharepoint_legal_removed - a...
+FAILED ../tests/test_outputs.py::test_theo_disabled - AssertionError: assert ...
+FAILED ../tests/test_outputs.py::test_theo_removed_from_design_group - Assert...
+FAILED ../tests/test_outputs.py::test_theo_sharepoint_design_removed - assert...
+FAILED ../tests/test_outputs.py::test_theo_sharepoint_ops_removed - assert no...
+FAILED ../tests/test_outputs.py::test_theo_github_deploy_key_removed - assert...
+FAILED ../tests/test_outputs.py::test_elena_disabled - AssertionError: assert...
+FAILED ../tests/test_outputs.py::test_elena_removed_from_integrations_group
+FAILED ../tests/test_outputs.py::test_elena_sharepoint_portfolio_removed - as...
+FAILED ../tests/test_outputs.py::test_elena_app_registration_neutralized - As...
+FAILED ../tests/test_outputs.py::test_viktor_disabled - AssertionError: asser...
+FAILED ../tests/test_outputs.py::test_viktor_removed_from_integrations_group
+FAILED ../tests/test_outputs.py::test_viktor_sharepoint_eng_removed - assert ...
+FAILED ../tests/test_outputs.py::test_eng_site_retains_active_owner - assert ...
+FAILED ../tests/test_outputs.py::test_viktor_service_principal_neutralized - ...
+FAILED ../tests/test_outputs.py::test_ticket_closed - AssertionError: assert ...
+============================== 34 failed in 0.23s ==============================

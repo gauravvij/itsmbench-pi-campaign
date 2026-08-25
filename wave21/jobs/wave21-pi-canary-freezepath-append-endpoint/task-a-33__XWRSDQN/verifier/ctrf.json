@@ -1,0 +1,380 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 34,
+            "passed": 16,
+            "failed": 18,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787483971.9103603,
+            "stop": 1787483972.1082807
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_priya_member_disabled",
+                "status": "passed",
+                "duration": 0.016587236430495977,
+                "start": 1787483971.9369223,
+                "stop": 1787483971.9537096,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_removed_from_helios_group",
+                "status": "passed",
+                "duration": 0.0012657148763537407,
+                "start": 1787483971.9538672,
+                "stop": 1787483971.9552495,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_removed_from_records_group",
+                "status": "passed",
+                "duration": 0.0010662199929356575,
+                "start": 1787483971.9553802,
+                "stop": 1787483971.9565501,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_sharepoint_finance_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0023248549550771713,
+                "start": 1787483971.9566905,
+                "stop": 1787483971.9740167,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_priya_sharepoint_finance_removed():\n>       assert not any(_grant_targets_user(p, PRIYA) for p in _site_perms(\"site-finance\"))\nE       assert not True\nE        +  where True = any(<generator object test_priya_sharepoint_finance_removed.<locals>.<genexpr> at 0x7ccb8df44660>)\n\n/tests/test_outputs.py:101: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_priya_sharepoint_exec_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016963942907750607,
+                "start": 1787483971.9741545,
+                "stop": 1787483971.9794197,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_priya_sharepoint_exec_removed():\n>       assert not any(_grant_targets_user(p, PRIYA) for p in _site_perms(\"site-exec\"))\nE       assert not True\nE        +  where True = any(<generator object test_priya_sharepoint_exec_removed.<locals>.<genexpr> at 0x7ccb8dfdf4c0>)\n\n/tests/test_outputs.py:104: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_priya_sharepoint_portfolio_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0013704788871109486,
+                "start": 1787483971.979551,
+                "stop": 1787483971.9840033,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_priya_sharepoint_portfolio_removed():\n>       assert not any(_grant_targets_user(p, PRIYA) for p in _site_perms(\"site-portfolio\"))\nE       assert not True\nE        +  where True = any(<generator object test_priya_sharepoint_portfolio_removed.<locals>.<genexpr> at 0x7ccb8df44580>)\n\n/tests/test_outputs.py:107: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_onedrive_departed_share_grants_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.008632926270365715,
+                "start": 1787483971.9841309,
+                "stop": 1787483971.99599,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_onedrive_departed_share_grants_removed():\n        priya_gone = not any(_grant_targets_user(p, PRIYA) for p in _item_perms(\"drive-dana\", \"item-budget\"))\n        theo_gone = not any(_grant_targets_user(p, THEO) for p in _item_perms(\"drive-dana\", \"item-forecast\"))\n>       assert priya_gone and theo_gone\nE       assert (False)\n\n/tests/test_outputs.py:112: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_priya_guest_disabled",
+                "status": "passed",
+                "duration": 0.0011796788312494755,
+                "start": 1787483971.9961257,
+                "stop": 1787483971.997414,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_guest_removed_from_external_group",
+                "status": "passed",
+                "duration": 0.0010115988552570343,
+                "start": 1787483971.9975386,
+                "stop": 1787483971.998656,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_guest_sharepoint_comms_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001248910091817379,
+                "start": 1787483971.9987803,
+                "stop": 1787483972.0031283,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_priya_guest_sharepoint_comms_removed():\n>       assert not any(_grant_targets_user(p, PRIYA_GUEST) for p in _site_perms(\"site-comms\"))\nE       assert not True\nE        +  where True = any(<generator object test_priya_guest_sharepoint_comms_removed.<locals>.<genexpr> at 0x7ccb8df459a0>)\n\n/tests/test_outputs.py:121: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_diego_disabled",
+                "status": "passed",
+                "duration": 0.0010515977628529072,
+                "start": 1787483972.003255,
+                "stop": 1787483972.0044117,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_removed_from_helios_group",
+                "status": "passed",
+                "duration": 0.0010427744127810001,
+                "start": 1787483972.0045366,
+                "stop": 1787483972.0056953,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_sharepoint_research_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012373425997793674,
+                "start": 1787483972.0058184,
+                "stop": 1787483972.0101593,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_diego_sharepoint_research_removed():\n>       assert not any(_grant_targets_user(p, DIEGO) for p in _site_perms(\"site-research\"))\nE       assert not True\nE        +  where True = any(<generator object test_diego_sharepoint_research_removed.<locals>.<genexpr> at 0x7ccb8df46260>)\n\n/tests/test_outputs.py:130: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_diego_sharepoint_helios_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0015107383951544762,
+                "start": 1787483972.0102842,
+                "stop": 1787483972.014884,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_diego_sharepoint_helios_removed():\n>       assert not any(_grant_targets_user(p, DIEGO) for p in _site_perms(\"site-helios\"))\nE       assert not True\nE        +  where True = any(<generator object test_diego_sharepoint_helios_removed.<locals>.<genexpr> at 0x7ccb8df46f80>)\n\n/tests/test_outputs.py:133: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_helios_site_retains_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012425510212779045,
+                "start": 1787483972.015014,
+                "stop": 1787483972.019429,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_helios_site_retains_active_owner():\n        owners = [p for p in _site_perms(\"site-helios\") if \"owner\" in (p.get(\"roles\") or [])]\n        non_departed_owner = any(\n            str((p.get(\"grantedToV2\") or {}).get(\"user\", {}).get(\"id\")) not in DEPARTED\n            and (p.get(\"grantedToV2\") or {}).get(\"user\", {}).get(\"id\")\n            for p in owners\n        )\n>       assert non_departed_owner\nE       assert False\n\n/tests/test_outputs.py:142: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_diego_github_deploy_key_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.020470380783081055,
+                "start": 1787483972.0195553,
+                "stop": 1787483972.0432615,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_diego_github_deploy_key_removed():\n>       assert not any(str(k.get(\"id\")) == \"501\" for k in _repo_deploy_keys(\"contoso\", \"helios-infra\"))\nE       assert not True\nE        +  where True = any(<generator object test_diego_github_deploy_key_removed.<locals>.<genexpr> at 0x7ccb8df084a0>)\n\n/tests/test_outputs.py:145: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_sana_guest_disabled",
+                "status": "passed",
+                "duration": 0.001218076329678297,
+                "start": 1787483972.0433912,
+                "stop": 1787483972.044732,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sana_guest_removed_from_external_group",
+                "status": "passed",
+                "duration": 0.0010810121893882751,
+                "start": 1787483972.044856,
+                "stop": 1787483972.046041,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sana_guest_sharepoint_legal_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0014159870333969593,
+                "start": 1787483972.0461628,
+                "stop": 1787483972.05075,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_sana_guest_sharepoint_legal_removed():\n>       assert not any(_grant_targets_user(p, SANA_GUEST) for p in _site_perms(\"site-legal\"))\nE       assert not True\nE        +  where True = any(<generator object test_sana_guest_sharepoint_legal_removed.<locals>.<genexpr> at 0x7ccb8df08e40>)\n\n/tests/test_outputs.py:154: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_theo_disabled",
+                "status": "passed",
+                "duration": 0.0010241982527077198,
+                "start": 1787483972.0508761,
+                "stop": 1787483972.0520065,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_removed_from_design_group",
+                "status": "passed",
+                "duration": 0.0009857816621661186,
+                "start": 1787483972.0521286,
+                "stop": 1787483972.053217,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_sharepoint_design_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001275048591196537,
+                "start": 1787483972.0533376,
+                "stop": 1787483972.0577483,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_theo_sharepoint_design_removed():\n>       assert not any(_grant_targets_user(p, THEO) for p in _site_perms(\"site-design\"))\nE       assert not True\nE        +  where True = any(<generator object test_theo_sharepoint_design_removed.<locals>.<genexpr> at 0x7ccb8df09700>)\n\n/tests/test_outputs.py:163: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_theo_sharepoint_ops_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0014664730988442898,
+                "start": 1787483972.0578744,
+                "stop": 1787483972.0624182,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_theo_sharepoint_ops_removed():\n>       assert not any(_grant_targets_user(p, THEO) for p in _site_perms(\"site-ops\"))\nE       assert not True\nE        +  where True = any(<generator object test_theo_sharepoint_ops_removed.<locals>.<genexpr> at 0x7ccb8df09fc0>)\n\n/tests/test_outputs.py:166: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_theo_github_deploy_key_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.009671511128544807,
+                "start": 1787483972.0625415,
+                "stop": 1787483972.0753734,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_theo_github_deploy_key_removed():\n>       assert not any(str(k.get(\"id\")) == \"504\" for k in _repo_deploy_keys(\"contoso\", \"data-platform\"))\nE       assert not True\nE        +  where True = any(<generator object test_theo_github_deploy_key_removed.<locals>.<genexpr> at 0x7ccb8df0a7a0>)\n\n/tests/test_outputs.py:169: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_elena_disabled",
+                "status": "passed",
+                "duration": 0.001157616265118122,
+                "start": 1787483972.0755029,
+                "stop": 1787483972.076768,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_removed_from_integrations_group",
+                "status": "passed",
+                "duration": 0.0010528191924095154,
+                "start": 1787483972.0768938,
+                "stop": 1787483972.0780478,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_sharepoint_portfolio_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0013045831583440304,
+                "start": 1787483972.0781705,
+                "stop": 1787483972.0828664,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_elena_sharepoint_portfolio_removed():\n>       assert not any(_grant_targets_user(p, ELENA) for p in _site_perms(\"site-portfolio\"))\nE       assert not True\nE        +  where True = any(<generator object test_elena_sharepoint_portfolio_removed.<locals>.<genexpr> at 0x7ccb8df0b140>)\n\n/tests/test_outputs.py:178: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_elena_app_registration_neutralized",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0027633188292384148,
+                "start": 1787483972.082998,
+                "stop": 1787483972.0889828,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_elena_app_registration_neutralized():\n        target = _by_id(_as_list(_get(M365 + \"/applications\")), \"app-partner-sync\")\n>       assert _apps_owned_by(ELENA) == [] and _artifact_neutralized(target)\nE       AssertionError: assert ([{'@odata.typ...nector', ...}] == []\nE         \nE         Left contains one more item: {'@odata.type': '#microsoft.graph.application', 'appId': '8f21c0a4-partner-sync', 'createdDateTime': '2026-03-01T09:00:00.000Z', 'displayName': 'Partner Data Sync Connector', ...}\nE         Use -v to get more diff)\n\n/tests/test_outputs.py:182: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_disabled",
+                "status": "passed",
+                "duration": 0.0010336916893720627,
+                "start": 1787483972.0891104,
+                "stop": 1787483972.0902512,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_removed_from_integrations_group",
+                "status": "passed",
+                "duration": 0.0010428112000226974,
+                "start": 1787483972.0903745,
+                "stop": 1787483972.0915246,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_sharepoint_eng_removed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012896708212792873,
+                "start": 1787483972.0916655,
+                "stop": 1787483972.09604,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_viktor_sharepoint_eng_removed():\n>       assert not any(_grant_targets_user(p, VIKTOR) for p in _site_perms(\"site-eng\"))\nE       assert not True\nE        +  where True = any(<generator object test_viktor_sharepoint_eng_removed.<locals>.<genexpr> at 0x7ccb8df46c00>)\n\n/tests/test_outputs.py:191: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_eng_site_retains_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012653861194849014,
+                "start": 1787483972.096166,
+                "stop": 1787483972.1006172,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_eng_site_retains_active_owner():\n        owners = [p for p in _site_perms(\"site-eng\") if \"owner\" in (p.get(\"roles\") or [])]\n        non_departed_owner = any(\n            str((p.get(\"grantedToV2\") or {}).get(\"user\", {}).get(\"id\")) not in DEPARTED\n            and (p.get(\"grantedToV2\") or {}).get(\"user\", {}).get(\"id\")\n            for p in owners\n        )\n>       assert non_departed_owner\nE       assert False\n\n/tests/test_outputs.py:200: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_service_principal_neutralized",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002666980028152466,
+                "start": 1787483972.1007485,
+                "stop": 1787483972.106566,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_viktor_service_principal_neutralized():\n        target = _by_id(_as_list(_get(M365 + \"/servicePrincipals\")), \"sp-export-bot\")\n>       assert _sps_owned_by(VIKTOR) == [] and _artifact_neutralized(target)\nE       AssertionError: assert ([{'@odata.typ...To': [], ...}] == []\nE         \nE         Left contains one more item: {'@odata.type': '#microsoft.graph.servicePrincipal', 'accountEnabled': True, 'appId': 'c7e9-nightly-export', 'appRoleAssignedTo': [], ...}\nE         Use -v to get more diff)\n\n/tests/test_outputs.py:204: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_ticket_closed",
+                "status": "passed",
+                "duration": 0.0013325843028724194,
+                "start": 1787483972.1067069,
+                "stop": 1787483972.1081433,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

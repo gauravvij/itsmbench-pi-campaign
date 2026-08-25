@@ -1,0 +1,26 @@
+{
+    "task": {
+        "path": "tasks/task-a-2",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-2__Lp3PsYC",
+    "trials_dir": "/home/azureuser/agent_evals/wave0/jobs/wave0-pi-canary",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/gpt-5.6-sol",
+        "extra_allowed_hosts": [
+            "openrouter.ai"
+        ],
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "extra_allowed_hosts": [
+            "openrouter.ai"
+        ]
+    },
+    "job_id": "4ed8066d-715c-466c-8f35-9bb607841c3d"
+}

@@ -1,0 +1,521 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 47,
+            "passed": 21,
+            "failed": 26,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787216901.9100254,
+            "stop": 1787216902.2990677
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_s2_file_restored_trend_h1",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.020966329611837864,
+                "start": 1787216901.9574234,
+                "stop": 1787216902.000242,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_file_restored_trend_h1():\n>       _s2_restored(MARCUS_FILES[0])\n\n/tests/test_outputs.py:240: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfname = 'VP-220 complaint trend analysis 2024-H1.xlsx'\n\n    def _s2_restored(fname):\n        drive_id, kids = sp_children(\"quality\", \"Quality Records\", \"Complaint Trends\")\n        hits = [k for k in kids if k.get(\"name\") == fname]\n>       assert len(hits) == 1, f\"{fname} not (uniquely) back in Complaint Trends\"\nE       AssertionError: VP-220 complaint trend analysis 2024-H1.xlsx not (uniquely) back in Complaint Trends\nE       assert 0 == 1\nE        +  where 0 = len([])\n\n/tests/test_outputs.py:235: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_file_restored_trend_h2",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002550381701439619,
+                "start": 1787216902.0004106,
+                "stop": 1787216902.0125563,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_file_restored_trend_h2():\n>       _s2_restored(MARCUS_FILES[1])\n\n/tests/test_outputs.py:243: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfname = 'VP-220 complaint trend analysis 2024-H2.xlsx'\n\n    def _s2_restored(fname):\n        drive_id, kids = sp_children(\"quality\", \"Quality Records\", \"Complaint Trends\")\n        hits = [k for k in kids if k.get(\"name\") == fname]\n>       assert len(hits) == 1, f\"{fname} not (uniquely) back in Complaint Trends\"\nE       AssertionError: VP-220 complaint trend analysis 2024-H2.xlsx not (uniquely) back in Complaint Trends\nE       assert 0 == 1\nE        +  where 0 = len([])\n\n/tests/test_outputs.py:235: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_file_restored_mdr_log",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0023461785167455673,
+                "start": 1787216902.0127153,
+                "stop": 1787216902.0247567,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_file_restored_mdr_log():\n>       _s2_restored(MARCUS_FILES[2])\n\n/tests/test_outputs.py:246: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfname = 'VP-220 MDR log 2024.xlsx'\n\n    def _s2_restored(fname):\n        drive_id, kids = sp_children(\"quality\", \"Quality Records\", \"Complaint Trends\")\n        hits = [k for k in kids if k.get(\"name\") == fname]\n>       assert len(hits) == 1, f\"{fname} not (uniquely) back in Complaint Trends\"\nE       AssertionError: VP-220 MDR log 2024.xlsx not (uniquely) back in Complaint Trends\nE       assert 0 == 1\nE        +  where 0 = len([])\n\n/tests/test_outputs.py:235: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_row_status_trend_h1",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002652402501553297,
+                "start": 1787216902.0248957,
+                "stop": 1787216902.0344784,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_row_status_trend_h1():\n>       assert str(_s2_fields(MARCUS_FILES[0]).get(\"Status\", \"\")).lower() == \"active\"\nE       AssertionError: assert 'archived' == 'active'\nE         \nE         - active\nE         + archived\n\n/tests/test_outputs.py:252: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_row_status_trend_h2",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001508546993136406,
+                "start": 1787216902.0346293,
+                "stop": 1787216902.0430124,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_row_status_trend_h2():\n>       assert str(_s2_fields(MARCUS_FILES[1]).get(\"Status\", \"\")).lower() == \"active\"\nE       AssertionError: assert 'archived' == 'active'\nE         \nE         - active\nE         + archived\n\n/tests/test_outputs.py:255: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_row_status_mdr_log",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0015169186517596245,
+                "start": 1787216902.0431497,
+                "stop": 1787216902.0515542,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_row_status_mdr_log():\n>       assert str(_s2_fields(MARCUS_FILES[2]).get(\"Status\", \"\")).lower() == \"active\"\nE       AssertionError: assert 'archived' == 'active'\nE         \nE         - active\nE         + archived\n\n/tests/test_outputs.py:258: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_row_label_trend_h1",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016013747081160545,
+                "start": 1787216902.0517154,
+                "stop": 1787216902.0602372,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_row_label_trend_h1():\n>       assert str(_s2_fields(MARCUS_FILES[0]).get(\"RetentionLabel\", \"\")).lower() == \"vp220-qms\"\nE       AssertionError: assert '' == 'vp220-qms'\nE         \nE         - vp220-qms\n\n/tests/test_outputs.py:261: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_row_label_trend_h2",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0014978614635765553,
+                "start": 1787216902.060369,
+                "stop": 1787216902.0687537,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_row_label_trend_h2():\n>       assert str(_s2_fields(MARCUS_FILES[1]).get(\"RetentionLabel\", \"\")).lower() == \"vp220-qms\"\nE       AssertionError: assert '' == 'vp220-qms'\nE         \nE         - vp220-qms\n\n/tests/test_outputs.py:264: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_row_label_mdr_log",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016495361924171448,
+                "start": 1787216902.0688865,
+                "stop": 1787216902.077968,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_row_label_mdr_log():\n>       assert str(_s2_fields(MARCUS_FILES[2]).get(\"RetentionLabel\", \"\")).lower() == \"vp220-qms\"\nE       AssertionError: assert '' == 'vp220-qms'\nE         \nE         - vp220-qms\n\n/tests/test_outputs.py:267: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_row_docpath_trend_h1",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0014652609825134277,
+                "start": 1787216902.0781012,
+                "stop": 1787216902.0888445,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_row_docpath_trend_h1():\n>       _s2_docpath(MARCUS_FILES[0])\n\n/tests/test_outputs.py:275: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfname = 'VP-220 complaint trend analysis 2024-H1.xlsx'\n\n    def _s2_docpath(fname):\n        dp = norm_path(_s2_fields(fname).get(\"DocPath\"))\n>       assert dp.endswith(f\"complaint trends/{fname.lower()}\"), f\"DocPath wrong: {dp}\"\nE       AssertionError: DocPath wrong: quality records/archive/vp-220 complaint trend analysis 2024-h1.xlsx\nE       assert False\nE        +  where False = <built-in method endswith of str object at 0x79ddc36072f0>('complaint trends/vp-220 complaint trend analysis 2024-h1.xlsx')\nE        +    where <built-in method endswith of str object at 0x79ddc36072f0> = 'quality records/archive/vp-220 complaint trend analysis 2024-h1.xlsx'.endswith\n\n/tests/test_outputs.py:271: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_row_docpath_trend_h2",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0015922216698527336,
+                "start": 1787216902.0889783,
+                "stop": 1787216902.100235,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_row_docpath_trend_h2():\n>       _s2_docpath(MARCUS_FILES[1])\n\n/tests/test_outputs.py:278: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfname = 'VP-220 complaint trend analysis 2024-H2.xlsx'\n\n    def _s2_docpath(fname):\n        dp = norm_path(_s2_fields(fname).get(\"DocPath\"))\n>       assert dp.endswith(f\"complaint trends/{fname.lower()}\"), f\"DocPath wrong: {dp}\"\nE       AssertionError: DocPath wrong: quality records/archive/vp-220 complaint trend analysis 2024-h2.xlsx\nE       assert False\nE        +  where False = <built-in method endswith of str object at 0x79ddc36077c0>('complaint trends/vp-220 complaint trend analysis 2024-h2.xlsx')\nE        +    where <built-in method endswith of str object at 0x79ddc36077c0> = 'quality records/archive/vp-220 complaint trend analysis 2024-h2.xlsx'.endswith\n\n/tests/test_outputs.py:271: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_row_docpath_mdr_log",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001457400619983673,
+                "start": 1787216902.1003726,
+                "stop": 1787216902.1114793,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_row_docpath_mdr_log():\n>       _s2_docpath(MARCUS_FILES[2])\n\n/tests/test_outputs.py:281: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfname = 'VP-220 MDR log 2024.xlsx'\n\n    def _s2_docpath(fname):\n        dp = norm_path(_s2_fields(fname).get(\"DocPath\"))\n>       assert dp.endswith(f\"complaint trends/{fname.lower()}\"), f\"DocPath wrong: {dp}\"\nE       AssertionError: DocPath wrong: quality records/archive/vp-220 mdr log 2024.xlsx\nE       assert False\nE        +  where False = <built-in method endswith of str object at 0x79ddc35d2490>('complaint trends/vp-220 mdr log 2024.xlsx')\nE        +    where <built-in method endswith of str object at 0x79ddc35d2490> = 'quality records/archive/vp-220 mdr log 2024.xlsx'.endswith\n\n/tests/test_outputs.py:271: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s2_qa_archive_exact_remaining_set",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0025380048900842667,
+                "start": 1787216902.1116297,
+                "stop": 1787216902.1211019,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s2_qa_archive_exact_remaining_set():\n        _, kids = sp_children(\"quality\", \"Quality Records\", \"Archive\")\n>       assert {k.get(\"name\") for k in kids} == QA_ARCHIVE_EXPECTED\nE       AssertionError: assert {'Legacy supp...24.docx', ...} == {'Legacy supp...ds 2024.xlsx'}\nE         \nE         Extra items in the left set:\nE         'VP-220 complaint trend analysis 2024-H1.xlsx'\nE         'VP-220 MDR log 2024.xlsx'\nE         'VP-220 complaint trend analysis 2024-H2.xlsx'\nE         Use -v to get more diff\n\n/tests/test_outputs.py:285: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s3_marcus_folder_back_at_root",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.003765102941542864,
+                "start": 1787216902.1212366,
+                "stop": 1787216902.1321268,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s3_marcus_folder_back_at_root():\n        hits = od_by_name(\"marcus.chen\", \"VP220-complaint-raw\")\n        assert len(hits) == 1\n>       assert od_eff_parent(hits[0]) == od_root_id(\"marcus.chen\"), \"folder still displaced\"\nE       AssertionError: folder still displaced\nE       assert 'odi-a87fd77227' == 'odi-426df18e58'\nE         \nE         - odi-426df18e58\nE         + odi-a87fd77227\n\n/tests/test_outputs.py:290: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s3_litsupport_share_restored",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0024094111286103725,
+                "start": 1787216902.1322627,
+                "stop": 1787216902.1415663,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s3_litsupport_share_restored():\n        d = od_drive(\"marcus.chen\")\n        hits = od_by_name(\"marcus.chen\", \"VP220-complaint-raw\")\n        assert len(hits) == 1\n>       assert any(grants_litsupport(p) for p in perms_of(d[\"id\"], hits[0][\"id\"])), \\\n            \"no litsupport read grant on the evidence folder\"\nE       AssertionError: no litsupport read grant on the evidence folder\nE       assert False\nE        +  where False = any(<generator object test_s3_litsupport_share_restored.<locals>.<genexpr> at 0x79ddc34d4860>)\n\n/tests/test_outputs.py:296: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s4_fluidics_page_reparented",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.003889987710863352,
+                "start": 1787216902.1417131,
+                "stop": 1787216902.1525092,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s4_fluidics_page_reparented():\n        reg = page_by_title(FMEA_REGISTER)\n>       assert str(page_by_title(PRIYA_PAGES[0]).get(\"parentId\")) == str(reg[\"id\"])\nE       AssertionError: assert 'cp-324' == 'cp-353'\nE         \nE         - cp-353\nE         + cp-324\n\n/tests/test_outputs.py:301: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s4_occlusion_page_reparented",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0004315301775932312,
+                "start": 1787216902.1526687,
+                "stop": 1787216902.1600714,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s4_occlusion_page_reparented():\n        reg = page_by_title(FMEA_REGISTER)\n>       assert str(page_by_title(PRIYA_PAGES[1]).get(\"parentId\")) == str(reg[\"id\"])\nE       AssertionError: assert 'cp-324' == 'cp-353'\nE         \nE         - cp-353\nE         + cp-324\n\n/tests/test_outputs.py:305: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s4_conf_archive_children_exact_set",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.000420592725276947,
+                "start": 1787216902.16021,
+                "stop": 1787216902.1673934,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s4_conf_archive_children_exact_set():\n        arch = page_by_title(\"Archive\")\n        kids = {p[\"title\"] for p in eng_pages() if str(p.get(\"parentId\")) == str(arch[\"id\"])}\n>       assert kids == CONF_ARCHIVE_EXPECTED\nE       AssertionError: assert {'Cleanroom g...ventory', ...} == {'Cleanroom g... sunset plan'}\nE         \nE         Extra items in the left set:\nE         'FMEA \u2014 VP-220 Occlusion Sensor'\nE         'FMEA \u2014 VP-220 Fluidics Module'\nE         Use -v to get more diff\n\n/tests/test_outputs.py:310: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s5_vp220_channel_unarchived",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.008076685480773449,
+                "start": 1787216902.1675262,
+                "stop": 1787216902.182479,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s5_vp220_channel_unarchived():\n>       assert channel(\"vp220-eng\").get(\"is_archived\") is False\nE       AssertionError: assert True is False\nE        +  where True = <built-in method get of dict object at 0x79ddc36c3cc0>('is_archived')\nE        +    where <built-in method get of dict object at 0x79ddc36c3cc0> = {'created': 1704704400, 'creator': 'U975F5358', 'id': 'C4AB1C971', 'is_archived': True, ...}.get\nE        +      where {'created': 1704704400, 'creator': 'U975F5358', 'id': 'C4AB1C971', 'is_archived': True, ...} = channel('vp220-eng')\n\n/tests/test_outputs.py:313: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s6_row_status_fatigue",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002788946498185396,
+                "start": 1787216902.1826317,
+                "stop": 1787216902.192372,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s6_row_status_fatigue():\n>       assert str((dhf_row(TOM_FILES[0]).get(\"fields\") or {}).get(\"Status\", \"\")).lower() == \"active\"\nE       AssertionError: assert 'archived' == 'active'\nE         \nE         - active\nE         + archived\n\n/tests/test_outputs.py:316: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s6_row_status_occlusion",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001557379961013794,
+                "start": 1787216902.192506,
+                "stop": 1787216902.2014802,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s6_row_status_occlusion():\n>       assert str((dhf_row(TOM_FILES[1]).get(\"fields\") or {}).get(\"Status\", \"\")).lower() == \"active\"\nE       AssertionError: assert 'archived' == 'active'\nE         \nE         - active\nE         + archived\n\n/tests/test_outputs.py:319: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s6_row_label_fatigue",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016755945980548859,
+                "start": 1787216902.201626,
+                "stop": 1787216902.2103577,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s6_row_label_fatigue():\n>       assert str((dhf_row(TOM_FILES[0]).get(\"fields\") or {}).get(\"RetentionLabel\", \"\")).lower() == \"vp220-dhf\"\nE       AssertionError: assert '' == 'vp220-dhf'\nE         \nE         - vp220-dhf\n\n/tests/test_outputs.py:322: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s6_row_label_occlusion",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0015216157771646976,
+                "start": 1787216902.2104895,
+                "stop": 1787216902.2190676,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s6_row_label_occlusion():\n>       assert str((dhf_row(TOM_FILES[1]).get(\"fields\") or {}).get(\"RetentionLabel\", \"\")).lower() == \"vp220-dhf\"\nE       AssertionError: assert '' == 'vp220-dhf'\nE         \nE         - vp220-dhf\n\n/tests/test_outputs.py:325: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s6_row_docpath_fatigue",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001548565924167633,
+                "start": 1787216902.2192092,
+                "stop": 1787216902.2304943,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s6_row_docpath_fatigue():\n>       _s6_docpath(TOM_FILES[0])\n\n/tests/test_outputs.py:333: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfname = 'VP-220 bench fatigue test raw 2024-08.csv'\n\n    def _s6_docpath(fname):\n        dp = norm_path((dhf_row(fname).get(\"fields\") or {}).get(\"DocPath\"))\n>       assert dp.endswith(f\"bench tests/{fname.lower()}\"), f\"DocPath wrong: {dp}\"\nE       AssertionError: DocPath wrong: vp-220 dhf/archive/vp-220 bench fatigue test raw 2024-08.csv\nE       assert False\nE        +  where False = <built-in method endswith of str object at 0x79ddc378ae20>('bench tests/vp-220 bench fatigue test raw 2024-08.csv')\nE        +    where <built-in method endswith of str object at 0x79ddc378ae20> = 'vp-220 dhf/archive/vp-220 bench fatigue test raw 2024-08.csv'.endswith\n\n/tests/test_outputs.py:329: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s6_row_docpath_occlusion",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0014703711494803429,
+                "start": 1787216902.230649,
+                "stop": 1787216902.2417672,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s6_row_docpath_occlusion():\n>       _s6_docpath(TOM_FILES[1])\n\n/tests/test_outputs.py:336: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nfname = 'VP-220 occlusion test raw 2024-09.csv'\n\n    def _s6_docpath(fname):\n        dp = norm_path((dhf_row(fname).get(\"fields\") or {}).get(\"DocPath\"))\n>       assert dp.endswith(f\"bench tests/{fname.lower()}\"), f\"DocPath wrong: {dp}\"\nE       AssertionError: DocPath wrong: vp-220 dhf/archive/vp-220 occlusion test raw 2024-09.csv\nE       assert False\nE        +  where False = <built-in method endswith of str object at 0x79ddc378af00>('bench tests/vp-220 occlusion test raw 2024-09.csv')\nE        +    where <built-in method endswith of str object at 0x79ddc378af00> = 'vp-220 dhf/archive/vp-220 occlusion test raw 2024-09.csv'.endswith\n\n/tests/test_outputs.py:329: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s7_priya_folder_back_at_root",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0026640803553164005,
+                "start": 1787216902.2419019,
+                "stop": 1787216902.2516258,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_s7_priya_folder_back_at_root():\n        hits = od_by_name(\"priya.raman\", \"VP220-fw-traces\")\n        assert len(hits) == 1\n>       assert od_eff_parent(hits[0]) == od_root_id(\"priya.raman\"), \"folder still displaced\"\nE       AssertionError: folder still displaced\nE       assert 'odi-e3eaa70ba7' == 'odi-31279f1afc'\nE         \nE         - odi-31279f1afc\nE         + odi-e3eaa70ba7\n\n/tests/test_outputs.py:341: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_s8_trigger_ticket_closed",
+                "status": "passed",
+                "duration": 0.0011612731032073498,
+                "start": 1787216902.2517614,
+                "stop": 1787216902.2530339,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_dana_report_name_kept",
+                "status": "passed",
+                "duration": 0.00205781077966094,
+                "start": 1787216902.2531605,
+                "stop": 1787216902.2553217,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_dana_report_stays_in_submission_folder",
+                "status": "passed",
+                "duration": 0.0002513430081307888,
+                "start": 1787216902.255444,
+                "stop": 1787216902.2558022,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_dana_report_content_untouched",
+                "status": "passed",
+                "duration": 0.002246222458779812,
+                "start": 1787216902.2559123,
+                "stop": 1787216902.2582593,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_elena_files_untouched",
+                "status": "passed",
+                "duration": 0.0020904000848531723,
+                "start": 1787216902.2583797,
+                "stop": 1787216902.2605727,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_elena_rows_untouched",
+                "status": "passed",
+                "duration": 0.0020374800078570843,
+                "start": 1787216902.2607145,
+                "stop": 1787216902.2628546,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_elena_folder_and_share_untouched",
+                "status": "passed",
+                "duration": 0.003840935416519642,
+                "start": 1787216902.262975,
+                "stop": 1787216902.2669227,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_vp180_file_stays_archived",
+                "status": "passed",
+                "duration": 0.0021165795624256134,
+                "start": 1787216902.2670486,
+                "stop": 1787216902.2692688,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_vp180_row_stays_archived",
+                "status": "passed",
+                "duration": 0.0011648880317807198,
+                "start": 1787216902.2693913,
+                "stop": 1787216902.2706757,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_tom_files_never_moved",
+                "status": "passed",
+                "duration": 0.0037819580174982548,
+                "start": 1787216902.270797,
+                "stop": 1787216902.2747102,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_eng_archive_exact_set",
+                "status": "passed",
+                "duration": 0.0020384020172059536,
+                "start": 1787216902.2748468,
+                "stop": 1787216902.2770002,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_thermal_summary_left_where_owner_put_it",
+                "status": "passed",
+                "duration": 0.002058651763945818,
+                "start": 1787216902.2771275,
+                "stop": 1787216902.2792923,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_jordan_archive_untouched",
+                "status": "passed",
+                "duration": 0.0021402034908533096,
+                "start": 1787216902.27942,
+                "stop": 1787216902.281665,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_sam_archive_untouched",
+                "status": "passed",
+                "duration": 0.0018276902846992016,
+                "start": 1787216902.2817893,
+                "stop": 1787216902.2837431,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_jordan_share_not_regranted",
+                "status": "passed",
+                "duration": 0.0020137769170105457,
+                "start": 1787216902.283865,
+                "stop": 1787216902.2859817,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_fmea_sibling_pages_unmoved",
+                "status": "passed",
+                "duration": 0.0002573714591562748,
+                "start": 1787216902.2861018,
+                "stop": 1787216902.286445,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_other_archived_channels_stay_archived",
+                "status": "passed",
+                "duration": 0.00025685178115963936,
+                "start": 1787216902.2865536,
+                "stop": 1787216902.2868955,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_all_custodian_holds_still_applied",
+                "status": "passed",
+                "duration": 0.003712225239723921,
+                "start": 1787216902.2870038,
+                "stop": 1787216902.2908177,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_case_still_active",
+                "status": "passed",
+                "duration": 0.0017925272695720196,
+                "start": 1787216902.290941,
+                "stop": 1787216902.2928352,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_retention_label_definitions_untouched",
+                "status": "passed",
+                "duration": 0.0018044747412204742,
+                "start": 1787216902.2929528,
+                "stop": 1787216902.2948573,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_g_register_row_counts_unchanged",
+                "status": "passed",
+                "duration": 0.0038420152850449085,
+                "start": 1787216902.2949762,
+                "stop": 1787216902.2989252,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,224 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 12,
+            "failed": 8,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787061177.6106524,
+            "stop": 1787061177.7274082
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_crowdstrike_containment_lifted",
+                "status": "passed",
+                "duration": 0.017615119460970163,
+                "start": 1787061177.6368783,
+                "stop": 1787061177.654692,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_malware_hash_blocked",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016936534084379673,
+                "start": 1787061177.6548655,
+                "stop": 1787061177.671214,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_crowdstrike_malware_hash_blocked():\n        iocs = cs_malware_ioc_list()\n>       assert len(iocs) == 1 and str(iocs[0].get(\"action\", \"\")).lower() == \"prevent\"\nE       AssertionError: assert (1 == 1 and 'detect' == 'prevent'\nE        +  where 1 = len([{'action': 'detect', 'applied_globally': True, 'created_by': 'soc-playbook@nimbuslattice.com', 'created_on': '2026-01-12T06:45:00Z', ...}])\nE         \nE         - prevent\nE         + detect)\n\n/tests/test_outputs.py:100: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_closed",
+                "status": "passed",
+                "duration": 0.0013669291511178017,
+                "start": 1787061177.6713595,
+                "stop": 1787061177.6728346,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_assigned_to_responder",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012434651143848896,
+                "start": 1787061177.6729639,
+                "stop": 1787061177.6770933,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_crowdstrike_detection_assigned_to_responder():\n>       assert cs_malware_alert().get(\"assigned_to_name\") == RESPONDER\nE       AssertionError: assert 'IT Support' == 'IT Security Operations'\nE         \nE         - IT Security Operations\nE         + IT Support\n\n/tests/test_outputs.py:106: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_intune_defender_scan_ran",
+                "status": "passed",
+                "duration": 0.0014833598397672176,
+                "start": 1787061177.6772265,
+                "stop": 1787061177.6788151,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_resynced",
+                "status": "passed",
+                "duration": 0.0011767558753490448,
+                "start": 1787061177.678944,
+                "stop": 1787061177.6802225,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_last_sync_advanced",
+                "status": "passed",
+                "duration": 0.0011731605045497417,
+                "start": 1787061177.680345,
+                "stop": 1787061177.6816175,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_reclassified_security",
+                "status": "passed",
+                "duration": 0.002205516677349806,
+                "start": 1787061177.6817403,
+                "stop": 1787061177.684057,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_state_closed",
+                "status": "passed",
+                "duration": 0.0018774340860545635,
+                "start": 1787061177.6841915,
+                "stop": 1787061177.6861758,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_inactive",
+                "status": "passed",
+                "duration": 0.0017957952804863453,
+                "start": 1787061177.686302,
+                "stop": 1787061177.688204,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_code_permanent",
+                "status": "passed",
+                "duration": 0.001999826170504093,
+                "start": 1787061177.688329,
+                "stop": 1787061177.690432,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_notes_name_malware",
+                "status": "passed",
+                "duration": 0.0020107929594814777,
+                "start": 1787061177.6905546,
+                "stop": 1787061177.6926782,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_malware",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0020607467740774155,
+                "start": 1787061177.6928003,
+                "stop": 1787061177.6983533,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_problem_root_cause_names_malware():\n>       assert \"malware\" in str(sn_target_problem().get(\"root_cause\", \"\")).lower()\nE       AssertionError: assert 'malware' in ''\nE        +  where '' = <built-in method lower of str object at 0xb3c3f0>()\nE        +    where <built-in method lower of str object at 0xb3c3f0> = ''.lower\nE        +      where '' = str('')\nE        +        where '' = <built-in method get of dict object at 0x7c46559070c0>('root_cause', '')\nE        +          where <built-in method get of dict object at 0x7c46559070c0> = {}.get\nE        +            where {} = sn_target_problem()\n\n/tests/test_outputs.py:133: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_exact_hash",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001971092540770769,
+                "start": 1787061177.6984866,
+                "stop": 1787061177.703323,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_problem_root_cause_names_exact_hash():\n>       assert SHA256 in str(sn_target_problem().get(\"root_cause\", \"\"))\nE       AssertionError: assert '9d3f1c7a2b8e4f60d15a93c47e0b26f8a1c4d97e5302f8b6ae19c4d70f3b82a5' in ''\nE        +  where '' = str('')\nE        +    where '' = <built-in method get of dict object at 0x7c46556b6500>('root_cause', '')\nE        +      where <built-in method get of dict object at 0x7c46556b6500> = {}.get\nE        +        where {} = sn_target_problem()\n\n/tests/test_outputs.py:136: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_problem_product_area_endpoint_security",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002016379963606596,
+                "start": 1787061177.7034547,
+                "stop": 1787061177.7083037,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_problem_product_area_endpoint_security():\n>       assert str(sn_target_problem().get(\"u_product_area\", \"\")).lower() == \"endpoint security\"\nE       AssertionError: assert '' == 'endpoint security'\nE         \nE         - endpoint security\n\n/tests/test_outputs.py:139: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_problem_short_description_names_malware",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002028828952461481,
+                "start": 1787061177.7084332,
+                "stop": 1787061177.7133079,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_problem_short_description_names_malware():\n>       assert \"malware\" in str(sn_target_problem().get(\"short_description\", \"\")).lower()\nE       AssertionError: assert 'malware' in ''\nE        +  where '' = <built-in method lower of str object at 0xb3c3f0>()\nE        +    where <built-in method lower of str object at 0xb3c3f0> = ''.lower\nE        +      where '' = str('')\nE        +        where '' = <built-in method get of dict object at 0x7c46559050c0>('short_description', '')\nE        +          where <built-in method get of dict object at 0x7c46559050c0> = {}.get\nE        +            where {} = sn_target_problem()\n\n/tests/test_outputs.py:142: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_asset_audited",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0037026209756731987,
+                "start": 1787061177.7134361,
+                "stop": 1787061177.7199616,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_asset_audited():\n>       assert snipe_asset().get(\"last_audit_date\") not in (None, \"\", SEEDED_LAST_AUDIT)\nE       AssertionError: assert '2025-11-20' not in (None, '', '2025-11-20')\nE        +  where '2025-11-20' = <built-in method get of dict object at 0x7c465593eec0>('last_audit_date')\nE        +    where <built-in method get of dict object at 0x7c465593eec0> = {'asset_tag': 'NL-2000', 'assigned_to': {'id': 100, 'name': 'Marcus Reilly', 'type': 'user'}, 'assigned_type': 'user', 'available_actions': {'checkin': True, 'checkout': False, 'clone': True, 'delete': True, ...}, ...}.get\nE        +      where {'asset_tag': 'NL-2000', 'assigned_to': {'id': 100, 'name': 'Marcus Reilly', 'type': 'user'}, 'assigned_type': 'user', 'available_actions': {'checkin': True, 'checkout': False, 'clone': True, 'delete': True, ...}, ...} = snipe_asset()\n\n/tests/test_outputs.py:145: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_not_wiped_or_retired",
+                "status": "passed",
+                "duration": 0.0012708459980785847,
+                "start": 1787061177.7200892,
+                "stop": 1787061177.7214646,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_still_compliant",
+                "status": "passed",
+                "duration": 0.0012207599356770515,
+                "start": 1787061177.7216034,
+                "stop": 1787061177.7229264,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_malware_ioc_escalated_in_place",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001312275417149067,
+                "start": 1787061177.7230482,
+                "stop": 1787061177.7272677,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_malware_ioc_escalated_in_place():\n        iocs = cs_malware_ioc_list()\n        seeded = next((i for i in iocs if i.get(\"id\") == SEEDED_IOC_ID), None)\n>       assert seeded is not None and str(seeded.get(\"action\", \"\")).lower() == \"prevent\"\nE       AssertionError: assert ({'action': 'detect', 'applied_globally': True, 'created_by': 'soc-playbook@nimbuslattice.com', 'created_on': '2026-01-12T06:45:00Z', ...} is not None and 'detect' == 'prevent'\nE         \nE         - prevent\nE         + detect)\n\n/tests/test_outputs.py:156: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

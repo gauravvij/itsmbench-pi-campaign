@@ -1,0 +1,39 @@
+{
+    "job_name": "wave1-pi-canary-closeout",
+    "jobs_dir": "/home/azureuser/agent_evals/wave1/jobs",
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave1/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "agents": [
+        {
+            "name": "pi",
+            "model_name": "openai/gpt-5.6-sol",
+            "kwargs": {
+                "thinking": "high"
+            },
+            "env": {
+                "OPENAI_BASE_URL": "https://openrouter.ai/api/v1",
+                "OPENAI_API_BASE": "https://openrouter.ai/api/v1"
+            }
+        }
+    ],
+    "datasets": [
+        {
+            "path": "tasks",
+            "task_names": [
+                "task-n-2",
+                "task-a-1",
+                "task-a-33",
+                "task-a-2"
+            ]
+        }
+    ]
+}

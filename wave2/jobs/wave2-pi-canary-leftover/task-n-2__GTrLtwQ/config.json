@@ -1,0 +1,31 @@
+{
+    "task": {
+        "path": "tasks/task-n-2",
+        "source": "tasks"
+    },
+    "trial_name": "task-n-2__GTrLtwQ",
+    "trials_dir": "/home/azureuser/agent_evals/wave2/jobs/wave2-pi-canary-leftover",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/gpt-5.6-sol",
+        "kwargs": {
+            "thinking": "high"
+        },
+        "env": {
+            "OPENAI_BASE_URL": "https://openrouter.ai/api/v1",
+            "OPENAI_API_BASE": "https://openrouter.ai/api/v1"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave2/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "9ae5e8ea-23ea-468e-bce7-b7952c543998"
+}

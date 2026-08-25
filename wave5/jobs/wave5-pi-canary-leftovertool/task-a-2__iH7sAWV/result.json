@@ -1,0 +1,127 @@
+{
+    "id": "4f754fb1-5757-4abb-b7cd-dfcfe293206e",
+    "task_name": "abhishek203/task-a-2",
+    "trial_name": "task-a-2__iH7sAWV",
+    "trial_uri": "file:///home/azureuser/agent_evals/wave5/jobs/wave5-pi-canary-leftovertool/task-a-2__iH7sAWV",
+    "task_id": {
+        "path": "/home/azureuser/agent_evals/ITSMBench/tasks/task-a-2"
+    },
+    "source": "tasks",
+    "task_checksum": "802c7374ab4bec0f4da92286292abc71485a2b66e88c33b8ac4ee89bb7f5ec5a",
+    "config": {
+        "task": {
+            "path": "/home/azureuser/agent_evals/ITSMBench/tasks/task-a-2",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "task-a-2__iH7sAWV",
+        "trials_dir": "/home/azureuser/agent_evals/wave5/jobs/wave5-pi-canary-leftovertool",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "pi",
+            "import_path": null,
+            "model_name": "openai/gpt-5.6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "thinking": "high"
+            },
+            "env": {
+                "OPENAI_BASE_URL": "https://openrouter.ai/api/v1",
+                "OPENAI_API_BASE": "https://openrouter.ai/api/v1"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "/home/azureuser/agent_evals/wave5/pi-agent-home",
+                    "target": "/root/.pi/agent"
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "75010c72-3da0-4bf5-b433-b3492f53544c",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "pi",
+        "version": "0.84.2",
+        "model_info": {
+            "name": "gpt-5.6-sol",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 1338240,
+        "n_cache_tokens": 1338183,
+        "n_output_tokens": 7166,
+        "cost_usd": 1.608969,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-18T15:01:46.054597Z",
+    "finished_at": "2026-08-18T15:04:43.422855Z",
+    "environment_setup": {
+        "started_at": "2026-08-18T15:01:46.116594Z",
+        "finished_at": "2026-08-18T15:01:48.127996Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-18T15:01:48.128031Z",
+        "finished_at": "2026-08-18T15:02:09.229777Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-18T15:02:09.229874Z",
+        "finished_at": "2026-08-18T15:04:12.742008Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-18T15:04:13.067827Z",
+        "finished_at": "2026-08-18T15:04:21.258127Z"
+    },
+    "step_results": null
+}

@@ -1,0 +1,27 @@
+{
+    "task": {
+        "path": "tasks/task-a-33",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-33__7FbvPeq",
+    "trials_dir": "/home/azureuser/agent_evals/wave9/jobs/wave9-pi-canary-endpointrca",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/gpt-5.6-sol",
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave9/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "443781fe-2529-44b1-aec5-f6a5b340a28b"
+}

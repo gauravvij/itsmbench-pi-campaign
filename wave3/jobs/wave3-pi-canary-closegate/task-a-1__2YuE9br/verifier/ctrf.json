@@ -1,0 +1,203 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 19,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787056832.3916762,
+            "stop": 1787056832.4768453
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_gw_account_suspended",
+                "status": "passed",
+                "duration": 0.0173632875084877,
+                "start": 1787056832.412704,
+                "stop": 1787056832.430247,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_credential_reset_forced",
+                "status": "passed",
+                "duration": 0.0017845681868493557,
+                "start": 1787056832.430414,
+                "stop": 1787056832.4323294,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_moved_into_legal_hold_ou",
+                "status": "passed",
+                "duration": 0.0014100922271609306,
+                "start": 1787056832.4324596,
+                "stop": 1787056832.4339855,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_zoom",
+                "status": "passed",
+                "duration": 0.0015660845674574375,
+                "start": 1787056832.4341116,
+                "stop": 1787056832.435773,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_dropbox",
+                "status": "passed",
+                "duration": 0.001358244102448225,
+                "start": 1787056832.4358969,
+                "stop": 1787056832.4373481,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_asana",
+                "status": "passed",
+                "duration": 0.0015698191709816456,
+                "start": 1787056832.4374695,
+                "stop": 1787056832.4391522,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_slack_connector",
+                "status": "passed",
+                "duration": 0.0013683796860277653,
+                "start": 1787056832.4392722,
+                "stop": 1787056832.440733,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_calendly",
+                "status": "passed",
+                "duration": 0.0015518125146627426,
+                "start": 1787056832.4408503,
+                "stop": 1787056832.4425044,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_docusign",
+                "status": "passed",
+                "duration": 0.0014294502325356007,
+                "start": 1787056832.4426575,
+                "stop": 1787056832.4441874,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_grammarly",
+                "status": "passed",
+                "duration": 0.0014613275416195393,
+                "start": 1787056832.4443119,
+                "stop": 1787056832.4458675,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_trello",
+                "status": "passed",
+                "duration": 0.0012869988568127155,
+                "start": 1787056832.4459898,
+                "stop": 1787056832.447372,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_zapier",
+                "status": "passed",
+                "duration": 0.0014560101553797722,
+                "start": 1787056832.4474936,
+                "stop": 1787056832.4490442,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_loom",
+                "status": "passed",
+                "duration": 0.0012881318107247353,
+                "start": 1787056832.4491634,
+                "stop": 1787056832.4505432,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_notion",
+                "status": "passed",
+                "duration": 0.0012880205176770687,
+                "start": 1787056832.450675,
+                "stop": 1787056832.4520552,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_slack_account_deactivated",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0018328889273107052,
+                "start": 1787056832.4521747,
+                "stop": 1787056832.4675488,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_slack_account_deactivated():\n>       assert _slack_user().get(\"deleted\") is True\nE       AssertionError: assert False is True\nE        +  where False = <built-in method get of dict object at 0x7647cca639c0>('deleted')\nE        +    where <built-in method get of dict object at 0x7647cca639c0> = {'channel_ids': [], 'deleted': False, 'id': 'U42543D3ED', 'is_admin': False, ...}.get\nE        +      where {'channel_ids': [], 'deleted': False, 'id': 'U42543D3ED', 'is_admin': False, ...} = _slack_user()\n\n/tests/test_outputs.py:94: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_routed_to_legal_hold_group",
+                "status": "passed",
+                "duration": 0.002009791787713766,
+                "start": 1787056832.4677036,
+                "stop": 1787056832.4698148,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_escalation_reason_recorded",
+                "status": "passed",
+                "duration": 0.0017820238135755062,
+                "start": 1787056832.4699433,
+                "stop": 1787056832.4718225,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_put_on_hold",
+                "status": "passed",
+                "duration": 0.0018239771015942097,
+                "start": 1787056832.471946,
+                "stop": 1787056832.4738655,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_okta_status_remains_suspended",
+                "status": "passed",
+                "duration": 0.001229565590620041,
+                "start": 1787056832.473988,
+                "stop": 1787056832.4753146,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_okta_mfa_factors_preserved",
+                "status": "passed",
+                "duration": 0.001176795456558466,
+                "start": 1787056832.4754362,
+                "stop": 1787056832.4767227,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

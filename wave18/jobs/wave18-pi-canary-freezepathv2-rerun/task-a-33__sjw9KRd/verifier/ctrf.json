@@ -1,0 +1,326 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 34,
+            "passed": 34,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787312229.9428868,
+            "stop": 1787312230.062956
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_priya_member_disabled",
+                "status": "passed",
+                "duration": 0.01669055689126253,
+                "start": 1787312229.9696124,
+                "stop": 1787312229.9864848,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_removed_from_helios_group",
+                "status": "passed",
+                "duration": 0.0013409489765763283,
+                "start": 1787312229.9866614,
+                "stop": 1787312229.988111,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_removed_from_records_group",
+                "status": "passed",
+                "duration": 0.001082496251910925,
+                "start": 1787312229.9882407,
+                "stop": 1787312229.989419,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_sharepoint_finance_removed",
+                "status": "passed",
+                "duration": 0.0012727179564535618,
+                "start": 1787312229.9895418,
+                "stop": 1787312229.99091,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_sharepoint_exec_removed",
+                "status": "passed",
+                "duration": 0.0012218831107020378,
+                "start": 1787312229.991033,
+                "stop": 1787312229.9923596,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_sharepoint_portfolio_removed",
+                "status": "passed",
+                "duration": 0.0013241446577012539,
+                "start": 1787312229.9924936,
+                "stop": 1787312229.993917,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_onedrive_departed_share_grants_removed",
+                "status": "passed",
+                "duration": 0.004054301884025335,
+                "start": 1787312229.9940443,
+                "stop": 1787312229.9982052,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_guest_disabled",
+                "status": "passed",
+                "duration": 0.0010278848931193352,
+                "start": 1787312229.9983351,
+                "stop": 1787312229.9994586,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_guest_removed_from_external_group",
+                "status": "passed",
+                "duration": 0.0009620361961424351,
+                "start": 1787312229.999594,
+                "stop": 1787312230.0006497,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_priya_guest_sharepoint_comms_removed",
+                "status": "passed",
+                "duration": 0.0011298167519271374,
+                "start": 1787312230.0007715,
+                "stop": 1787312230.0019932,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_disabled",
+                "status": "passed",
+                "duration": 0.0009641801007091999,
+                "start": 1787312230.0021129,
+                "stop": 1787312230.0031683,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_removed_from_helios_group",
+                "status": "passed",
+                "duration": 0.000953394453972578,
+                "start": 1787312230.0032873,
+                "stop": 1787312230.0043328,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_sharepoint_research_removed",
+                "status": "passed",
+                "duration": 0.0010956553742289543,
+                "start": 1787312230.004451,
+                "stop": 1787312230.005669,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_sharepoint_helios_removed",
+                "status": "passed",
+                "duration": 0.0012895525433123112,
+                "start": 1787312230.0057893,
+                "stop": 1787312230.007169,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_helios_site_retains_active_owner",
+                "status": "passed",
+                "duration": 0.001118239015340805,
+                "start": 1787312230.0072834,
+                "stop": 1787312230.0084927,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_diego_github_deploy_key_removed",
+                "status": "passed",
+                "duration": 0.019432514905929565,
+                "start": 1787312230.0086281,
+                "stop": 1787312230.0281696,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sana_guest_disabled",
+                "status": "passed",
+                "duration": 0.0010476941242814064,
+                "start": 1787312230.028307,
+                "stop": 1787312230.029448,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sana_guest_removed_from_external_group",
+                "status": "passed",
+                "duration": 0.0009821667335927486,
+                "start": 1787312230.0295672,
+                "stop": 1787312230.0306413,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sana_guest_sharepoint_legal_removed",
+                "status": "passed",
+                "duration": 0.0011426154524087906,
+                "start": 1787312230.03076,
+                "stop": 1787312230.0319946,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_disabled",
+                "status": "passed",
+                "duration": 0.000939282588660717,
+                "start": 1787312230.0321121,
+                "stop": 1787312230.0331419,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_removed_from_design_group",
+                "status": "passed",
+                "duration": 0.0009396038949489594,
+                "start": 1787312230.0332584,
+                "stop": 1787312230.0342896,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_sharepoint_design_removed",
+                "status": "passed",
+                "duration": 0.0011222949251532555,
+                "start": 1787312230.0344095,
+                "stop": 1787312230.0356257,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_sharepoint_ops_removed",
+                "status": "passed",
+                "duration": 0.0011323899962008,
+                "start": 1787312230.0357487,
+                "stop": 1787312230.0369716,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_theo_github_deploy_key_removed",
+                "status": "passed",
+                "duration": 0.009324501734226942,
+                "start": 1787312230.0370889,
+                "stop": 1787312230.0465107,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_disabled",
+                "status": "passed",
+                "duration": 0.0010004835203289986,
+                "start": 1787312230.0466514,
+                "stop": 1787312230.047745,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_removed_from_integrations_group",
+                "status": "passed",
+                "duration": 0.0010039489716291428,
+                "start": 1787312230.0478618,
+                "stop": 1787312230.0489554,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_sharepoint_portfolio_removed",
+                "status": "passed",
+                "duration": 0.001128964126110077,
+                "start": 1787312230.0490735,
+                "stop": 1787312230.0502932,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_app_registration_neutralized",
+                "status": "passed",
+                "duration": 0.0027184924110770226,
+                "start": 1787312230.0504115,
+                "stop": 1787312230.0532248,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_disabled",
+                "status": "passed",
+                "duration": 0.0009562079794704914,
+                "start": 1787312230.0533462,
+                "stop": 1787312230.0543947,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_removed_from_integrations_group",
+                "status": "passed",
+                "duration": 0.0009425864554941654,
+                "start": 1787312230.0545125,
+                "stop": 1787312230.055547,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_sharepoint_eng_removed",
+                "status": "passed",
+                "duration": 0.0011145630851387978,
+                "start": 1787312230.0556767,
+                "stop": 1787312230.0568824,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_eng_site_retains_active_owner",
+                "status": "passed",
+                "duration": 0.0010886751115322113,
+                "start": 1787312230.0570002,
+                "stop": 1787312230.0581799,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_viktor_service_principal_neutralized",
+                "status": "passed",
+                "duration": 0.0029870914295315742,
+                "start": 1787312230.0582952,
+                "stop": 1787312230.061378,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_ticket_closed",
+                "status": "passed",
+                "duration": 0.0012305150739848614,
+                "start": 1787312230.061502,
+                "stop": 1787312230.062823,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

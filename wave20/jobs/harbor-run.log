@@ -1,0 +1,24 @@
+  3/3 Mean: 0.667 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:08:47 0:00:00
+tasks • pi • deepseek/deepseek-v4-flash-0731
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃ Pass@2 ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━┩
+│      3 │          0 │ 0.667 │  1.000 │
+└────────┴────────────┴───────┴────────┘
+
+┏━━━━━━━━┳━━━━━━━┓
+┃ Reward ┃ Count ┃
+┡━━━━━━━━╇━━━━━━━┩
+│ 1.0    │     2 │
+│ 0.0    │     1 │
+└────────┴───────┘
+
+Job Info
+Total runtime: 8m 47s
+Results written to 
+/home/azureuser/agent_evals/wave20/jobs/wave20-pi-probe-a2-endpointclose/result.
+json
+Inspect results by running `harbor view /home/azureuser/agent_evals/wave20/jobs`
+Share results by running `harbor upload 
+/home/azureuser/agent_evals/wave20/jobs/wave20-pi-probe-a2-endpointclose`
+

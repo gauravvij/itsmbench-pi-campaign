@@ -1,0 +1,242 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 24,
+            "passed": 22,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787216827.4235487,
+            "stop": 1787216827.514234
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_active_hold_01_aurora_notapplied",
+                "status": "passed",
+                "duration": 0.016985897906124592,
+                "start": 1787216827.4441252,
+                "stop": 1787216827.461303,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_02_aurora_notapplied",
+                "status": "passed",
+                "duration": 0.0014453916810452938,
+                "start": 1787216827.4614859,
+                "stop": 1787216827.463052,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_03_aurora_notapplied",
+                "status": "passed",
+                "duration": 0.0014725136570632458,
+                "start": 1787216827.4631855,
+                "stop": 1787216827.464764,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_04_aurora_partial",
+                "status": "passed",
+                "duration": 0.001436529215425253,
+                "start": 1787216827.4648914,
+                "stop": 1787216827.4664311,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_05_nimbus_notapplied",
+                "status": "passed",
+                "duration": 0.0014550271444022655,
+                "start": 1787216827.4665642,
+                "stop": 1787216827.468124,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_06_nimbus_notapplied",
+                "status": "passed",
+                "duration": 0.001367819495499134,
+                "start": 1787216827.4682462,
+                "stop": 1787216827.4697413,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_07_nimbus_never_activated",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016058208420872688,
+                "start": 1787216827.4698699,
+                "stop": 1787216827.4851556,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_active_hold_07_nimbus_never_activated():\n>       assert _on_hold(*ACTIVE_GAP[6])\nE       AssertionError: assert False\nE        +  where False = _on_hold(*('case-nimbus', 'cust-nim-3'))\n\n/tests/test_outputs.py:69: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_08_nimbus_applying",
+                "status": "passed",
+                "duration": 0.001627542544156313,
+                "start": 1787216827.4852917,
+                "stop": 1787216827.4870265,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_09_titan_notapplied",
+                "status": "passed",
+                "duration": 0.0014176624827086926,
+                "start": 1787216827.4871511,
+                "stop": 1787216827.488683,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_10_titan_partial",
+                "status": "passed",
+                "duration": 0.0012850654311478138,
+                "start": 1787216827.4888062,
+                "stop": 1787216827.4901943,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_active_hold_11_titan_never_activated",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001361378002911806,
+                "start": 1787216827.4903152,
+                "stop": 1787216827.4938323,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_active_hold_11_titan_never_activated():\n>       assert _on_hold(*ACTIVE_GAP[10])\nE       AssertionError: assert False\nE        +  where False = _on_hold(*('case-titan', 'cust-tit-2'))\n\n/tests/test_outputs.py:81: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_closed_release_1",
+                "status": "passed",
+                "duration": 0.001420426182448864,
+                "start": 1787216827.4939623,
+                "stop": 1787216827.495487,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_closed_release_2",
+                "status": "passed",
+                "duration": 0.0013968613930046558,
+                "start": 1787216827.4956312,
+                "stop": 1787216827.4971294,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_closed_release_3",
+                "status": "passed",
+                "duration": 0.001288251020014286,
+                "start": 1787216827.4972486,
+                "stop": 1787216827.4986417,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_closed_release_4",
+                "status": "passed",
+                "duration": 0.0012725554406642914,
+                "start": 1787216827.4987602,
+                "stop": 1787216827.5001297,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_closed_release_5",
+                "status": "passed",
+                "duration": 0.0013967822305858135,
+                "start": 1787216827.500243,
+                "stop": 1787216827.5017383,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_closed_release_6",
+                "status": "passed",
+                "duration": 0.0013709324412047863,
+                "start": 1787216827.5018518,
+                "stop": 1787216827.5033207,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_closed_release_7",
+                "status": "passed",
+                "duration": 0.0012773550115525723,
+                "start": 1787216827.503434,
+                "stop": 1787216827.5048072,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_closed_release_8",
+                "status": "passed",
+                "duration": 0.0012814495712518692,
+                "start": 1787216827.5049317,
+                "stop": 1787216827.5063117,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_closed_release_9",
+                "status": "passed",
+                "duration": 0.0013856543228030205,
+                "start": 1787216827.5064259,
+                "stop": 1787216827.5079083,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_retention_event_departure",
+                "status": "passed",
+                "duration": 0.001257654745131731,
+                "start": 1787216827.5080204,
+                "stop": 1787216827.509374,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_retention_event_contract",
+                "status": "passed",
+                "duration": 0.0011606523767113686,
+                "start": 1787216827.509487,
+                "stop": 1787216827.5107484,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_retention_event_producteol",
+                "status": "passed",
+                "duration": 0.0012437929399311543,
+                "start": 1787216827.510859,
+                "stop": 1787216827.512198,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_ticket_closed",
+                "status": "passed",
+                "duration": 0.001703775953501463,
+                "start": 1787216827.5123096,
+                "stop": 1787216827.514106,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

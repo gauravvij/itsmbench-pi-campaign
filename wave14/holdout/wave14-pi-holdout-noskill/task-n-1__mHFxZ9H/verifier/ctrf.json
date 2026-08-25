@@ -1,0 +1,245 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 25,
+            "passed": 25,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787216541.9610531,
+            "stop": 1787216542.037266
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_db01_device_archived",
+                "status": "passed",
+                "duration": 0.016820676624774933,
+                "start": 1787216541.9814334,
+                "stop": 1787216541.9984374,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_db01_ip_freed",
+                "status": "passed",
+                "duration": 0.0013291728682816029,
+                "start": 1787216541.998619,
+                "stop": 1787216542.000058,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_db01_stale_dns_removed",
+                "status": "passed",
+                "duration": 0.0011821934022009373,
+                "start": 1787216542.0001938,
+                "stop": 1787216542.0014741,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_db01_cmdb_ci_retired",
+                "status": "passed",
+                "duration": 0.0023182304576039314,
+                "start": 1787216542.0016215,
+                "stop": 1787216542.004036,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_app02_device_archived",
+                "status": "passed",
+                "duration": 0.0011712373234331608,
+                "start": 1787216542.0041673,
+                "stop": 1787216542.0054343,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_app02_primary_ip_freed",
+                "status": "passed",
+                "duration": 0.0012922761961817741,
+                "start": 1787216542.0055583,
+                "stop": 1787216542.006946,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_app02_secondary_mgmt_ip_freed",
+                "status": "passed",
+                "duration": 0.0011013643816113472,
+                "start": 1787216542.007066,
+                "stop": 1787216542.00826,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_app02_dns_removed",
+                "status": "passed",
+                "duration": 0.001236895564943552,
+                "start": 1787216542.008379,
+                "stop": 1787216542.0097206,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_app02_cmdb_ci_retired",
+                "status": "passed",
+                "duration": 0.0020626215264201164,
+                "start": 1787216542.009838,
+                "stop": 1787216542.0119963,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_cache03_device_archived",
+                "status": "passed",
+                "duration": 0.0011401916854083538,
+                "start": 1787216542.012117,
+                "stop": 1787216542.013349,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_cache03_ip_freed",
+                "status": "passed",
+                "duration": 0.0010961652733385563,
+                "start": 1787216542.0134678,
+                "stop": 1787216542.0146868,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_cache03_businessapp_element_removed",
+                "status": "passed",
+                "duration": 0.0010974975302815437,
+                "start": 1787216542.0148127,
+                "stop": 1787216542.0160017,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_cache03_cmdb_ci_retired",
+                "status": "passed",
+                "duration": 0.0020130672492086887,
+                "start": 1787216542.0161185,
+                "stop": 1787216542.018223,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_lb04_device_archived",
+                "status": "passed",
+                "duration": 0.0011802208609879017,
+                "start": 1787216542.0183427,
+                "stop": 1787216542.0196154,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_lb04_ip_freed",
+                "status": "passed",
+                "duration": 0.0012596994638442993,
+                "start": 1787216542.0197358,
+                "stop": 1787216542.0210865,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_lb04_cmdb_ci_retired",
+                "status": "passed",
+                "duration": 0.0021714316681027412,
+                "start": 1787216542.0212047,
+                "stop": 1787216542.0234687,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_worker05_device_archived",
+                "status": "passed",
+                "duration": 0.0011836751364171505,
+                "start": 1787216542.0236042,
+                "stop": 1787216542.024881,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_worker05_ip_freed",
+                "status": "passed",
+                "duration": 0.0011026877909898758,
+                "start": 1787216542.0249968,
+                "stop": 1787216542.0261896,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_worker05_cmdb_ci_retired",
+                "status": "passed",
+                "duration": 0.0020202272571623325,
+                "start": 1787216542.0263066,
+                "stop": 1787216542.0284195,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_orphan_dns_removed",
+                "status": "passed",
+                "duration": 0.001326423604041338,
+                "start": 1787216542.028536,
+                "stop": 1787216542.0299652,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_orphan_ip_freed",
+                "status": "passed",
+                "duration": 0.0011228211224079132,
+                "start": 1787216542.0300965,
+                "stop": 1787216542.0313148,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_orphan2_dns_removed",
+                "status": "passed",
+                "duration": 0.0012495438568294048,
+                "start": 1787216542.0314336,
+                "stop": 1787216542.032776,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_orphan2_ip_freed",
+                "status": "passed",
+                "duration": 0.0010909494012594223,
+                "start": 1787216542.032893,
+                "stop": 1787216542.0340734,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_subnet_freed",
+                "status": "passed",
+                "duration": 0.0013047396205365658,
+                "start": 1787216542.034189,
+                "stop": 1787216542.03559,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_vlan_freed",
+                "status": "passed",
+                "duration": 0.0013269069604575634,
+                "start": 1787216542.0357203,
+                "stop": 1787216542.0371408,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

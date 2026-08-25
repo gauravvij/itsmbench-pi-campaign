@@ -1,0 +1,311 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 28,
+            "passed": 15,
+            "failed": 13,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787215731.620443,
+            "stop": 1787215731.795979
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_gregor_okta_cannot_authenticate",
+                "status": "passed",
+                "duration": 0.017076827120035887,
+                "start": 1787215731.6459298,
+                "stop": 1787215731.6631918,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gregor_entra_account_disabled",
+                "status": "passed",
+                "duration": 0.0013174470514059067,
+                "start": 1787215731.6633518,
+                "stop": 1787215731.6647828,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gregor_removed_from_okta_super_admins",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0024338667280972004,
+                "start": 1787215731.6649148,
+                "stop": 1787215731.6820047,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gregor_removed_from_okta_super_admins():\n>       assert not _okta_in_group(GREGOR, G_SUPER)\nE       AssertionError: assert not True\nE        +  where True = _okta_in_group('gregor.halvorsen@meridianrobotics.example', 'Okta Super Administrators')\n\n/tests/test_outputs.py:164: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gregor_super_admin_role_revoked",
+                "status": "passed",
+                "duration": 0.0026394613087177277,
+                "start": 1787215731.682146,
+                "stop": 1787215731.6848946,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_okta_cannot_authenticate",
+                "status": "passed",
+                "duration": 0.0014137402176856995,
+                "start": 1787215731.6850245,
+                "stop": 1787215731.686544,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_removed_from_okta_super_admins",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002051390241831541,
+                "start": 1787215731.6866808,
+                "stop": 1787215731.6921277,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_dylan_removed_from_okta_super_admins():\n>       assert not _okta_in_group(DYLAN, G_SUPER)\nE       AssertionError: assert not True\nE        +  where True = _okta_in_group('dylan.okoro@meridianrobotics.example', 'Okta Super Administrators')\n\n/tests/test_outputs.py:173: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_super_admin_role_revoked",
+                "status": "passed",
+                "duration": 0.0024107121862471104,
+                "start": 1787215731.6922612,
+                "stop": 1787215731.6947796,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_removed_from_entra_super_admins_mirror",
+                "status": "passed",
+                "duration": 0.00185071537271142,
+                "start": 1787215731.694908,
+                "stop": 1787215731.6968617,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_removed_from_github_infra_admins_team",
+                "status": "passed",
+                "duration": 0.00703819002956152,
+                "start": 1787215731.6969886,
+                "stop": 1787215731.7041385,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_okta_cannot_authenticate",
+                "status": "passed",
+                "duration": 0.0014753560535609722,
+                "start": 1787215731.7042704,
+                "stop": 1787215731.7058568,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_removed_from_aws_prod_admins",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0022883866913616657,
+                "start": 1787215731.7059872,
+                "stop": 1787215731.7121482,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_elena_removed_from_aws_prod_admins():\n>       assert not _okta_in_group(ELENA, G_AWS)\nE       AssertionError: assert not True\nE        +  where True = _okta_in_group('elena.vasquez@meridianrobotics.example', 'AWS Production Admins')\n\n/tests/test_outputs.py:188: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_elena_prod_console_direct_assignment_cleared",
+                "status": "passed",
+                "duration": 0.003429219126701355,
+                "start": 1787215731.7122824,
+                "stop": 1787215731.7158213,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_removed_from_entra_aws_mirror",
+                "status": "passed",
+                "duration": 0.0017937412485480309,
+                "start": 1787215731.715952,
+                "stop": 1787215731.7178504,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_marcus_okta_cannot_authenticate",
+                "status": "passed",
+                "duration": 0.0013274825178086758,
+                "start": 1787215731.7179754,
+                "stop": 1787215731.7194061,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_marcus_removed_from_aws_prod_admins",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0020061242394149303,
+                "start": 1787215731.7195303,
+                "stop": 1787215731.724876,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_marcus_removed_from_aws_prod_admins():\n>       assert not _okta_in_group(MARCUS, G_AWS)\nE       AssertionError: assert not True\nE        +  where True = _okta_in_group('marcus.feldon@meridianrobotics.example', 'AWS Production Admins')\n\n/tests/test_outputs.py:200: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_marcus_removed_from_security_operations_admins",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002089979127049446,
+                "start": 1787215731.7250068,
+                "stop": 1787215731.7303944,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_marcus_removed_from_security_operations_admins():\n>       assert not _okta_in_group(MARCUS, G_SECOPS)\nE       AssertionError: assert not True\nE        +  where True = _okta_in_group('marcus.feldon@meridianrobotics.example', 'Security Operations Admins')\n\n/tests/test_outputs.py:203: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_marcus_org_admin_role_revoked",
+                "status": "passed",
+                "duration": 0.002269313670694828,
+                "start": 1787215731.730525,
+                "stop": 1787215731.7329028,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_ingrid_entra_guest_disabled",
+                "status": "passed",
+                "duration": 0.0011552581563591957,
+                "start": 1787215731.733029,
+                "stop": 1787215731.734286,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_ingrid_removed_from_github_outside_collaborators",
+                "status": "passed",
+                "duration": 0.006924714893102646,
+                "start": 1787215731.7344067,
+                "stop": 1787215731.7414417,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_ingrid_slack_deactivated",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0020035416819155216,
+                "start": 1787215731.7415671,
+                "stop": 1787215731.7471242,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_ingrid_slack_deactivated():\n>       assert _slack_deactivated(INGRID_UPN)\nE       AssertionError: assert False\nE        +  where False = _slack_deactivated('ingrid.voss@partner.example')\n\n/tests/test_outputs.py:215: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_svc_okta_cannot_authenticate",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0020495904609560966,
+                "start": 1787215731.7472732,
+                "stop": 1787215731.752747,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_svc_okta_cannot_authenticate():\n>       assert _okta_cannot_auth(SVC)\nE       AssertionError: assert False\nE        +  where False = _okta_cannot_auth('svc-telemetry-sync@meridianrobotics.example')\n\n/tests/test_outputs.py:218: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_svc_api_admin_role_revoked",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0032170936465263367,
+                "start": 1787215731.7528977,
+                "stop": 1787215731.7597504,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_svc_api_admin_role_revoked():\n>       assert \"API_ACCESS_MANAGEMENT_ADMIN\" not in _okta_active_role_types(SVC)\nE       AssertionError: assert 'API_ACCESS_MANAGEMENT_ADMIN' not in {'API_ACCESS_MANAGEMENT_ADMIN'}\nE        +  where {'API_ACCESS_MANAGEMENT_ADMIN'} = _okta_active_role_types('svc-telemetry-sync@meridianrobotics.example')\n\n/tests/test_outputs.py:221: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_svc_removed_from_telemetry_ingest_app",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0057290359400212765,
+                "start": 1787215731.7599099,
+                "stop": 1787215731.7695196,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_svc_removed_from_telemetry_ingest_app():\n>       assert SVC.lower() not in _okta_app_user_logins(TELEMETRY_APP)\nE       AssertionError: assert 'svc-telemetry-sync@meridianrobotics.example' not in {'svc-telemetry-sync@meridianrobotics.example'}\nE        +  where 'svc-telemetry-sync@meridianrobotics.example' = <built-in method lower of str object at 0x7238a7db52f0>()\nE        +    where <built-in method lower of str object at 0x7238a7db52f0> = 'svc-telemetry-sync@meridianrobotics.example'.lower\nE        +  and   {'svc-telemetry-sync@meridianrobotics.example'} = _okta_app_user_logins('Telemetry Ingest API')\n\n/tests/test_outputs.py:224: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_svc_entra_account_disabled",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0016787806525826454,
+                "start": 1787215731.769704,
+                "stop": 1787215731.774756,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_svc_entra_account_disabled():\n>       assert _entra_disabled(SVC)\nE       AssertionError: assert False\nE        +  where False = _entra_disabled('svc-telemetry-sync@meridianrobotics.example')\n\n/tests/test_outputs.py:227: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_cmdb_telemetry_pipeline_reassigned_to_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0029664840549230576,
+                "start": 1787215731.7748897,
+                "stop": 1787215731.7812045,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_cmdb_telemetry_pipeline_reassigned_to_active_owner():\n>       assert _owner_is_active_non_departed(_cmdb_owner(CMDB_PIPELINE))\nE       AssertionError: assert False\nE        +  where False = _owner_is_active_non_departed('svc-telemetry-sync@meridianrobotics.example')\nE        +    where 'svc-telemetry-sync@meridianrobotics.example' = _cmdb_owner('Telemetry Pipeline Access')\n\n/tests/test_outputs.py:230: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_cmdb_ingest_job_reassigned_to_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0029509514570236206,
+                "start": 1787215731.7813358,
+                "stop": 1787215731.7876327,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_cmdb_ingest_job_reassigned_to_active_owner():\n>       assert _owner_is_active_non_departed(_cmdb_owner(CMDB_INGEST))\nE       AssertionError: assert False\nE        +  where False = _owner_is_active_non_departed('svc-telemetry-sync@meridianrobotics.example')\nE        +    where 'svc-telemetry-sync@meridianrobotics.example' = _cmdb_owner('Nightly Metrics Ingestion Job')\n\n/tests/test_outputs.py:233: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gws_telemetry_pipeline_group_has_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001992885023355484,
+                "start": 1787215731.7877693,
+                "stop": 1787215731.7931964,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gws_telemetry_pipeline_group_has_active_owner():\n        members = _as_list(_get(\"http://google-workspace.local.mock:8080/admin/directory/v1/groups/%s/members\"\n                                % urllib.parse.quote(GWS_PIPELINE_GROUP)), \"members\")\n        owners = [str(m.get(\"email\", \"\")).lower() for m in members if str(m.get(\"role\", \"\")).upper() == \"OWNER\"]\n>       assert any(o and o != SVC.lower() and _okta_status(o) == \"ACTIVE\" for o in owners)\nE       assert False\nE        +  where False = any(<generator object test_gws_telemetry_pipeline_group_has_active_owner.<locals>.<genexpr> at 0x7238a75eac20>)\n\n/tests/test_outputs.py:239: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_offboarding_ticket_closed",
+                "status": "passed",
+                "duration": 0.002414179500192404,
+                "start": 1787215731.7933278,
+                "stop": 1787215731.7958374,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

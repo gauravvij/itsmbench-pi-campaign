@@ -1,0 +1,27 @@
+{
+    "task": {
+        "path": "tasks/task-a-1",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-1__6tGAoxf",
+    "trials_dir": "/home/azureuser/agent_evals/wave8/jobs/wave8-pi-canary-narrowfreeze",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/gpt-5.6-sol",
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave8/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "35c8360c-7977-4adc-acc5-ea960eec8a4b"
+}

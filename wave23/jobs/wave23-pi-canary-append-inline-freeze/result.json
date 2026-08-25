@@ -1,0 +1,54 @@
+{
+    "id": "87378be4-da99-421c-a982-8b6618d49b12",
+    "started_at": "2026-08-24T13:46:49.958112",
+    "updated_at": "2026-08-24T14:23:44.674979",
+    "finished_at": "2026-08-24T14:23:44.674979",
+    "n_total_trials": 12,
+    "stats": {
+        "n_completed_trials": 12,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "pi__deepseek/deepseek-v4-flash-0731__tasks": {
+                "n_trials": 12,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.25
+                    }
+                ],
+                "pass_at_k": {
+                    "2": 0.5
+                },
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "task-a-33__wdGZwVP",
+                            "task-a-1__QZbD9tP",
+                            "task-a-2__Ui3eBr9",
+                            "task-n-2__x2cJFjs",
+                            "task-a-33__DXyqdnF",
+                            "task-a-1__iW7rqvn",
+                            "task-a-2__eYFxv86",
+                            "task-a-33__sf5Q5SQ",
+                            "task-n-2__eCpPDPS"
+                        ],
+                        "1.0": [
+                            "task-n-2__PvuVnef",
+                            "task-a-1__CfLTkMv",
+                            "task-a-2__t6Bmv7i"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 20590597,
+        "n_cache_tokens": 16984320,
+        "n_output_tokens": 323392,
+        "cost_usd": 36.225305000000006
+    }
+}

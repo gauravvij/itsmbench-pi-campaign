@@ -1,0 +1,206 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 18,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787301628.8682086,
+            "stop": 1787301628.9659889
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_crowdstrike_containment_lifted",
+                "status": "passed",
+                "duration": 0.017441213130950928,
+                "start": 1787301628.8938951,
+                "stop": 1787301628.9115276,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_malware_hash_blocked",
+                "status": "passed",
+                "duration": 0.001177620142698288,
+                "start": 1787301628.9117098,
+                "stop": 1787301628.9130025,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_closed",
+                "status": "passed",
+                "duration": 0.0012093079276382923,
+                "start": 1787301628.913134,
+                "stop": 1787301628.9144597,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_assigned_to_responder",
+                "status": "passed",
+                "duration": 0.0010273666121065617,
+                "start": 1787301628.9146025,
+                "stop": 1787301628.9157317,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_defender_scan_ran",
+                "status": "passed",
+                "duration": 0.0018483661115169525,
+                "start": 1787301628.915855,
+                "stop": 1787301628.917804,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_resynced",
+                "status": "passed",
+                "duration": 0.001232852227985859,
+                "start": 1787301628.9179275,
+                "stop": 1787301628.9192598,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_last_sync_advanced",
+                "status": "passed",
+                "duration": 0.0011987211182713509,
+                "start": 1787301628.9193797,
+                "stop": 1787301628.9206898,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_reclassified_security",
+                "status": "passed",
+                "duration": 0.0024250936694443226,
+                "start": 1787301628.9208088,
+                "stop": 1787301628.9233336,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_state_closed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002414371818304062,
+                "start": 1787301628.9234526,
+                "stop": 1787301628.9404664,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_incident_state_closed():\n>       assert str(sn_incident().get(\"state\", \"\")) == \"7\"\nE       AssertionError: assert '6' == '7'\nE         \nE         - 7\nE         + 6\n\n/tests/test_outputs.py:121: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_incident_inactive",
+                "status": "passed",
+                "duration": 0.0022026929073035717,
+                "start": 1787301628.9406207,
+                "stop": 1787301628.942932,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_code_permanent",
+                "status": "passed",
+                "duration": 0.0019248202443122864,
+                "start": 1787301628.9430587,
+                "stop": 1787301628.945089,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_notes_name_malware",
+                "status": "passed",
+                "duration": 0.0018798247911036015,
+                "start": 1787301628.9452105,
+                "stop": 1787301628.94719,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_malware",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0020109768956899643,
+                "start": 1787301628.9473097,
+                "stop": 1787301628.9523146,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_problem_root_cause_names_malware():\n>       assert \"malware\" in str(sn_target_problem().get(\"root_cause\", \"\")).lower()\nE       AssertionError: assert 'malware' in 'xmrig cryptominer and lummastealer credential stealer (sha256 9d3f1c7a2b8e4f60d15a93c47e0b26f8a1c4d97e5302f8b6ae19c4d...a5) executed as svch0st.exe after malicious update delivery, causing cpu saturation and requiring network containment.'\nE        +  where 'xmrig cryptominer and lummastealer credential stealer (sha256 9d3f1c7a2b8e4f60d15a93c47e0b26f8a1c4d97e5302f8b6ae19c4d...a5) executed as svch0st.exe after malicious update delivery, causing cpu saturation and requiring network containment.' = <built-in method lower of str object at 0x738fbba6ef70>()\nE        +    where <built-in method lower of str object at 0x738fbba6ef70> = 'XMRig cryptominer and LummaStealer credential stealer (SHA256 9d3f1c7a2b8e4f60d15a93c47e0b26f8a1c4d97e5302f8b6ae19c4d...a5) executed as svch0st.exe after malicious update delivery, causing CPU saturation and requiring network containment.'.lower\nE        +      where 'XMRig cryptominer and LummaStealer credential stealer (SHA256 9d3f1c7a2b8e4f60d15a93c47e0b26f8a1c4d97e5302f8b6ae19c4d...a5) executed as svch0st.exe after malicious update delivery, causing CPU saturation and requiring network containment.' = str('XMRig cryptominer and LummaStealer credential stealer (SHA256 9d3f1c7a2b8e4f60d15a93c47e0b26f8a1c4d97e5302f8b6ae19c4d...a5) executed as svch0st.exe after malicious update delivery, causing CPU saturation and requiring network containment.')\nE        +        where 'XMRig cryptominer and LummaStealer credential stealer (SHA256 9d3f1c7a2b8e4f60d15a93c47e0b26f8a1c4d97e5302f8b6ae19c4d...a5) executed as svch0st.exe after malicious update delivery, causing CPU saturation and requiring network containment.' = <built-in method get of dict object at 0x738fbbad0080>('root_cause', '')\nE        +          where <built-in method get of dict object at 0x738fbbad0080> = {'number': 'PRB0001001', 'root_cause': 'XMRig cryptominer and LummaStealer credential stealer (SHA256 9d3f1c7a2b8e4f60..._description': 'Confirmed malware infection with containment on endpoint NL-LT-4471', 'sys_class_name': 'problem', ...}.get\nE        +            where {'number': 'PRB0001001', 'root_cause': 'XMRig cryptominer and LummaStealer credential stealer (SHA256 9d3f1c7a2b8e4f60..._description': 'Confirmed malware infection with containment on endpoint NL-LT-4471', 'sys_class_name': 'problem', ...} = sn_target_problem()\n\n/tests/test_outputs.py:133: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_exact_hash",
+                "status": "passed",
+                "duration": 0.0018422771245241165,
+                "start": 1787301628.9524453,
+                "stop": 1787301628.9544067,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_product_area_endpoint_security",
+                "status": "passed",
+                "duration": 0.0018875845707952976,
+                "start": 1787301628.9545314,
+                "stop": 1787301628.9565248,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_short_description_names_malware",
+                "status": "passed",
+                "duration": 0.0018772399052977562,
+                "start": 1787301628.9566596,
+                "stop": 1787301628.958637,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_asset_audited",
+                "status": "passed",
+                "duration": 0.002950463443994522,
+                "start": 1787301628.9587572,
+                "stop": 1787301628.9618094,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_not_wiped_or_retired",
+                "status": "passed",
+                "duration": 0.0012353160418570042,
+                "start": 1787301628.9619334,
+                "stop": 1787301628.9632683,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_still_compliant",
+                "status": "passed",
+                "duration": 0.0011389120481908321,
+                "start": 1787301628.9633868,
+                "stop": 1787301628.9646273,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_malware_ioc_escalated_in_place",
+                "status": "passed",
+                "duration": 0.0010168291628360748,
+                "start": 1787301628.9647462,
+                "stop": 1787301628.965856,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

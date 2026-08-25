@@ -1,0 +1,27 @@
+{
+    "task": {
+        "path": "/home/azureuser/agent_evals/ITSMBench/tasks/task-a-1",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-1__hppmTGJ",
+    "trials_dir": "/home/azureuser/agent_evals/wave25/jobs/wave25-pi-canary-pro-empty-home",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/deepseek/deepseek-v4-pro-0813",
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave25/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "05f9548d-c62a-4135-8b99-7866105223b2"
+}

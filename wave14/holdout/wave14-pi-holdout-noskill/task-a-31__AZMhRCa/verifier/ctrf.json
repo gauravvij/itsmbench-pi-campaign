@@ -1,0 +1,293 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 28,
+            "passed": 21,
+            "failed": 7,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787217233.830891,
+            "stop": 1787217233.9764943
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_gregor_okta_cannot_authenticate",
+                "status": "passed",
+                "duration": 0.017248988151550293,
+                "start": 1787217233.8565228,
+                "stop": 1787217233.873962,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gregor_entra_account_disabled",
+                "status": "passed",
+                "duration": 0.0013491706922650337,
+                "start": 1787217233.874121,
+                "stop": 1787217233.8755891,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gregor_removed_from_okta_super_admins",
+                "status": "passed",
+                "duration": 0.002104580868035555,
+                "start": 1787217233.8757253,
+                "stop": 1787217233.8779364,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gregor_super_admin_role_revoked",
+                "status": "passed",
+                "duration": 0.0021961969323456287,
+                "start": 1787217233.8780658,
+                "stop": 1787217233.88037,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_okta_cannot_authenticate",
+                "status": "passed",
+                "duration": 0.0014148573391139507,
+                "start": 1787217233.8805037,
+                "stop": 1787217233.8820252,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_removed_from_okta_super_admins",
+                "status": "passed",
+                "duration": 0.0018513663671910763,
+                "start": 1787217233.8821528,
+                "stop": 1787217233.8841088,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_super_admin_role_revoked",
+                "status": "passed",
+                "duration": 0.002258878666907549,
+                "start": 1787217233.8842344,
+                "stop": 1787217233.886598,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_removed_from_entra_super_admins_mirror",
+                "status": "passed",
+                "duration": 0.0018319250084459782,
+                "start": 1787217233.8867285,
+                "stop": 1787217233.8886616,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_dylan_removed_from_github_infra_admins_team",
+                "status": "passed",
+                "duration": 0.006982125341892242,
+                "start": 1787217233.888791,
+                "stop": 1787217233.895882,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_okta_cannot_authenticate",
+                "status": "passed",
+                "duration": 0.0013568210415542126,
+                "start": 1787217233.8960116,
+                "stop": 1787217233.89747,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_removed_from_aws_prod_admins",
+                "status": "passed",
+                "duration": 0.0019393065012991428,
+                "start": 1787217233.897608,
+                "stop": 1787217233.8996515,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_prod_console_direct_assignment_cleared",
+                "status": "passed",
+                "duration": 0.0032815453596413136,
+                "start": 1787217233.8997805,
+                "stop": 1787217233.9031706,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_elena_removed_from_entra_aws_mirror",
+                "status": "passed",
+                "duration": 0.001714453101158142,
+                "start": 1787217233.9033005,
+                "stop": 1787217233.905118,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_marcus_okta_cannot_authenticate",
+                "status": "passed",
+                "duration": 0.0013094628229737282,
+                "start": 1787217233.905242,
+                "stop": 1787217233.9066525,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_marcus_removed_from_aws_prod_admins",
+                "status": "passed",
+                "duration": 0.0018252055160701275,
+                "start": 1787217233.9067752,
+                "stop": 1787217233.908718,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_marcus_removed_from_security_operations_admins",
+                "status": "passed",
+                "duration": 0.0018508457578718662,
+                "start": 1787217233.9088414,
+                "stop": 1787217233.910795,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_marcus_org_admin_role_revoked",
+                "status": "passed",
+                "duration": 0.0021668649278581142,
+                "start": 1787217233.9109166,
+                "stop": 1787217233.913196,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_ingrid_entra_guest_disabled",
+                "status": "passed",
+                "duration": 0.0011159139685332775,
+                "start": 1787217233.9133341,
+                "stop": 1787217233.9145572,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_ingrid_removed_from_github_outside_collaborators",
+                "status": "passed",
+                "duration": 0.005670467391610146,
+                "start": 1787217233.9147058,
+                "stop": 1787217233.920487,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_ingrid_slack_deactivated",
+                "status": "passed",
+                "duration": 0.00153634836897254,
+                "start": 1787217233.9206364,
+                "stop": 1787217233.9222763,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_svc_okta_cannot_authenticate",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0014308616518974304,
+                "start": 1787217233.9223995,
+                "stop": 1787217233.9387283,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_svc_okta_cannot_authenticate():\n>       assert _okta_cannot_auth(SVC)\nE       AssertionError: assert False\nE        +  where False = _okta_cannot_auth('svc-telemetry-sync@meridianrobotics.example')\n\n/tests/test_outputs.py:218: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_svc_api_admin_role_revoked",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0024176551960408688,
+                "start": 1787217233.9388661,
+                "stop": 1787217233.945132,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_svc_api_admin_role_revoked():\n>       assert \"API_ACCESS_MANAGEMENT_ADMIN\" not in _okta_active_role_types(SVC)\nE       AssertionError: assert 'API_ACCESS_MANAGEMENT_ADMIN' not in {'API_ACCESS_MANAGEMENT_ADMIN'}\nE        +  where {'API_ACCESS_MANAGEMENT_ADMIN'} = _okta_active_role_types('svc-telemetry-sync@meridianrobotics.example')\n\n/tests/test_outputs.py:221: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_svc_removed_from_telemetry_ingest_app",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002961291465908289,
+                "start": 1787217233.9452603,
+                "stop": 1787217233.9515424,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_svc_removed_from_telemetry_ingest_app():\n>       assert SVC.lower() not in _okta_app_user_logins(TELEMETRY_APP)\nE       AssertionError: assert 'svc-telemetry-sync@meridianrobotics.example' not in {'svc-telemetry-sync@meridianrobotics.example'}\nE        +  where 'svc-telemetry-sync@meridianrobotics.example' = <built-in method lower of str object at 0x7d87f03b52f0>()\nE        +    where <built-in method lower of str object at 0x7d87f03b52f0> = 'svc-telemetry-sync@meridianrobotics.example'.lower\nE        +  and   {'svc-telemetry-sync@meridianrobotics.example'} = _okta_app_user_logins('Telemetry Ingest API')\n\n/tests/test_outputs.py:224: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_svc_entra_account_disabled",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012140413746237755,
+                "start": 1787217233.951686,
+                "stop": 1787217233.9560268,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_svc_entra_account_disabled():\n>       assert _entra_disabled(SVC)\nE       AssertionError: assert False\nE        +  where False = _entra_disabled('svc-telemetry-sync@meridianrobotics.example')\n\n/tests/test_outputs.py:227: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_cmdb_telemetry_pipeline_reassigned_to_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0023909746669232845,
+                "start": 1787217233.956153,
+                "stop": 1787217233.9618027,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_cmdb_telemetry_pipeline_reassigned_to_active_owner():\n>       assert _owner_is_active_non_departed(_cmdb_owner(CMDB_PIPELINE))\nE       AssertionError: assert False\nE        +  where False = _owner_is_active_non_departed('svc-telemetry-sync@meridianrobotics.example')\nE        +    where 'svc-telemetry-sync@meridianrobotics.example' = _cmdb_owner('Telemetry Pipeline Access')\n\n/tests/test_outputs.py:230: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_cmdb_ingest_job_reassigned_to_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002612664829939604,
+                "start": 1787217233.9619296,
+                "stop": 1787217233.9678116,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_cmdb_ingest_job_reassigned_to_active_owner():\n>       assert _owner_is_active_non_departed(_cmdb_owner(CMDB_INGEST))\nE       AssertionError: assert False\nE        +  where False = _owner_is_active_non_departed('svc-telemetry-sync@meridianrobotics.example')\nE        +    where 'svc-telemetry-sync@meridianrobotics.example' = _cmdb_owner('Nightly Metrics Ingestion Job')\n\n/tests/test_outputs.py:233: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_gws_telemetry_pipeline_group_has_active_owner",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002203115727752447,
+                "start": 1787217233.9679427,
+                "stop": 1787217233.9735305,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_gws_telemetry_pipeline_group_has_active_owner():\n        members = _as_list(_get(\"http://google-workspace.local.mock:8080/admin/directory/v1/groups/%s/members\"\n                                % urllib.parse.quote(GWS_PIPELINE_GROUP)), \"members\")\n        owners = [str(m.get(\"email\", \"\")).lower() for m in members if str(m.get(\"role\", \"\")).upper() == \"OWNER\"]\n>       assert any(o and o != SVC.lower() and _okta_status(o) == \"ACTIVE\" for o in owners)\nE       assert False\nE        +  where False = any(<generator object test_gws_telemetry_pipeline_group_has_active_owner.<locals>.<genexpr> at 0x7d87efbf9630>)\n\n/tests/test_outputs.py:239: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_offboarding_ticket_closed",
+                "status": "passed",
+                "duration": 0.0025772415101528168,
+                "start": 1787217233.9736812,
+                "stop": 1787217233.976361,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

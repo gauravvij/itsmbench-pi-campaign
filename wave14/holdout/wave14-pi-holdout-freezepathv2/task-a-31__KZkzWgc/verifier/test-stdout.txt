@@ -1,0 +1,208 @@
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1688 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1174 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1524 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2142 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1814 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1508 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [671 B]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.9 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+Fetched 32.2 MB in 2s (16.5 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcurl4t64
+The following packages will be upgraded:
+  curl libcurl4t64
+2 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Need to get 569 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.12 [227 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.12 [343 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 569 kB in 0s (2803 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6310 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Preparing to unpack .../libcurl4t64_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.12) ...
+Setting up curl (8.5.0-2ubuntu10.12) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.8) ...
+downloading uv 0.9.7 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 6 packages in 15ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 28 items
+
+../tests/test_outputs.py ..F..F....F...FF...FFFFFFFF.                    [100%]
+
+=================================== FAILURES ===================================
+__________________ test_gregor_removed_from_okta_super_admins __________________
+
+    def test_gregor_removed_from_okta_super_admins():
+>       assert not _okta_in_group(GREGOR, G_SUPER)
+E       AssertionError: assert not True
+E        +  where True = _okta_in_group('gregor.halvorsen@meridianrobotics.example', 'Okta Super Administrators')
+
+/tests/test_outputs.py:164: AssertionError
+__________________ test_dylan_removed_from_okta_super_admins ___________________
+
+    def test_dylan_removed_from_okta_super_admins():
+>       assert not _okta_in_group(DYLAN, G_SUPER)
+E       AssertionError: assert not True
+E        +  where True = _okta_in_group('dylan.okoro@meridianrobotics.example', 'Okta Super Administrators')
+
+/tests/test_outputs.py:173: AssertionError
+___________________ test_elena_removed_from_aws_prod_admins ____________________
+
+    def test_elena_removed_from_aws_prod_admins():
+>       assert not _okta_in_group(ELENA, G_AWS)
+E       AssertionError: assert not True
+E        +  where True = _okta_in_group('elena.vasquez@meridianrobotics.example', 'AWS Production Admins')
+
+/tests/test_outputs.py:188: AssertionError
+___________________ test_marcus_removed_from_aws_prod_admins ___________________
+
+    def test_marcus_removed_from_aws_prod_admins():
+>       assert not _okta_in_group(MARCUS, G_AWS)
+E       AssertionError: assert not True
+E        +  where True = _okta_in_group('marcus.feldon@meridianrobotics.example', 'AWS Production Admins')
+
+/tests/test_outputs.py:200: AssertionError
+_____________ test_marcus_removed_from_security_operations_admins ______________
+
+    def test_marcus_removed_from_security_operations_admins():
+>       assert not _okta_in_group(MARCUS, G_SECOPS)
+E       AssertionError: assert not True
+E        +  where True = _okta_in_group('marcus.feldon@meridianrobotics.example', 'Security Operations Admins')
+
+/tests/test_outputs.py:203: AssertionError
+________________________ test_ingrid_slack_deactivated _________________________
+
+    def test_ingrid_slack_deactivated():
+>       assert _slack_deactivated(INGRID_UPN)
+E       AssertionError: assert False
+E        +  where False = _slack_deactivated('ingrid.voss@partner.example')
+
+/tests/test_outputs.py:215: AssertionError
+______________________ test_svc_okta_cannot_authenticate _______________________
+
+    def test_svc_okta_cannot_authenticate():
+>       assert _okta_cannot_auth(SVC)
+E       AssertionError: assert False
+E        +  where False = _okta_cannot_auth('svc-telemetry-sync@meridianrobotics.example')
+
+/tests/test_outputs.py:218: AssertionError
+_______________________ test_svc_api_admin_role_revoked ________________________
+
+    def test_svc_api_admin_role_revoked():
+>       assert "API_ACCESS_MANAGEMENT_ADMIN" not in _okta_active_role_types(SVC)
+E       AssertionError: assert 'API_ACCESS_MANAGEMENT_ADMIN' not in {'API_ACCESS_MANAGEMENT_ADMIN'}
+E        +  where {'API_ACCESS_MANAGEMENT_ADMIN'} = _okta_active_role_types('svc-telemetry-sync@meridianrobotics.example')
+
+/tests/test_outputs.py:221: AssertionError
+__________________ test_svc_removed_from_telemetry_ingest_app __________________
+
+    def test_svc_removed_from_telemetry_ingest_app():
+>       assert SVC.lower() not in _okta_app_user_logins(TELEMETRY_APP)
+E       AssertionError: assert 'svc-telemetry-sync@meridianrobotics.example' not in {'svc-telemetry-sync@meridianrobotics.example'}
+E        +  where 'svc-telemetry-sync@meridianrobotics.example' = <built-in method lower of str object at 0x7238a7db52f0>()
+E        +    where <built-in method lower of str object at 0x7238a7db52f0> = 'svc-telemetry-sync@meridianrobotics.example'.lower
+E        +  and   {'svc-telemetry-sync@meridianrobotics.example'} = _okta_app_user_logins('Telemetry Ingest API')
+
+/tests/test_outputs.py:224: AssertionError
+_______________________ test_svc_entra_account_disabled ________________________
+
+    def test_svc_entra_account_disabled():
+>       assert _entra_disabled(SVC)
+E       AssertionError: assert False
+E        +  where False = _entra_disabled('svc-telemetry-sync@meridianrobotics.example')
+
+/tests/test_outputs.py:227: AssertionError
+___________ test_cmdb_telemetry_pipeline_reassigned_to_active_owner ____________
+
+    def test_cmdb_telemetry_pipeline_reassigned_to_active_owner():
+>       assert _owner_is_active_non_departed(_cmdb_owner(CMDB_PIPELINE))
+E       AssertionError: assert False
+E        +  where False = _owner_is_active_non_departed('svc-telemetry-sync@meridianrobotics.example')
+E        +    where 'svc-telemetry-sync@meridianrobotics.example' = _cmdb_owner('Telemetry Pipeline Access')
+
+/tests/test_outputs.py:230: AssertionError
+_______________ test_cmdb_ingest_job_reassigned_to_active_owner ________________
+
+    def test_cmdb_ingest_job_reassigned_to_active_owner():
+>       assert _owner_is_active_non_departed(_cmdb_owner(CMDB_INGEST))
+E       AssertionError: assert False
+E        +  where False = _owner_is_active_non_departed('svc-telemetry-sync@meridianrobotics.example')
+E        +    where 'svc-telemetry-sync@meridianrobotics.example' = _cmdb_owner('Nightly Metrics Ingestion Job')
+
+/tests/test_outputs.py:233: AssertionError
+______________ test_gws_telemetry_pipeline_group_has_active_owner ______________
+
+    def test_gws_telemetry_pipeline_group_has_active_owner():
+        members = _as_list(_get("http://google-workspace.local.mock:8080/admin/directory/v1/groups/%s/members"
+                                % urllib.parse.quote(GWS_PIPELINE_GROUP)), "members")
+        owners = [str(m.get("email", "")).lower() for m in members if str(m.get("role", "")).upper() == "OWNER"]
+>       assert any(o and o != SVC.lower() and _okta_status(o) == "ACTIVE" for o in owners)
+E       assert False
+E        +  where False = any(<generator object test_gws_telemetry_pipeline_group_has_active_owner.<locals>.<genexpr> at 0x7238a75eac20>)
+
+/tests/test_outputs.py:239: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_gregor_okta_cannot_authenticate
+PASSED ../tests/test_outputs.py::test_gregor_entra_account_disabled
+PASSED ../tests/test_outputs.py::test_gregor_super_admin_role_revoked
+PASSED ../tests/test_outputs.py::test_dylan_okta_cannot_authenticate
+PASSED ../tests/test_outputs.py::test_dylan_super_admin_role_revoked
+PASSED ../tests/test_outputs.py::test_dylan_removed_from_entra_super_admins_mirror
+PASSED ../tests/test_outputs.py::test_dylan_removed_from_github_infra_admins_team
+PASSED ../tests/test_outputs.py::test_elena_okta_cannot_authenticate
+PASSED ../tests/test_outputs.py::test_elena_prod_console_direct_assignment_cleared
+PASSED ../tests/test_outputs.py::test_elena_removed_from_entra_aws_mirror
+PASSED ../tests/test_outputs.py::test_marcus_okta_cannot_authenticate
+PASSED ../tests/test_outputs.py::test_marcus_org_admin_role_revoked
+PASSED ../tests/test_outputs.py::test_ingrid_entra_guest_disabled
+PASSED ../tests/test_outputs.py::test_ingrid_removed_from_github_outside_collaborators
+PASSED ../tests/test_outputs.py::test_offboarding_ticket_closed
+FAILED ../tests/test_outputs.py::test_gregor_removed_from_okta_super_admins
+FAILED ../tests/test_outputs.py::test_dylan_removed_from_okta_super_admins - ...
+FAILED ../tests/test_outputs.py::test_elena_removed_from_aws_prod_admins - As...
+FAILED ../tests/test_outputs.py::test_marcus_removed_from_aws_prod_admins - A...
+FAILED ../tests/test_outputs.py::test_marcus_removed_from_security_operations_admins
+FAILED ../tests/test_outputs.py::test_ingrid_slack_deactivated - AssertionErr...
+FAILED ../tests/test_outputs.py::test_svc_okta_cannot_authenticate - Assertio...
+FAILED ../tests/test_outputs.py::test_svc_api_admin_role_revoked - AssertionE...
+FAILED ../tests/test_outputs.py::test_svc_removed_from_telemetry_ingest_app
+FAILED ../tests/test_outputs.py::test_svc_entra_account_disabled - AssertionE...
+FAILED ../tests/test_outputs.py::test_cmdb_telemetry_pipeline_reassigned_to_active_owner
+FAILED ../tests/test_outputs.py::test_cmdb_ingest_job_reassigned_to_active_owner
+FAILED ../tests/test_outputs.py::test_gws_telemetry_pipeline_group_has_active_owner
+======================== 13 failed, 15 passed in 0.18s =========================

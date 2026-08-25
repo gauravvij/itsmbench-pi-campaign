@@ -1,0 +1,24 @@
+# Secrets and local credentials
+.env
+**/.env
+*.pem
+*.key
+
+# Local scratch / executor temp
+.tmp/
+**/.tmp/
+
+# Nested clone metadata (ITSMBench is vendored as a snapshot of
+# https://github.com/new-measure/ITSMBench — do not nest its .git)
+ITSMBench/.git/
+
+# Harbor agent transcripts. Some pi.txt / session jsonl files captured
+# provider API keys. Official scores live in result.json / ctrf / verifier.
+**/agent/pi.txt
+**/agent/pi/
+
+# Python / OS
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store

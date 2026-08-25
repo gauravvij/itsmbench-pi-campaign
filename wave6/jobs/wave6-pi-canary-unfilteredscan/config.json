@@ -1,0 +1,35 @@
+{
+    "job_name": "wave6-pi-canary-unfilteredscan",
+    "jobs_dir": "/home/azureuser/agent_evals/wave6/jobs",
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave6/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "agents": [
+        {
+            "name": "pi",
+            "model_name": "openai/gpt-5.6-sol",
+            "kwargs": {
+                "thinking": "high"
+            }
+        }
+    ],
+    "datasets": [
+        {
+            "path": "/home/azureuser/agent_evals/ITSMBench/tasks",
+            "task_names": [
+                "task-n-2",
+                "task-a-1",
+                "task-a-33",
+                "task-a-2"
+            ]
+        }
+    ]
+}

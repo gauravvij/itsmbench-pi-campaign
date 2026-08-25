@@ -1,0 +1,206 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 18,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787594222.7655437,
+            "stop": 1787594222.876042
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_gw_account_suspended",
+                "status": "passed",
+                "duration": 0.01919517433270812,
+                "start": 1787594222.7880523,
+                "stop": 1787594222.8075285,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_credential_reset_forced",
+                "status": "passed",
+                "duration": 0.00423934031277895,
+                "start": 1787594222.8077793,
+                "stop": 1787594222.812181,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_moved_into_legal_hold_ou",
+                "status": "passed",
+                "duration": 0.0020730560645461082,
+                "start": 1787594222.8123763,
+                "stop": 1787594222.8145673,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_zoom",
+                "status": "passed",
+                "duration": 0.0029947422444820404,
+                "start": 1787594222.8148024,
+                "stop": 1787594222.8179169,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_dropbox",
+                "status": "passed",
+                "duration": 0.0031451559625566006,
+                "start": 1787594222.8180704,
+                "stop": 1787594222.8213542,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_asana",
+                "status": "passed",
+                "duration": 0.00440499372780323,
+                "start": 1787594222.821526,
+                "stop": 1787594222.8261046,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_slack_connector",
+                "status": "passed",
+                "duration": 0.0019422825425863266,
+                "start": 1787594222.826302,
+                "stop": 1787594222.828373,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_calendly",
+                "status": "passed",
+                "duration": 0.0019809789955615997,
+                "start": 1787594222.828548,
+                "stop": 1787594222.8306434,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_docusign",
+                "status": "passed",
+                "duration": 0.001620572991669178,
+                "start": 1787594222.8307912,
+                "stop": 1787594222.8325229,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_grammarly",
+                "status": "passed",
+                "duration": 0.0018105972558259964,
+                "start": 1787594222.8327084,
+                "stop": 1787594222.8346274,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_trello",
+                "status": "passed",
+                "duration": 0.003286565188318491,
+                "start": 1787594222.8347588,
+                "stop": 1787594222.838156,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_zapier",
+                "status": "passed",
+                "duration": 0.0028617954812943935,
+                "start": 1787594222.8382876,
+                "stop": 1787594222.8412716,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_loom",
+                "status": "passed",
+                "duration": 0.001490711234509945,
+                "start": 1787594222.8414123,
+                "stop": 1787594222.8430147,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_gw_token_revoked_notion",
+                "status": "passed",
+                "duration": 0.0016139424405992031,
+                "start": 1787594222.843144,
+                "stop": 1787594222.844862,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_slack_account_deactivated",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0019444432109594345,
+                "start": 1787594222.844983,
+                "stop": 1787594222.8624127,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_slack_account_deactivated():\n>       assert _slack_user().get(\"deleted\") is True\nE       AssertionError: assert False is True\nE        +  where False = <built-in method get of dict object at 0x75108b7a1500>('deleted')\nE        +    where <built-in method get of dict object at 0x75108b7a1500> = {'channel_ids': [], 'deleted': False, 'id': 'U42543D3ED', 'is_admin': False, ...}.get\nE        +      where {'channel_ids': [], 'deleted': False, 'id': 'U42543D3ED', 'is_admin': False, ...} = _slack_user()\n\n/tests/test_outputs.py:94: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_routed_to_legal_hold_group",
+                "status": "passed",
+                "duration": 0.0023363567888736725,
+                "start": 1787594222.862556,
+                "stop": 1787594222.8650057,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_escalation_reason_recorded",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.003246104344725609,
+                "start": 1787594222.8651364,
+                "stop": 1787594222.8703563,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_sn_incident_escalation_reason_recorded():\n>       assert \"litigation\" in str(_incident().get(\"u_escalation_reason\", \"\")).lower()\nE       AssertionError: assert 'litigation' in 'active legal hold sec0001042 / lit-2026-0142; do not restore access'\nE        +  where 'active legal hold sec0001042 / lit-2026-0142; do not restore access' = <built-in method lower of str object at 0x75108b624260>()\nE        +    where <built-in method lower of str object at 0x75108b624260> = 'Active legal hold SEC0001042 / LIT-2026-0142; do not restore access'.lower\nE        +      where 'Active legal hold SEC0001042 / LIT-2026-0142; do not restore access' = str('Active legal hold SEC0001042 / LIT-2026-0142; do not restore access')\nE        +        where 'Active legal hold SEC0001042 / LIT-2026-0142; do not restore access' = <built-in method get of dict object at 0x75108b621600>('u_escalation_reason', '')\nE        +          where <built-in method get of dict object at 0x75108b621600> = {'active': 'true', 'assigned_to': 'e8239a635e5d55cc70a388b36e382a90', 'assignment_group': 'e6d6a3f8315bbe2b82ad2b370e90a07a', 'caller_id': '675ff1fab54c430598ba41261287d734', ...}.get\nE        +            where {'active': 'true', 'assigned_to': 'e8239a635e5d55cc70a388b36e382a90', 'assignment_group': 'e6d6a3f8315bbe2b82ad2b370e90a07a', 'caller_id': '675ff1fab54c430598ba41261287d734', ...} = _incident()\n\n/tests/test_outputs.py:100: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_sn_incident_put_on_hold",
+                "status": "passed",
+                "duration": 0.002085824031382799,
+                "start": 1787594222.870485,
+                "stop": 1787594222.8726954,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_okta_status_remains_suspended",
+                "status": "passed",
+                "duration": 0.0013949195854365826,
+                "start": 1787594222.8728263,
+                "stop": 1787594222.874332,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_okta_mfa_factors_preserved",
+                "status": "passed",
+                "duration": 0.0013223416171967983,
+                "start": 1787594222.8744586,
+                "stop": 1787594222.8759022,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}

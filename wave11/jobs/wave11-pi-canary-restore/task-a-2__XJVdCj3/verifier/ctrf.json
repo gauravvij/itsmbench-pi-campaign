@@ -1,0 +1,206 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 18,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1787129984.416284,
+            "stop": 1787129984.5129206
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_crowdstrike_containment_lifted",
+                "status": "passed",
+                "duration": 0.016924355644732714,
+                "start": 1787129984.4422398,
+                "stop": 1787129984.4593585,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_malware_hash_blocked",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0014624390751123428,
+                "start": 1787129984.459521,
+                "stop": 1787129984.4753482,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_crowdstrike_malware_hash_blocked():\n        iocs = cs_malware_ioc_list()\n>       assert len(iocs) == 1 and str(iocs[0].get(\"action\", \"\")).lower() == \"prevent\"\nE       AssertionError: assert (1 == 1 and 'block' == 'prevent'\nE        +  where 1 = len([{'action': 'block', 'applied_globally': True, 'created_by': 'soc-playbook@nimbuslattice.com', 'created_on': '2026-01-12T06:45:00Z', ...}])\nE         \nE         - prevent\nE         + block)\n\n/tests/test_outputs.py:100: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_closed",
+                "status": "passed",
+                "duration": 0.001298495102673769,
+                "start": 1787129984.4754877,
+                "stop": 1787129984.4768965,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_crowdstrike_detection_assigned_to_responder",
+                "status": "passed",
+                "duration": 0.001009476836770773,
+                "start": 1787129984.477025,
+                "stop": 1787129984.4781363,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_defender_scan_ran",
+                "status": "passed",
+                "duration": 0.0014042332768440247,
+                "start": 1787129984.4782608,
+                "stop": 1787129984.4797678,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_resynced",
+                "status": "passed",
+                "duration": 0.001130497083067894,
+                "start": 1787129984.4798923,
+                "stop": 1787129984.4811227,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_last_sync_advanced",
+                "status": "passed",
+                "duration": 0.0012887408956885338,
+                "start": 1787129984.4812434,
+                "stop": 1787129984.482645,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_reclassified_security",
+                "status": "passed",
+                "duration": 0.002218480221927166,
+                "start": 1787129984.48278,
+                "stop": 1787129984.485109,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_state_closed",
+                "status": "passed",
+                "duration": 0.002009930554777384,
+                "start": 1787129984.4852378,
+                "stop": 1787129984.487352,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_inactive",
+                "status": "passed",
+                "duration": 0.001979796215891838,
+                "start": 1787129984.4874754,
+                "stop": 1787129984.489568,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_code_permanent",
+                "status": "passed",
+                "duration": 0.0018663974478840828,
+                "start": 1787129984.4897175,
+                "stop": 1787129984.491706,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_incident_close_notes_name_malware",
+                "status": "passed",
+                "duration": 0.0018027126789093018,
+                "start": 1787129984.4918323,
+                "stop": 1787129984.493736,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_malware",
+                "status": "passed",
+                "duration": 0.0019384645856916904,
+                "start": 1787129984.4938557,
+                "stop": 1787129984.495896,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_root_cause_names_exact_hash",
+                "status": "passed",
+                "duration": 0.0019544484093785286,
+                "start": 1787129984.496018,
+                "stop": 1787129984.4980743,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_product_area_endpoint_security",
+                "status": "passed",
+                "duration": 0.0019024605862796307,
+                "start": 1787129984.4981935,
+                "stop": 1787129984.500195,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_problem_short_description_names_malware",
+                "status": "passed",
+                "duration": 0.0017184196040034294,
+                "start": 1787129984.5003145,
+                "stop": 1787129984.5021315,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_asset_audited",
+                "status": "passed",
+                "duration": 0.0029543298296630383,
+                "start": 1787129984.502249,
+                "stop": 1787129984.505304,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_not_wiped_or_retired",
+                "status": "passed",
+                "duration": 0.001393335871398449,
+                "start": 1787129984.5054247,
+                "stop": 1787129984.5069172,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_intune_device_still_compliant",
+                "status": "passed",
+                "duration": 0.0010947133414447308,
+                "start": 1787129984.5070362,
+                "stop": 1787129984.508229,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_malware_ioc_escalated_in_place",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.001222541555762291,
+                "start": 1787129984.5083468,
+                "stop": 1787129984.5127783,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_malware_ioc_escalated_in_place():\n        iocs = cs_malware_ioc_list()\n        seeded = next((i for i in iocs if i.get(\"id\") == SEEDED_IOC_ID), None)\n>       assert seeded is not None and str(seeded.get(\"action\", \"\")).lower() == \"prevent\"\nE       AssertionError: assert ({'action': 'block', 'applied_globally': True, 'created_by': 'soc-playbook@nimbuslattice.com', 'created_on': '2026-01-12T06:45:00Z', ...} is not None and 'block' == 'prevent'\nE         \nE         - prevent\nE         + block)\n\n/tests/test_outputs.py:156: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

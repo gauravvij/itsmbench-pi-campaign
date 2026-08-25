@@ -1,0 +1,27 @@
+{
+    "task": {
+        "path": "/home/azureuser/agent_evals/ITSMBench/tasks/task-a-33",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-33__XWRSDQN",
+    "trials_dir": "/home/azureuser/agent_evals/wave21/jobs/wave21-pi-canary-freezepath-append-endpoint",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/deepseek/deepseek-v4-flash-0731",
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave21/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "d6404282-a27e-47d4-899c-6e2054907c07"
+}

@@ -1,0 +1,110 @@
+Running command: set -euo pipefail; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | env -u NODE_VERSION bash && export NVM_DIR="$HOME/.nvm" && \. "$NVM_DIR/nvm.sh" || true && command -v nvm &>/dev/null || { echo 'Error: NVM failed to load' >&2; exit 1; } && nvm install 22 && nvm alias default 22 && npm -v && npm install -g --ignore-scripts @earendil-works/pi-coding-agent@latest && pi --version
+Running command: set -euo pipefail; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | env -u NODE_VERSION bash && export NVM_DIR="$HOME/.nvm" && \. "$NVM_DIR/nvm.sh" || true && command -v nvm &>/dev/null || { echo 'Error: NVM failed to load' >&2; exit 1; } && nvm install 22 && nvm alias default 22 && npm -v && npm install -g --ignore-scripts @earendil-works/pi-coding-agent@latest && pi --version
+Running command: set -euo pipefail; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | env -u NODE_VERSION bash && export NVM_DIR="$HOME/.nvm" && \. "$NVM_DIR/nvm.sh" || true && command -v nvm &>/dev/null || { echo 'Error: NVM failed to load' >&2; exit 1; } && nvm install 22 && nvm alias default 22 && npm -v && npm install -g --ignore-scripts @earendil-works/pi-coding-agent@latest && pi --version
+Running command: set -euo pipefail; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | env -u NODE_VERSION bash && export NVM_DIR="$HOME/.nvm" && \. "$NVM_DIR/nvm.sh" || true && command -v nvm &>/dev/null || { echo 'Error: NVM failed to load' >&2; exit 1; } && nvm install 22 && nvm alias default 22 && npm -v && npm install -g --ignore-scripts @earendil-works/pi-coding-agent@latest && pi --version
+Command outputs captured
+Command outputs captured
+Command outputs captured
+Running command: . ~/.nvm/nvm.sh; pi --print --mode json --session-dir /logs/agent/pi/sessions --provider openai --model deepseek/deepseek-v4-flash-0731 --thinking high '# Security alert
+
+CrowdStrike detected a suspicious process on a laptop assigned to a marketing employee.
+A ServiceNow incident has been raised for this: `INC0018842`.
+
+## Your goal
+
+Investigate the alert, determine what response is appropriate, take the required actions across the relevant systems, and close the ticket (`INC0018842`) when done.
+
+## API access
+
+- Search available mock API operations with `curl '"'"'http://search.local.mock:8080/search?q=<terms>&limit=10'"'"'`.
+- Use the returned provider hosts and paths to inspect and update records.
+- Use port 8080 for all APIs
+' 2>&1 </dev/null | grep -v '"type":"message_update"' | stdbuf -oL tee /logs/agent/pi.txt
+Running command: . ~/.nvm/nvm.sh; pi --print --mode json --session-dir /logs/agent/pi/sessions --provider openai --model deepseek/deepseek-v4-flash-0731 --thinking high 'You are the legal-hold and data-governance manager at Meridian Bancorp, a regulated financial-services
+company. You are accountable for the company'"'"'s litigation legal holds and its records-retention program,
+which are run in Microsoft Purview. Your remit is the WHOLE estate: EVERY eDiscovery matter (and the
+custodians under it) and EVERY records-retention obligation.
+
+
+# Legal-hold & retention compliance review
+
+A ticket has been raised in ServiceNow (incident `INC0030001`) by Legal ahead of an outside-counsel
+data-governance and preservation compliance review. Read the incident for the request.
+
+Make the actual state of every litigation hold and every records-retention obligation match the
+company'"'"'s obligations, then complete the closeout the ticket asks for. Confirm what is actually true
+before you change anything, and make only the changes that are actually required - do not touch matters,
+custodians, holds, or retention obligations that are already correct.
+
+## API access
+
+- Search available mock API operations with `curl '"'"'http://search.local.mock:8080/search?q=<terms>&limit=10'"'"'`.
+- Use the returned provider hosts and paths to inspect and update records.
+- Use port 8080 for all APIs
+' 2>&1 </dev/null | grep -v '"type":"message_update"' | stdbuf -oL tee /logs/agent/pi.txt
+Running command: . ~/.nvm/nvm.sh; pi --print --mode json --session-dir /logs/agent/pi/sessions --provider openai --model deepseek/deepseek-v4-flash-0731 --thinking high 'You are the IT operations engineer on duty at Meridian Instruments. Work helpdesk
+ticket 1873 to completion.
+
+## API access
+
+- Search available mock API operations with `curl '"'"'http://search.local.mock:8080/search?q=<terms>&limit=10'"'"'`.
+- Use the returned provider hosts and paths to inspect and update records.
+- Use port 8080 for all APIs
+' 2>&1 </dev/null | grep -v '"type":"message_update"' | stdbuf -oL tee /logs/agent/pi.txt
+Command outputs captured
+Running command: . ~/.nvm/nvm.sh; pi --print --mode json --session-dir /logs/agent/pi/sessions --provider openai --model deepseek/deepseek-v4-flash-0731 --thinking high 'You are the network operations engineer on duty for Rialto Networks. Your job is to keep the
+company'"'"'s network and infrastructure records correct and consistent by working each request through
+to completion — investigate thoroughly across the available systems, act on what you find with sound
+operational judgment, and leave the environment in a correct and consistent state.
+
+# Legacy Billing decommission
+
+A change has been raised in ServiceNow (change request `CHG0030001`): the Legacy Billing service on
+the RIA-1 row is being retired, along with its subnet and VLAN. The change lists the hosts slated for
+retirement.
+
+Read the change request for the list of hosts and the scope. Decommission the service end to end so
+the environment is left consistent — nothing that is decommissioned may still be reachable,
+allocated, or resolvable, and nothing decommissioned may remain operational in the CMDB. Verify each
+host is genuinely out of service before you tear it down. When the work is complete and the
+environment is left correct and consistent, close the change.
+
+## API access
+
+- Search available mock API operations with `curl '"'"'http://search.local.mock:8080/search?q=<terms>&limit=10'"'"'`.
+- Use the returned provider hosts and paths to inspect and update records.
+- Use port 8080 for all APIs
+' 2>&1 </dev/null | grep -v '"type":"message_update"' | stdbuf -oL tee /logs/agent/pi.txt
+Command outputs captured
+Collecting main service artifacts
+Running command: set -euo pipefail; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | env -u NODE_VERSION bash && export NVM_DIR="$HOME/.nvm" && \. "$NVM_DIR/nvm.sh" || true && command -v nvm &>/dev/null || { echo 'Error: NVM failed to load' >&2; exit 1; } && nvm install 22 && nvm alias default 22 && npm -v && npm install -g --ignore-scripts @earendil-works/pi-coding-agent@latest && pi --version
+Command outputs captured
+Running command: . ~/.nvm/nvm.sh; pi --print --mode json --session-dir /logs/agent/pi/sessions --provider openai --model deepseek/deepseek-v4-flash-0731 --thinking high 'You are the IT support agent on duty for the business. Your job is to keep the
+company'"'"'s systems secure and running smoothly by working each request through to
+completion — investigate thoroughly across the available systems, act on what you
+find with sound operational judgment, and make sure you leave the environment in a
+correct, secure, and consistent state.
+
+# Privileged-access offboarding
+
+A ticket has been raised in the IT service desk (ServiceNow, incident `INC0031001`):
+several privileged users have left the organization or ended their engagement this
+quarter and their access has not yet been removed.
+
+Read the ticket for the list of people, offboard each of them, and close the ticket
+when the review is complete.
+
+## API access
+
+- Search available mock API operations with `curl '"'"'http://search.local.mock:8080/search?q=<terms>&limit=10'"'"'`.
+- Use the returned provider hosts and paths to inspect and update records.
+- Use port 8080 for all APIs
+' 2>&1 </dev/null | grep -v '"type":"message_update"' | stdbuf -oL tee /logs/agent/pi.txt
+Command outputs captured
+Collecting main service artifacts
+Command outputs captured
+Collecting main service artifacts
+Command outputs captured
+Collecting main service artifacts
+Command outputs captured
+Collecting main service artifacts

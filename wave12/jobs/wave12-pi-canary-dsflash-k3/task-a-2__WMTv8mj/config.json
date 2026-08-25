@@ -1,0 +1,27 @@
+{
+    "task": {
+        "path": "tasks/task-a-2",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-2__WMTv8mj",
+    "trials_dir": "/home/azureuser/agent_evals/wave12/jobs/wave12-pi-canary-dsflash-k3",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/deepseek/deepseek-v4-flash-0731",
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave12/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "9fcbb0c3-3f15-4e51-99e0-fe32851786b0"
+}

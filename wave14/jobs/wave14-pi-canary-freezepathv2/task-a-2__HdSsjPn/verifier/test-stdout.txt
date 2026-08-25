@@ -1,0 +1,194 @@
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1688 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1524 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1174 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1814 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1508 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2142 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.9 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [671 B]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+Fetched 32.2 MB in 2s (13.4 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.5.0-2ubuntu10.11).
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+downloading uv 0.9.7 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 6 packages in 15ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 20 items
+
+../tests/test_outputs.py F..FFFFFF...FFFFF...                            [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_crowdstrike_containment_lifted ______________________
+
+    def test_crowdstrike_containment_lifted():
+>       assert str(cs_device().get("status", "")).lower() == "normal"
+E       AssertionError: assert 'contained' == 'normal'
+E         
+E         - normal
+E         + contained
+
+/tests/test_outputs.py:96: AssertionError
+_______________ test_crowdstrike_detection_assigned_to_responder _______________
+
+    def test_crowdstrike_detection_assigned_to_responder():
+>       assert cs_malware_alert().get("assigned_to_name") == RESPONDER
+E       AssertionError: assert None == 'IT Security Operations'
+E        +  where None = <built-in method get of dict object at 0x7825733f9200>('assigned_to_name')
+E        +    where <built-in method get of dict object at 0x7825733f9200> = {'agent_id': '5f9c2e7a4b1d8c3e6f0a9b2c7d4e1f80', 'cid': 'd31c0a9f8b7e6d5c9a2b3c4d5e6f7081', 'cmdline': 'svch0st.exe --...ssword reset initiated. Asset flagged Pending Repair for reimage.', 'created_timestamp': '2026-01-01T00:00:00Z'}], ...}.get
+E        +      where {'agent_id': '5f9c2e7a4b1d8c3e6f0a9b2c7d4e1f80', 'cid': 'd31c0a9f8b7e6d5c9a2b3c4d5e6f7081', 'cmdline': 'svch0st.exe --...ssword reset initiated. Asset flagged Pending Repair for reimage.', 'created_timestamp': '2026-01-01T00:00:00Z'}], ...} = cs_malware_alert()
+
+/tests/test_outputs.py:106: AssertionError
+________________________ test_intune_defender_scan_ran _________________________
+
+    def test_intune_defender_scan_ran():
+>       assert "done" in intune_action_states("windowsDefenderScan")
+E       AssertionError: assert 'done' in []
+E        +  where [] = intune_action_states('windowsDefenderScan')
+
+/tests/test_outputs.py:109: AssertionError
+_________________________ test_intune_device_resynced __________________________
+
+    def test_intune_device_resynced():
+>       assert "done" in intune_action_states("syncDevice")
+E       AssertionError: assert 'done' in []
+E        +  where [] = intune_action_states('syncDevice')
+
+/tests/test_outputs.py:112: AssertionError
+________________________ test_intune_last_sync_advanced ________________________
+
+    def test_intune_last_sync_advanced():
+>       assert intune_device().get("lastSyncDateTime") not in (None, "", SEEDED_LAST_SYNC)
+E       AssertionError: assert '2026-01-05T09:12:00Z' not in (None, '', '2026-01-05T09:12:00Z')
+E        +  where '2026-01-05T09:12:00Z' = <built-in method get of dict object at 0x78257362d680>('lastSyncDateTime')
+E        +    where <built-in method get of dict object at 0x78257362d680> = {'@odata.type': '#microsoft.graph.managedDevice', 'complianceState': 'compliant', 'deviceActionResults': [], 'deviceName': 'NL-LT-4471', ...}.get
+E        +      where {'@odata.type': '#microsoft.graph.managedDevice', 'complianceState': 'compliant', 'deviceActionResults': [], 'deviceName': 'NL-LT-4471', ...} = intune_device()
+
+/tests/test_outputs.py:115: AssertionError
+_____________________ test_incident_reclassified_security ______________________
+
+    def test_incident_reclassified_security():
+>       assert str(sn_incident().get("category", "")).lower() == "security"
+E       AssertionError: assert 'application' == 'security'
+E         
+E         - security
+E         + application
+
+/tests/test_outputs.py:118: AssertionError
+__________________________ test_incident_state_closed __________________________
+
+    def test_incident_state_closed():
+>       assert str(sn_incident().get("state", "")) == "7"
+E       AssertionError: assert '6' == '7'
+E         
+E         - 7
+E         + 6
+
+/tests/test_outputs.py:121: AssertionError
+____________________ test_problem_root_cause_names_malware _____________________
+
+    def test_problem_root_cause_names_malware():
+>       assert "malware" in str(sn_target_problem().get("root_cause", "")).lower()
+E       AssertionError: assert 'malware' in ''
+E        +  where '' = <built-in method lower of str object at 0xb3c3f0>()
+E        +    where <built-in method lower of str object at 0xb3c3f0> = ''.lower
+E        +      where '' = str('')
+E        +        where '' = <built-in method get of dict object at 0x7825733e5400>('root_cause', '')
+E        +          where <built-in method get of dict object at 0x7825733e5400> = {}.get
+E        +            where {} = sn_target_problem()
+
+/tests/test_outputs.py:133: AssertionError
+___________________ test_problem_root_cause_names_exact_hash ___________________
+
+    def test_problem_root_cause_names_exact_hash():
+>       assert SHA256 in str(sn_target_problem().get("root_cause", ""))
+E       AssertionError: assert '9d3f1c7a2b8e4f60d15a93c47e0b26f8a1c4d97e5302f8b6ae19c4d70f3b82a5' in ''
+E        +  where '' = str('')
+E        +    where '' = <built-in method get of dict object at 0x78257365ce00>('root_cause', '')
+E        +      where <built-in method get of dict object at 0x78257365ce00> = {}.get
+E        +        where {} = sn_target_problem()
+
+/tests/test_outputs.py:136: AssertionError
+_________________ test_problem_product_area_endpoint_security __________________
+
+    def test_problem_product_area_endpoint_security():
+>       assert str(sn_target_problem().get("u_product_area", "")).lower() == "endpoint security"
+E       AssertionError: assert '' == 'endpoint security'
+E         
+E         - endpoint security
+
+/tests/test_outputs.py:139: AssertionError
+_________________ test_problem_short_description_names_malware _________________
+
+    def test_problem_short_description_names_malware():
+>       assert "malware" in str(sn_target_problem().get("short_description", "")).lower()
+E       AssertionError: assert 'malware' in ''
+E        +  where '' = <built-in method lower of str object at 0xb3c3f0>()
+E        +    where <built-in method lower of str object at 0xb3c3f0> = ''.lower
+E        +      where '' = str('')
+E        +        where '' = <built-in method get of dict object at 0x78257361cf00>('short_description', '')
+E        +          where <built-in method get of dict object at 0x78257361cf00> = {}.get
+E        +            where {} = sn_target_problem()
+
+/tests/test_outputs.py:142: AssertionError
+______________________________ test_asset_audited ______________________________
+
+    def test_asset_audited():
+>       assert snipe_asset().get("last_audit_date") not in (None, "", SEEDED_LAST_AUDIT)
+E       AssertionError: assert '2025-11-20' not in (None, '', '2025-11-20')
+E        +  where '2025-11-20' = <built-in method get of dict object at 0x7825732df680>('last_audit_date')
+E        +    where <built-in method get of dict object at 0x7825732df680> = {'asset_tag': 'NL-2000', 'assigned_to': {'id': 100, 'name': 'Marcus Reilly', 'type': 'user'}, 'assigned_type': 'user', 'available_actions': {'checkin': True, 'checkout': False, 'clone': True, 'delete': True, ...}, ...}.get
+E        +      where {'asset_tag': 'NL-2000', 'assigned_to': {'id': 100, 'name': 'Marcus Reilly', 'type': 'user'}, 'assigned_type': 'user', 'available_actions': {'checkin': True, 'checkout': False, 'clone': True, 'delete': True, ...}, ...} = snipe_asset()
+
+/tests/test_outputs.py:145: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../tests/test_outputs.py::test_crowdstrike_malware_hash_blocked
+PASSED ../tests/test_outputs.py::test_crowdstrike_detection_closed
+PASSED ../tests/test_outputs.py::test_incident_inactive
+PASSED ../tests/test_outputs.py::test_incident_close_code_permanent
+PASSED ../tests/test_outputs.py::test_incident_close_notes_name_malware
+PASSED ../tests/test_outputs.py::test_intune_device_not_wiped_or_retired
+PASSED ../tests/test_outputs.py::test_intune_device_still_compliant
+PASSED ../tests/test_outputs.py::test_malware_ioc_escalated_in_place
+FAILED ../tests/test_outputs.py::test_crowdstrike_containment_lifted - Assert...
+FAILED ../tests/test_outputs.py::test_crowdstrike_detection_assigned_to_responder
+FAILED ../tests/test_outputs.py::test_intune_defender_scan_ran - AssertionErr...
+FAILED ../tests/test_outputs.py::test_intune_device_resynced - AssertionError...
+FAILED ../tests/test_outputs.py::test_intune_last_sync_advanced - AssertionEr...
+FAILED ../tests/test_outputs.py::test_incident_reclassified_security - Assert...
+FAILED ../tests/test_outputs.py::test_incident_state_closed - AssertionError:...
+FAILED ../tests/test_outputs.py::test_problem_root_cause_names_malware - Asse...
+FAILED ../tests/test_outputs.py::test_problem_root_cause_names_exact_hash - A...
+FAILED ../tests/test_outputs.py::test_problem_product_area_endpoint_security
+FAILED ../tests/test_outputs.py::test_problem_short_description_names_malware
+FAILED ../tests/test_outputs.py::test_asset_audited - AssertionError: assert ...
+========================= 12 failed, 8 passed in 0.13s =========================

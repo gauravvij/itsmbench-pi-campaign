@@ -1,0 +1,34 @@
+{
+    "job_name": "wave20-pi-probe-a2-endpointclose",
+    "jobs_dir": "/home/azureuser/agent_evals/wave20/jobs",
+    "n_attempts": 3,
+    "n_concurrent_trials": 3,
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave20/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "agents": [
+        {
+            "name": "pi",
+            "model_name": "openai/deepseek/deepseek-v4-flash-0731",
+            "kwargs": {
+                "thinking": "high"
+            }
+        }
+    ],
+    "datasets": [
+        {
+            "path": "tasks",
+            "task_names": [
+                "task-a-2"
+            ]
+        }
+    ]
+}

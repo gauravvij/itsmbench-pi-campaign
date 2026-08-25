@@ -1,0 +1,42 @@
+{
+    "id": "972dd34c-c317-431b-8734-a6903bb42077",
+    "started_at": "2026-08-18T13:47:33.622004",
+    "updated_at": "2026-08-18T13:55:47.308032",
+    "finished_at": "2026-08-18T13:55:47.308032",
+    "n_total_trials": 4,
+    "stats": {
+        "n_completed_trials": 4,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "pi__gpt-5.6-sol__tasks": {
+                "n_trials": 4,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "task-a-33__8FRKa7X",
+                            "task-a-1__Y4fQkc8",
+                            "task-a-2__AenkceY",
+                            "task-n-2__2yQfwgR"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 4538395,
+        "n_cache_tokens": 4538059,
+        "n_output_tokens": 37901,
+        "cost_usd": 5.21895825
+    }
+}

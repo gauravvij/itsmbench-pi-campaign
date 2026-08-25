@@ -1,0 +1,123 @@
+{
+    "id": "641f5eff-e69e-4f2e-8dff-8a69ea9a6851",
+    "task_name": "abhishek203/task-a-1",
+    "trial_name": "task-a-1__6tGAoxf",
+    "trial_uri": "file:///home/azureuser/agent_evals/wave8/jobs/wave8-pi-canary-narrowfreeze/task-a-1__6tGAoxf",
+    "task_id": {
+        "path": "tasks/task-a-1"
+    },
+    "source": "tasks",
+    "task_checksum": "1425e71b8a2d06e04f7977f30d2f5e88e872afea121a20a7b2de9d5fe96ab439",
+    "config": {
+        "task": {
+            "path": "tasks/task-a-1",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "task-a-1__6tGAoxf",
+        "trials_dir": "/home/azureuser/agent_evals/wave8/jobs/wave8-pi-canary-narrowfreeze",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "pi",
+            "import_path": null,
+            "model_name": "openai/gpt-5.6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "thinking": "high"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "/home/azureuser/agent_evals/wave8/pi-agent-home",
+                    "target": "/root/.pi/agent"
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "35c8360c-7977-4adc-acc5-ea960eec8a4b",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "pi",
+        "version": "0.84.2",
+        "model_info": {
+            "name": "gpt-5.6-sol",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 201219,
+        "n_cache_tokens": 201174,
+        "n_output_tokens": 4065,
+        "cost_usd": 0.40153074999999994,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-18T18:31:59.376119Z",
+    "finished_at": "2026-08-18T18:34:40.875291Z",
+    "environment_setup": {
+        "started_at": "2026-08-18T18:31:59.414021Z",
+        "finished_at": "2026-08-18T18:32:01.132715Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-18T18:32:01.132743Z",
+        "finished_at": "2026-08-18T18:32:25.750814Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-18T18:32:25.750911Z",
+        "finished_at": "2026-08-18T18:34:13.215191Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-18T18:34:13.521819Z",
+        "finished_at": "2026-08-18T18:34:18.824696Z"
+    },
+    "step_results": null
+}

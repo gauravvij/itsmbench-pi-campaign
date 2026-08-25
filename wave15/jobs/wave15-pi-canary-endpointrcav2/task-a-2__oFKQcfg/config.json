@@ -1,0 +1,27 @@
+{
+    "task": {
+        "path": "tasks/task-a-2",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-2__oFKQcfg",
+    "trials_dir": "/home/azureuser/agent_evals/wave15/jobs/wave15-pi-canary-endpointrcav2",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/deepseek/deepseek-v4-flash-0731",
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave15/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "f99cadc1-0b81-4b08-b9e2-63311bfe3d47"
+}

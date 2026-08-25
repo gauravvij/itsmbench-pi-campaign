@@ -1,0 +1,27 @@
+{
+    "task": {
+        "path": "tasks/task-a-31",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-31__AZMhRCa",
+    "trials_dir": "/home/azureuser/agent_evals/wave14/holdout/wave14-pi-holdout-noskill",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/deepseek/deepseek-v4-flash-0731",
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave14/holdout/noskill-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "3eae1be2-8d7b-4ab0-8a5a-972c880d85cd"
+}

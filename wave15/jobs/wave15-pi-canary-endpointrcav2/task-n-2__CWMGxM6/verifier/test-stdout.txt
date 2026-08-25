@@ -1,0 +1,261 @@
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1174 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1524 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1688 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1508 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1814 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [55.8 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2142 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [671 B]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.9 kB]
+Fetched 32.2 MB in 2s (17.8 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcurl4t64
+The following packages will be upgraded:
+  curl libcurl4t64
+2 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+Need to get 569 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.12 [227 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.12 [343 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 569 kB in 0s (9416 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6310 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Preparing to unpack .../libcurl4t64_8.5.0-2ubuntu10.12_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.12) over (8.5.0-2ubuntu10.11) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.12) ...
+Setting up curl (8.5.0-2ubuntu10.12) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.8) ...
+downloading uv 0.9.7 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 6 packages in 15ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 21 items
+
+../tests/test_outputs.py FFFFFFFFFFFFFFFFFFFFF                           [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_payments_sg_ingress_443_from_lb _____________________
+
+    def test_payments_sg_ingress_443_from_lb():
+>       assert _ingress_allows(SG_PAY, 443, LB_CIDR)
+E       AssertionError: assert False
+E        +  where False = _ingress_allows('sg-0payments00000001', 443, '10.60.0.0/24')
+
+/tests/test_outputs.py:140: AssertionError
+____________________ test_payments_sg_ingress_8081_from_lb _____________________
+
+    def test_payments_sg_ingress_8081_from_lb():
+>       assert _ingress_allows(SG_PAY, 8081, LB_CIDR)
+E       AssertionError: assert False
+E        +  where False = _ingress_allows('sg-0payments00000001', 8081, '10.60.0.0/24')
+
+/tests/test_outputs.py:143: AssertionError
+____________________ test_payments_sg_ingress_8404_from_lb _____________________
+
+    def test_payments_sg_ingress_8404_from_lb():
+>       assert _ingress_allows(SG_PAY, 8404, LB_CIDR)
+E       AssertionError: assert False
+E        +  where False = _ingress_allows('sg-0payments00000001', 8404, '10.60.0.0/24')
+
+/tests/test_outputs.py:146: AssertionError
+____________________ test_payments_nacl_edge_return_egress _____________________
+
+    def test_payments_nacl_edge_return_egress():
+>       assert _nacl_allows(NACL_PAY, egress=True, cidr_options={LB_CIDR, "0.0.0.0/0"}, cover_ephemeral=True)
+E       AssertionError: assert False
+E        +  where False = _nacl_allows('acl-0payments0001', egress=True, cidr_options={'0.0.0.0/0', '10.60.0.0/24'}, cover_ephemeral=True)
+
+/tests/test_outputs.py:149: AssertionError
+______________________ test_payments_backend_02_undrained ______________________
+
+    def test_payments_backend_02_undrained():
+>       assert _runtime_admin("payments-be", "payments-api-02") not in ("maint", "drain", "None", None)
+E       AssertionError: assert 'maint' not in ('maint', 'drain', 'None', None)
+E        +  where 'maint' = _runtime_admin('payments-be', 'payments-api-02')
+
+/tests/test_outputs.py:152: AssertionError
+_____________________ test_payments_sg_egress_internal_api _____________________
+
+    def test_payments_sg_egress_internal_api():
+>       assert _egress_allows(SG_PAY, DEP_PORT["internal-api"], SHARED_CIDR)
+E       AssertionError: assert False
+E        +  where False = _egress_allows('sg-0payments00000001', 8443, '10.50.0.0/24')
+
+/tests/test_outputs.py:155: AssertionError
+__________________________ test_payments_sg_egress_db __________________________
+
+    def test_payments_sg_egress_db():
+>       assert _egress_allows(SG_PAY, DEP_PORT["payments-db"], SHARED_CIDR)
+E       AssertionError: assert False
+E        +  where False = _egress_allows('sg-0payments00000001', 5432, '10.50.0.0/24')
+
+/tests/test_outputs.py:158: AssertionError
+________________________ test_payments_sg_egress_cache _________________________
+
+    def test_payments_sg_egress_cache():
+>       assert _egress_allows(SG_PAY, DEP_PORT["cache"], SHARED_CIDR)
+E       AssertionError: assert False
+E        +  where False = _egress_allows('sg-0payments00000001', 6379, '10.50.0.0/24')
+
+/tests/test_outputs.py:161: AssertionError
+_________________ test_payments_route_to_shared_not_blackholed _________________
+
+    def test_payments_route_to_shared_not_blackholed():
+        t = _rt(RT_PAY)
+        assert t is not None
+        for r in t.get("RouteSet", []):
+            if str(r.get("DestinationCidrBlock")) == SHARED_CIDR and str(r.get("State")) == "blackhole":
+>               assert False, "blackhole route to shared-services still present"
+E               AssertionError: blackhole route to shared-services still present
+E               assert False
+
+/tests/test_outputs.py:168: AssertionError
+_________________ test_payments_nacl_dependency_return_ingress _________________
+
+    def test_payments_nacl_dependency_return_ingress():
+>       assert _nacl_allows(NACL_PAY, egress=False, cidr_options={SHARED_CIDR, "0.0.0.0/0"}, cover_ephemeral=True)
+E       AssertionError: assert False
+E        +  where False = _nacl_allows('acl-0payments0001', egress=False, cidr_options={'0.0.0.0/0', '10.50.0.0/24'}, cover_ephemeral=True)
+
+/tests/test_outputs.py:171: AssertionError
+___________________ test_shared_nacl_allows_payments_inbound ___________________
+
+    def test_shared_nacl_allows_payments_inbound():
+>       assert _nacl_allows(NACL_SHARED, egress=False, cidr_options={PAY_CIDR, "0.0.0.0/0"}, cover_ephemeral=False)
+E       AssertionError: assert False
+E        +  where False = _nacl_allows('acl-0shared00001', egress=False, cidr_options={'0.0.0.0/0', '10.30.0.0/24'}, cover_ephemeral=False)
+
+/tests/test_outputs.py:174: AssertionError
+_____________________ test_internal_api_sg_allows_payments _____________________
+
+    def test_internal_api_sg_allows_payments():
+>       assert _ingress_allows(SG_IAPI, DEP_PORT["internal-api"], PAY_CIDR)
+E       AssertionError: assert False
+E        +  where False = _ingress_allows('sg-0internalapi0001', 8443, '10.30.0.0/24')
+
+/tests/test_outputs.py:177: AssertionError
+__________________________ test_db_sg_allows_payments __________________________
+
+    def test_db_sg_allows_payments():
+>       assert _ingress_allows(SG_DB, DEP_PORT["payments-db"], PAY_CIDR)
+E       AssertionError: assert False
+E        +  where False = _ingress_allows('sg-0db0000000000001', 5432, '10.30.0.0/24')
+
+/tests/test_outputs.py:180: AssertionError
+________________________ test_cache_sg_allows_payments _________________________
+
+    def test_cache_sg_allows_payments():
+>       assert _ingress_allows(SG_CACHE, DEP_PORT["cache"], PAY_CIDR)
+E       AssertionError: assert False
+E        +  where False = _ingress_allows('sg-0cache00000001', 6379, '10.30.0.0/24')
+
+/tests/test_outputs.py:183: AssertionError
+______________________ test_internal_api_dns_points_live _______________________
+
+    def test_internal_api_dns_points_live():
+>       assert _resolves_live("internal-api", "internal-api")
+E       AssertionError: assert False
+E        +  where False = _resolves_live('internal-api', 'internal-api')
+
+/tests/test_outputs.py:186: AssertionError
+___________________________ test_db_dns_points_live ____________________________
+
+    def test_db_dns_points_live():
+>       assert _resolves_live("payments-db", "payments-db")
+E       AssertionError: assert False
+E        +  where False = _resolves_live('payments-db', 'payments-db')
+
+/tests/test_outputs.py:189: AssertionError
+__________________________ test_cache_dns_points_live __________________________
+
+    def test_cache_dns_points_live():
+>       assert _resolves_live("cache", "cache")
+E       AssertionError: assert False
+E        +  where False = _resolves_live('cache', 'cache')
+
+/tests/test_outputs.py:192: AssertionError
+________________________ test_internal_api_02_undrained ________________________
+
+    def test_internal_api_02_undrained():
+>       assert _runtime_admin("internal-api-be", "internal-api-02") not in ("maint", "drain", "None", None)
+E       AssertionError: assert 'maint' not in ('maint', 'drain', 'None', None)
+E        +  where 'maint' = _runtime_admin('internal-api-be', 'internal-api-02')
+
+/tests/test_outputs.py:195: AssertionError
+________________________ test_legacy_dns_record_cleaned ________________________
+
+    def test_legacy_dns_record_cleaned():
+>       assert all(str(r.get("ipv4addr")) != LEGACY_DEAD_IP for r in _dns_records("internal-api-legacy." + DOMAIN))
+E       assert False
+E        +  where False = all(<generator object test_legacy_dns_record_cleaned.<locals>.<genexpr> at 0x7aa2d2f21e00>)
+
+/tests/test_outputs.py:198: AssertionError
+_______________________ test_dead_backend_server_removed _______________________
+
+    def test_dead_backend_server_removed():
+>       assert all(str(s.get("address")) != DEAD_BACKEND_IP for s in _pay_servers())
+E       assert False
+E        +  where False = all(<generator object test_dead_backend_server_removed.<locals>.<genexpr> at 0x7aa2d2e67300>)
+
+/tests/test_outputs.py:201: AssertionError
+_____________________________ test_incident_closed _____________________________
+
+    def test_incident_closed():
+>       assert _incident_state(INC_SYS) in ("6", "7")
+E       AssertionError: assert '2' in ('6', '7')
+E        +  where '2' = _incident_state('2e31b68847d76a4d2e68c219abab4e2a')
+
+/tests/test_outputs.py:204: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_payments_sg_ingress_443_from_lb - Asser...
+FAILED ../tests/test_outputs.py::test_payments_sg_ingress_8081_from_lb - Asse...
+FAILED ../tests/test_outputs.py::test_payments_sg_ingress_8404_from_lb - Asse...
+FAILED ../tests/test_outputs.py::test_payments_nacl_edge_return_egress - Asse...
+FAILED ../tests/test_outputs.py::test_payments_backend_02_undrained - Asserti...
+FAILED ../tests/test_outputs.py::test_payments_sg_egress_internal_api - Asser...
+FAILED ../tests/test_outputs.py::test_payments_sg_egress_db - AssertionError:...
+FAILED ../tests/test_outputs.py::test_payments_sg_egress_cache - AssertionErr...
+FAILED ../tests/test_outputs.py::test_payments_route_to_shared_not_blackholed
+FAILED ../tests/test_outputs.py::test_payments_nacl_dependency_return_ingress
+FAILED ../tests/test_outputs.py::test_shared_nacl_allows_payments_inbound - A...
+FAILED ../tests/test_outputs.py::test_internal_api_sg_allows_payments - Asser...
+FAILED ../tests/test_outputs.py::test_db_sg_allows_payments - AssertionError:...
+FAILED ../tests/test_outputs.py::test_cache_sg_allows_payments - AssertionErr...
+FAILED ../tests/test_outputs.py::test_internal_api_dns_points_live - Assertio...
+FAILED ../tests/test_outputs.py::test_db_dns_points_live - AssertionError: as...
+FAILED ../tests/test_outputs.py::test_cache_dns_points_live - AssertionError:...
+FAILED ../tests/test_outputs.py::test_internal_api_02_undrained - AssertionEr...
+FAILED ../tests/test_outputs.py::test_legacy_dns_record_cleaned - assert False
+FAILED ../tests/test_outputs.py::test_dead_backend_server_removed - assert False
+FAILED ../tests/test_outputs.py::test_incident_closed - AssertionError: asser...
+============================== 21 failed in 0.15s ==============================

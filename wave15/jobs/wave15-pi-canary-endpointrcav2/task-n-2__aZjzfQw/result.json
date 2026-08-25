@@ -1,0 +1,123 @@
+{
+    "id": "56d9db90-a42c-47d5-93f5-f7487704cb20",
+    "task_name": "abhishek203/task-n-2",
+    "trial_name": "task-n-2__aZjzfQw",
+    "trial_uri": "file:///home/azureuser/agent_evals/wave15/jobs/wave15-pi-canary-endpointrcav2/task-n-2__aZjzfQw",
+    "task_id": {
+        "path": "tasks/task-n-2"
+    },
+    "source": "tasks",
+    "task_checksum": "49ebbfa6a3764035a548d7f24a8c2e70cbff13ba1c14859114501dc5c0a79237",
+    "config": {
+        "task": {
+            "path": "tasks/task-n-2",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tasks"
+        },
+        "trial_name": "task-n-2__aZjzfQw",
+        "trials_dir": "/home/azureuser/agent_evals/wave15/jobs/wave15-pi-canary-endpointrcav2",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "pi",
+            "import_path": null,
+            "model_name": "openai/deepseek/deepseek-v4-flash-0731",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "thinking": "high"
+            },
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "/home/azureuser/agent_evals/wave15/pi-agent-home",
+                    "target": "/root/.pi/agent"
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "f99cadc1-0b81-4b08-b9e2-63311bfe3d47",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "pi",
+        "version": "0.84.2",
+        "model_info": {
+            "name": "deepseek/deepseek-v4-flash-0731",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 2155710,
+        "n_cache_tokens": 2022912,
+        "n_output_tokens": 42451,
+        "cost_usd": 2.948976,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-08-20T12:32:13.244181Z",
+    "finished_at": "2026-08-20T12:47:26.612863Z",
+    "environment_setup": {
+        "started_at": "2026-08-20T12:32:13.245017Z",
+        "finished_at": "2026-08-20T12:32:14.516283Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-08-20T12:32:14.516305Z",
+        "finished_at": "2026-08-20T12:32:30.651313Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-08-20T12:32:30.651416Z",
+        "finished_at": "2026-08-20T12:46:57.904188Z"
+    },
+    "verifier": {
+        "started_at": "2026-08-20T12:46:58.220287Z",
+        "finished_at": "2026-08-20T12:47:04.477913Z"
+    },
+    "step_results": null
+}

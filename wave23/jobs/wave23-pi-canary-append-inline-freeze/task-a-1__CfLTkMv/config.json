@@ -1,0 +1,27 @@
+{
+    "task": {
+        "path": "/home/azureuser/agent_evals/ITSMBench/tasks/task-a-1",
+        "source": "tasks"
+    },
+    "trial_name": "task-a-1__CfLTkMv",
+    "trials_dir": "/home/azureuser/agent_evals/wave23/jobs/wave23-pi-canary-append-inline-freeze",
+    "agent": {
+        "name": "pi",
+        "model_name": "openai/deepseek/deepseek-v4-flash-0731",
+        "kwargs": {
+            "thinking": "high"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "delete": false,
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "/home/azureuser/agent_evals/wave23/pi-agent-home",
+                "target": "/root/.pi/agent"
+            }
+        ]
+    },
+    "job_id": "87378be4-da99-421c-a982-8b6618d49b12"
+}
